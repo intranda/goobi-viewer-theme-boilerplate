@@ -1,0 +1,62 @@
+/* ==============================================================
+   View Reading Mode
+   style declarations for viewReadingMode.xhtml 
+   ==============================================================*/
+/* READING MODE */
+#readingMode {}
+
+#readingModeImageWrapper {}
+
+#readingModeImage {}
+
+/* BLOCK */
+.reading-mode {
+    /* ELEMENT */
+    /* NAVIGATION */
+    &__navigation {}
+    &__navigation-logo {}
+    &__navigation-controls {}
+    &__navigation-goback {
+        a {
+            &:hover {}
+        }
+        
+        .fa {}
+    }
+    /* CONTENT */
+    &__content {}
+    &__content-view,
+    &__content-sidebar {}
+    &__content-view {
+        &.in {}
+    }
+    &__content-view-image {}
+    &__content-sidebar {
+        &.in {}
+    }
+    &__content-sidebar-toggle {
+        button {
+            .fa {}
+            .fa-chevron-right {}
+            .fa-chevron-left {}
+            &.in {
+                .fa-chevron-right {}
+                .fa-chevron-left {}
+            }
+        }
+    }
+}
+
+/* MODIFICATION */
+
+/* BREAKPOINT FOR LARGE DESKTOPS */
+@media screen and (max-width: @largeBreakpoint) {} 
+
+/* BREAKPOINT FOR DESKTOP */
+@media screen and (max-width: @mediumBreakpoint) {}
+
+/* BREAKPOINT FOR TABLETS */
+@media screen and (max-width: @smallBreakpoint) {}
+
+/* BREAKPOINT FOR SMARTPHONES */
+@media screen and (max-width: @xSmallBreakpoint) {}

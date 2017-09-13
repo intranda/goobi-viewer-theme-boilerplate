@@ -1,0 +1,64 @@
+/* ==============================================================
+   User Backend Tables
+   style declarations for user backend tables
+   ==============================================================*/
+.user-backend-table {
+	thead {
+		tr {
+			th {}
+		}
+	}
+	tbody {
+		tr {
+			td {
+				a {}
+				.btn {}
+			}
+		}
+	}
+}
+
+/* data table styles */
+.dataTables_paginate {
+    .pagination {
+        li {
+            span, a {}
+            span {}
+            a {}
+        }
+        li[id*="previous"] {
+            a {}
+        }
+        li.paginate_button {
+            a {}
+            &.active {
+                a {}
+            }
+        }
+        li[id*="ellipsis"] {
+            a {}
+        }
+        li[id*="next"] {
+            a {}
+        }
+        
+    }
+}
+
+.dataTables_filter {
+    label {
+        input {}
+    }
+}
+
+/* BREAKPOINT FOR LARGE DESKTOPS */
+@media screen and (max-width: @largeBreakpoint) {}
+
+/* BREAKPOINT FOR DESKTOP */
+@media screen and (max-width: @mediumBreakpoint) {}
+
+/* BREAKPOINT FOR TABLETS */
+@media screen and (max-width: @smallBreakpoint) {}
+
+/* BREAKPOINT FOR SMARTPHONES */
+@media screen and (max-width: @xSmallBreakpoint) {}

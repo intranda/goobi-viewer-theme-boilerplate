@@ -1,0 +1,63 @@
+/* ==============================================================
+   View Metadata
+   style declarations for viewMetadata.xhtml 
+   ==============================================================*/
+/* METADATA */
+#metadataElementWrapper {
+    .metadata-element-box {
+        .metadata-element {
+            .dl-horizontal {
+                dt {}
+                dd {
+                    .metadata-value {}
+                }
+            }
+        }
+    }
+    .metadata-event-box {
+        .metadata-event {
+            .dl-horizontal {
+                dt {}
+                dd {
+                    .metadata-value {}
+                }
+            }
+        }
+    }
+    .glyphicon {}
+}
+
+/* DOWNLOADS */
+#viewMetadataDownloads {
+    ul {
+        li {
+            a {}
+            .btn {}
+            /* BLOCK */
+            &.dl-links {
+                /* ELEMENT */
+                &__mets {}
+                &__mets-all {}
+                &__marcxml {}
+                &__dc {}
+                &__ese {}
+                &__dfg {}
+                &__opac {}
+                &__pdf {}
+                &__epub {}
+            }
+        }
+    }
+}
+
+/* BREAKPOINT FOR LARGE DESKTOPS */
+@media screen and (max-width: @largeBreakpoint) {}
+
+/* BREAKPOINT FOR DESKTOP */
+@media screen and (max-width: @mediumBreakpoint) {}
+
+/* BREAKPOINT FOR TABLETS */
+@media screen and (max-width: @smallBreakpoint) {}
+
+/* BREAKPOINT FOR SMARTPHONES */
+@media screen and (max-width: @xSmallBreakpoint) {}

@@ -1,0 +1,60 @@
+/* ==============================================================
+   Widget Toc
+   style declarations for widget_toc.xhtml
+   ==============================================================*/
+#widgetToc {
+    #AJAXLoaderSidebarToc {}
+    .widget-toc-title {
+        h3 {}
+        .widget-toc-title-expand {
+            li {
+                a {
+                	.fa-stack {}
+                }
+            }
+        }
+    }
+    .widget-toc-elem-wrapp {
+        ul {
+            li {
+                &.parent {
+                    .widget-toc-elem-link {
+                        a {}
+                    }
+                }
+                &.last-child {                
+                    .widget-toc-elem-link {
+                        &:after {}
+                    }
+                }
+                .widget-toc-elem-expand {
+                    a {
+                        .fa-stack {}
+                    }
+                }
+                .widget-toc-elem-link {
+                    &:before {}
+                    &:hover,
+                    &:focus,
+                    &:active {}
+                    &:hover {}
+                    a {
+                        &.active {}
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* BREAKPOINT FOR LARGE DESKTOPS */
+@media screen and (max-width: @largeBreakpoint) {}
+
+/* BREAKPOINT FOR DESKTOP */
+@media screen and (max-width: @mediumBreakpoint) {}
+
+/* BREAKPOINT FOR TABLETS */
+@media screen and (max-width: @smallBreakpoint) {}
+
+/* BREAKPOINT FOR SMARTPHONES */
+@media screen and (max-width: @xSmallBreakpoint) {}

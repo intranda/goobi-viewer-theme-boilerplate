@@ -1,0 +1,58 @@
+/* ==============================================================
+   Navigation
+   style declarations for navigation.xhtml
+   ==============================================================*/
+/* NAVIGATION */
+/* BLOCK */
+.navigation {	
+	/* ELEMENT */
+	li {
+		&.active > a,
+		&.active > button {}
+	}
+	a, button {
+		&:hover,
+		&:focus,
+		&:active {}
+	}
+	.caret {}
+	/* STANDARD MENU */
+	&__submenu-trigger {}
+	&__submenu {
+		li {
+			&.divider {}
+		}
+		a, button {}
+		&.in {}
+		&.level-2,
+		&.level-3,
+		&.level-4,
+		&.level-5 {}
+	}
+	/* MEGA MENU */
+	&__megamenu-trigger {}
+	&__megamenu-wrapper {
+	    &.in {}
+	}
+	&__megamenu-close {
+		.fa {}
+	}
+	&__megamenu-element {
+		&.level-1 {}
+		&.level-2 {}
+	}
+	&__megamenu-heading {}
+	&__megamenu-item {}
+}
+
+/* BREAKPOINT FOR LARGE DESKTOPS */
+@media screen and (max-width: @largeBreakpoint) {}
+
+/* BREAKPOINT FOR DESKTOP */
+@media screen and (max-width: @mediumBreakpoint) {}
+
+/* BREAKPOINT FOR TABLETS */
+@media screen and (max-width: @smallBreakpoint) {}
+
+/* BREAKPOINT FOR SMARTPHONES */
+@media screen and (max-width: @xSmallBreakpoint) {}

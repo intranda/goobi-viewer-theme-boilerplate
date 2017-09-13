@@ -1,0 +1,72 @@
+/* ==============================================================
+   View Timematrix
+   style declarations for viewTimematrix.xhtml
+   ==============================================================*/
+#timeMatrix {
+    h2 {}
+    p {}
+    h3 {}
+    .timematrix-selection {
+        #slider-range {
+            .ui-slider-range {}
+            .ui-slider-handle {
+                .timematrix-slider-bubble-startDate,
+                .timematrix-slider-bubble-endDate {
+                    &:before {}
+                }
+                .timematrix-slider-bubble-startDate {}
+                .timematrix-slider-bubble-endDate {}
+            }
+        }
+    }
+    .btn {}
+}
+
+#timematrixCanvas {
+    .timematrix-box {
+        .timematrix-header {
+            h3 {}
+        }
+        .timematrix-body {
+            .timematrix-thumb {
+                &:hover {}
+                img {}
+                &.marker:before {}
+            }
+        }
+        .timematrix-footer {}
+    }
+}
+
+.timematrix-popover {
+    .timematrix-popover-close {}
+    .timematrix-popover-header,
+    .timematrix-popover-body,
+    .timematrix-popover-footer {}
+    .timematrix-popover-header {
+        h4 {}
+    }
+    .timematrix-popover-body {
+        .timematrix-popover-imageloader {}
+        a {
+            img {}
+        }
+    }
+    .timematrix-popover-footer {
+        a {}
+    }
+}
+
+/* BREAKPOINT FOR LARGE DESKTOPS */
+@media screen and (max-width: @largeBreakpoint) {}
+
+/* BREAKPOINT FOR DESKTOP */
+@media screen and (max-width: @mediumBreakpoint) {}
+
+/* BREAKPOINT FOR TABLETS */
+@media screen and (max-width: @smallBreakpoint) {}
+
+@media screen and (max-width: 400px) {}
+
+/* BREAKPOINT FOR SMARTPHONES */
+@media screen and (max-width: @xSmallBreakpoint) {}

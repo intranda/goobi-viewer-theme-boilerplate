@@ -1,0 +1,43 @@
+/* ==============================================================
+   Browse
+   style declarations for browse.xhtml
+   ==============================================================*/
+/* BROWSE */
+/* BLOCK */
+.collections {
+	/* ELEMENT */
+	&__wrapper {}
+}
+.collection {
+	/* ELEMENT */
+	.row {}
+	&__item {}
+	&__structure,
+	&__title,
+	&__description-toggle,
+	&__rss {
+		a {}
+	}
+	&__structure {}
+	&__title {}
+	&__top-element {}
+	&__description-toggle,
+	&__rss {}
+	&__description-toggle {}
+	&__rss {}
+	&__description {}
+	/* MODIFICATION */
+	&__item--level-0 {}
+}
+
+/* BREAKPOINT FOR LARGE DESKTOPS */
+@media screen and (max-width: @largeBreakpoint) {}
+
+/* BREAKPOINT FOR DESKTOP */
+@media screen and (max-width: @mediumBreakpoint) {}
+
+/* BREAKPOINT FOR TABLETS */
+@media screen and (max-width: @smallBreakpoint) {}
+
+/* BREAKPOINT FOR SMARTPHONES */
+@media screen and (max-width: @xSmallBreakpoint) {}

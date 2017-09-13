@@ -1,0 +1,38 @@
+/* ==============================================================
+   Search Help text
+   style declarations for searchHelpText.xhtml
+   ==============================================================*/
+/* SEARCH HELP TEXT */
+/* BLOCK */
+#searchHelpAccordion {
+	/* ELEMENT */
+	&.panel-group {
+        .panel {}
+    }
+    .panel-heading {}
+    .panel-title {
+        a {
+            &:hover,
+            &:focus,
+            &:active {}
+        }
+    }
+    .panel-body {
+        p {
+            &:last-child {}
+            span {}
+        }
+    }
+}
+
+/* BREAKPOINT FOR LARGE DESKTOPS */
+@media screen and (max-width: @largeBreakpoint) {} 
+
+/* BREAKPOINT FOR DESKTOP */
+@media screen and (max-width: @mediumBreakpoint) {}
+
+/* BREAKPOINT FOR TABLETS */
+@media screen and (max-width: @smallBreakpoint) {}
+
+/* BREAKPOINT FOR SMARTPHONES */
+@media screen and (max-width: @xSmallBreakpoint) {}

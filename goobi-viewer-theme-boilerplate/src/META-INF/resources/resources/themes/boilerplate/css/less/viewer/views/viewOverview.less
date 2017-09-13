@@ -1,0 +1,82 @@
+/* ==============================================================
+   View Overview
+   style declarations for viewOverview.xhtml 
+   ==============================================================*/
+/* VIEW OVERVIEW */
+/* BLOCK */
+.overview {
+	/* ELEMENT */
+	h2 {}
+	/* DELETE */
+	&__delete {
+		.btn {}
+	}
+	/* METADATA */
+	&__image {}
+	&__metadata {
+		.dl-horizontal {
+			&.edit-metadata:hover {}
+		}
+		dt {}
+	}
+	&__metadata-label,
+	&__metadata-value,
+	&__metadata-delete {}
+	&__metadata-label,
+	&__metadata-value {}
+	&__metadata-label {}
+	&__metadata-value {}
+	&__metadata-delete {}
+	&__metadata-select {}
+	&__metadata-add {
+		.btn {}
+	}
+	&__metadata-save {
+		.btn {}
+	}
+	/* DESCRIPTION */
+	&__description {}
+	&__description-title,
+	&__description-action {}
+	&__description-title {
+		h3 {}
+	}
+	&__description-action {
+		.btn {}
+	}
+	&__description-text {}
+	&__description-editor {}
+	/* PUBLICATION */
+	&__publication {}
+	&__publication-title,
+	&__publication-action {}
+	&__publication-title {
+		h3 {}
+	}
+	&__publication-action {
+		.btn {}
+	}
+	&__publication-navigate {
+		li {}
+        a, span {}
+	}
+	&__publication-navigate-count {
+		span {}
+	}
+	&__publication-text {}
+	&__publication-editor {}
+	/* HISTORY */
+	&__history {}
+}
+
+/* BREAKPOINT FOR LARGE DESKTOPS */
+@media screen and (max-width: @largeBreakpoint) {}
+
+/* BREAKPOINT FOR DESKTOP */
+@media screen and (max-width: @mediumBreakpoint) {}
+
+/* BREAKPOINT FOR TABLETS */
+@media screen and (max-width: @smallBreakpoint) {}
+
+/* BREAKPOINT FOR SMARTPHONES */
+@media screen and (max-width: @xSmallBreakpoint) {}

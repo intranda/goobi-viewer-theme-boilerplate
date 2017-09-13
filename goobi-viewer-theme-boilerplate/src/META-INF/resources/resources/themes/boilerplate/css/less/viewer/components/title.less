@@ -1,0 +1,55 @@
+/* ==============================================================
+   Title
+   style declarations for title.xhtml
+   ==============================================================*/
+#titleWrapper {
+    .title-header {
+        h3 {
+            a {
+                &:hover {}
+                .fa {}
+            }
+        }
+    }
+    .title-body {
+        form {
+            .dl-horizontal {
+                dt {}
+                dd {
+                    .title-value {}
+                    nav {
+                        ul {
+                            li {
+                                a {}
+                                &.title-breadcrumb-spacer:before {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#downloadWrapper {
+    nav {
+        ul {
+            li {
+                &.download-title {}
+                a {}
+            }
+        }
+    }
+}
+
+/* BREAKPOINT FOR LARGE DESKTOPS */
+@media screen and (max-width: @largeBreakpoint) {}
+
+/* BREAKPOINT FOR DESKTOP */
+@media screen and (max-width: @mediumBreakpoint) {}
+
+/* BREAKPOINT FOR TABLETS */
+@media screen and (max-width: @smallBreakpoint) {}
+
+/* BREAKPOINT FOR SMARTPHONES */
+@media screen and (max-width: @xSmallBreakpoint) {}

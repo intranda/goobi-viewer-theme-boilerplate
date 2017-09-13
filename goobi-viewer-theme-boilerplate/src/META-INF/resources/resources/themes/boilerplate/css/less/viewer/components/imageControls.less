@@ -1,0 +1,53 @@
+/* ==============================================================
+   Image Controls
+   ==============================================================*/
+/* CONTROLS */
+/* BLOCK */
+.image-controls {
+    ul {}
+}
+
+.image-control {
+    &.inactive {
+        a, span {}
+        [class^="control-icon-"], 
+        [class*=" control-icon-"] {}
+    }
+    a, span {
+        &:hover {}
+    }
+    [class^="control-icon-"], 
+    [class*=" control-icon-"] {}
+    /* ELEMENT */
+    &__start {}
+    &__page-browse {}
+    &__back {}
+    &__select {
+        .form-control__select {
+            select {}
+        }
+    }
+    &__forward {}
+    &__end {}
+    &__rotate-left {}
+    &__rotate-right {}
+    &__reset {}
+    &__fullscreen {}
+    &__zoom-slider {
+        .zoom-slider {}
+        .zoom-slider-handle {}
+    }
+    &__pdf {}
+}
+
+/* BREAKPOINT FOR LARGE DESKTOPS */
+@media screen and (max-width: @largeBreakpoint) {} 
+
+/* BREAKPOINT FOR DESKTOP */
+@media screen and (max-width: @mediumBreakpoint) {}
+
+/* BREAKPOINT FOR TABLETS */
+@media screen and (max-width: @smallBreakpoint) {}
+
+/* BREAKPOINT FOR SMARTPHONES */
+@media screen and (max-width: @xSmallBreakpoint) {}

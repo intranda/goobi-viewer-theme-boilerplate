@@ -1,0 +1,48 @@
+/* ==============================================================
+   Buttons
+   style declarations for buttons
+   ==============================================================*/
+.btn,
+.btn.ui-button,
+a.btn,
+input.btn,
+.btn.ui-button,
+.btn-search,
+.btn-clean,
+.btn-inactive {
+	&:focus,
+    &:active {}
+}
+
+.btn,
+.btn.ui-button {
+    &:hover {}
+}
+
+a.btn {}
+
+input.btn,
+.btn.ui-button {
+    .ui-button-text {}
+    &:hover {
+        .ui-button-text {}
+    }    
+}
+
+.btn-search {}
+
+.btn-clean {}
+
+.btn-inactive {}
+
+/* BREAKPOINT FOR LARGE DESKTOPS */
+@media screen and (max-width: @largeBreakpoint) {} 
+
+/* BREAKPOINT FOR DESKTOP */
+@media screen and (max-width: @mediumBreakpoint) {}
+
+/* BREAKPOINT FOR TABLETS */
+@media screen and (max-width: @smallBreakpoint) {}
+
+/* BREAKPOINT FOR SMARTPHONES */
+@media screen and (max-width: @xSmallBreakpoint) {}

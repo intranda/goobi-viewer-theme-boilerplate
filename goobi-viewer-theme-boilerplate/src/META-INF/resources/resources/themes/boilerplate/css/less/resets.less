@@ -1,0 +1,37 @@
+/* ==============================================================
+   Resets for CSS Libs
+   ==============================================================*/
+ /* BOOTSTRAP */
+.page-header {}
+.nav-tabs {
+	li {
+		a {}
+		span {}
+		&.active {
+			a {}
+		}
+	}
+}
+.tab-pane {}
+.form-control {
+    &:focus {}
+}
+.form-horizontal {
+    .form-group {
+        label {}
+        .form-control {}
+        .btn {}
+    }
+}
+
+/* BREAKPOINT FOR LARGE DESKTOPS */
+@media screen and (max-width: @largeBreakpoint) {} 
+
+/* BREAKPOINT FOR DESKTOP */
+@media screen and (max-width: @mediumBreakpoint) {}
+
+/* BREAKPOINT FOR TABLETS */
+@media screen and (max-width: @smallBreakpoint) {}
+
+/* BREAKPOINT FOR SMARTPHONES */
+@media screen and (max-width: @xSmallBreakpoint) {}

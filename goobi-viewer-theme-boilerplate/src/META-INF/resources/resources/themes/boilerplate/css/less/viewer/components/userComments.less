@@ -1,0 +1,49 @@
+/* ==============================================================
+   User Comments
+   style declarations for viewImageComments.xhtml
+   ==============================================================*/
+#viewImageComments {
+    h3 {}
+    a {}    
+    /* ADD COMMENT */
+    .btn.comment-submit {}    
+    /* EXSITING COMMENTS */
+    .comments-elem {
+        .comments-gravatar {
+            img {}
+        }
+        .comments-content {
+            .comments-header {
+                .comments-creator {}
+                .comments-date {}
+                .comments-last-change {}
+                .comments-delete-btn {
+                    .glyphicon {}
+                }
+            }
+            .comments-comment {
+                .comments-comment-text {}
+                .comments-comment-edit {
+                    .form-group {}
+                    input {}
+                    .btn {}
+                }
+                .comments-edit-comment-btn {
+                    .btn {}
+                }
+            }
+        }
+    }
+}
+
+/* BREAKPOINT FOR LARGE DESKTOPS */
+@media screen and (max-width: @largeBreakpoint) {}
+
+/* BREAKPOINT FOR DESKTOP */
+@media screen and (max-width: @mediumBreakpoint) {}
+
+/* BREAKPOINT FOR TABLETS */
+@media screen and (max-width: @smallBreakpoint) {}
+
+/* BREAKPOINT FOR SMARTPHONES */
+@media screen and (max-width: @xSmallBreakpoint) {}
