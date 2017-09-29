@@ -1,5 +1,5 @@
 # Goobi viewer - Theme boilerplate
-> Theme boilerplace is an clean start point to create a new theme for your digital library framework - made by the Goobi developer team
+> Theme boilerplate is a clean start point to create a new theme for your digital library framework - made by the Goobi developer team
 
 
 ## Documentation
@@ -10,7 +10,7 @@ Please notice that the Goobi viewer was formerly known as proprietary software u
 
 ## Technical background
 
-The Goobi viewer indexer is part of the Goobi viewer project which consisists of multiple packages:
+The Goobi viewer indexer is part of the Goobi viewer project which consists of multiple packages:
 
 | Package | Function |
 | ------ | ------ |
@@ -22,7 +22,7 @@ The Goobi viewer indexer is part of the Goobi viewer project which consisists of
 
 
 ## Installation
-The installation can be done on any operating system as the software is based on Java. A detailed explaination how to install the viewer will follow later on. In the mean time please get in touch with us via <info@intranda.com>
+The installation can be done on any operating system as the software is based on Java. A detailed explanation how to install the viewer will follow later on. In the mean time please get in touch with us via <info@intranda.com>
 
 ## Release History
 Detailed release note descriptions can be found using this URL:  
