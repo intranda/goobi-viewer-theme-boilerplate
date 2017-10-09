@@ -1,5 +1,5 @@
 {
-  "name": "goobi-viewer-boilerplate",
+  "name": "goobi-viewer-theme-boilerplate",
   "version": "3.2.5",
   "description": "This is a theme template for the Goobi viewer.",
   "devDependencies": {
