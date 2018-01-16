@@ -2,8 +2,8 @@
 #
 # README
 # Kunde: intranda GmbH
-# Goobi viewer Version: 3.2
-# Boilerplate-Version: 3.0.6
+# Goobi viewer Version: 3.4
+# Boilerplate-Version: 3.0.7
 # Goobi viewer Theme: boilerplate
 #
 ###############################################################################
