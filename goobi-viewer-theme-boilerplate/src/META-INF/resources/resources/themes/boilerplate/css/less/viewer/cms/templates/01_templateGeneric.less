@@ -6,22 +6,13 @@
 /* BLOCK */
 .tpl-generic {
     /* ELEMENT */
-    &__content {
-        margin-bottom: 15px;
-    }
+    &__content {}
     &__image {
-        float: left;
-        width: 25%;
-        margin: 0 10px 10px 0;
-        margin-bottom: 15px;
-        figcaption {
-            padding: 5px 0;
-            font-style: italic;
-            font-size: 0.9rem;
-            color: @middlegray;
-        }
+        figcaption {}
     }
     &__text {}
+    /* SOLR-QUERY */
+    .solr-query-collection {}
 }
 
 /* BREAKPOINT FOR LARGE DESKTOPS */
@@ -34,9 +25,4 @@
 @media screen and (max-width: @smallBreakpoint) {}
 
 /* BREAKPOINT FOR SMARTPHONES */
-@media screen and (max-width: @xSmallBreakpoint) {
-    .tpl-generic__image {
-        width: 100%;
-        margin: 0 0 10px 0;
-    }
-}
+@media screen and (max-width: @xSmallBreakpoint) {}
