@@ -15,12 +15,13 @@
     /* NAVIGATION */
     &__navigation {}
     &__navigation-logo {}
-    &__navigation-controls {}
+    &__navigation-controls {
+		.image-controls {}
+    }
     &__navigation-goback {
         a {
             &:hover {}
         }
-        
         .fa {}
     }
     /* CONTENT */
@@ -32,7 +33,9 @@
     }
     &__content-view-image {}
     &__content-sidebar {
-        &.in {}
+        &.in {
+            .reading-mode__content-sidebar-inner {}
+        }
     }
     &__content-sidebar-toggle {
         button {
@@ -45,6 +48,7 @@
             }
         }
     }
+    &__content-sidebar-inner {}
 }
 
 /* MODIFICATION */

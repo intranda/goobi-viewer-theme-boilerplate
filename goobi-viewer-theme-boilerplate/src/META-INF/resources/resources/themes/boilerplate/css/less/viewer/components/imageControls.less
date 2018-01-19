@@ -4,10 +4,18 @@
 /* CONTROLS */
 /* BLOCK */
 .image-controls {
-    ul {}
+    /* ELEMENT */
+    [data-toggle="mobile-image-controls"] {}
+    &__actions {
+	    ul {}
+	    li {}
+	    a {}
+	    span {}
+    }
 }
-
+/* BLOCK */
 .image-control {
+    /* ELEMENT */
     &.inactive {
         a, span {}
         [class^="control-icon-"], 
@@ -18,10 +26,18 @@
     }
     [class^="control-icon-"], 
     [class*=" control-icon-"] {}
+    .labeltext {}
     /* ELEMENT */
     &__start {}
-    &__page-browse {}
+    &__page-browse,
+    &__select {}
+    &__page-browse {
+        a, span {}
+    }
     &__back {}
+    &__select-text {
+    	span {}
+    }
     &__select {
         .form-control__select {
             select {}
@@ -29,20 +45,27 @@
     }
     &__forward {}
     &__end {}
+    &__double-page-view {}
+    &__single-page-view {}
+    &__switch-pages {}
     &__rotate-left {}
     &__rotate-right {}
     &__reset {}
     &__fullscreen {}
     &__zoom-slider {
         .zoom-slider {}
-        .zoom-slider-handle {}
+        .zoom-slider-handle {}        
     }
-    &__pdf {}
+    &__pdf,
+    &__fulltext {
+    	a {}
+    }
     &__fulltext {}
 }
 
 /* BREAKPOINT FOR LARGE DESKTOPS */
 @media screen and (max-width: @largeBreakpoint) {} 
+
 
 /* BREAKPOINT FOR DESKTOP */
 @media screen and (max-width: @mediumBreakpoint) {}
