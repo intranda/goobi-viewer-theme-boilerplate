@@ -1,10 +1,10 @@
 /***************************************************************
- * viewer custom Stylesheet v3.1.0
+ * viewer custom Stylesheet v3.4.0
  * 
  * Write {LESS}, do more!
  *
  * This file overwrites the basic style declarations for the
- * Goobi viewer (<themeName>.css)
+ * Goobi viewer
  **************************************************************/
 /* CORE VARIABLES AND MIXINS */
 /* ==============================================================
@@ -183,6 +183,14 @@ body {
 }
 /* BASIC COMPONENTS */
 /* ==============================================================
+   Buttons
+   style declarations for buttons
+   ==============================================================*/
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
    Icons
    style declarations for icons used in viewer
    ==============================================================*/
@@ -231,14 +239,6 @@ body {
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
-   Buttons
-   style declarations for buttons
-   ==============================================================*/
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOP */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
    Modals
    style declarations for Bootstrap Modals
    ==============================================================*/
@@ -248,16 +248,112 @@ body {
 /* BREAKPOINT FOR SMARTPHONES */
 /* VIEWER COMPONENTS */
 /* ==============================================================
-   Navigation
-   style declarations for navigation.xhtml
+   Alphabetic Paginator
+   style declarations for alphabeticPaginator.xhtml
    ==============================================================*/
-/* NAVIGATION */
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   Breadcrumbs
+   style declarations for breadcrumbs.xhtml
+   ==============================================================*/
+/* BREADCRUMBS */
 /* BLOCK */
-.navigation {
+.breadcrumbs {
   /* ELEMENT */
-  /* STANDARD MENU */
-  /* MEGA MENU */
 }
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   Change Local
+   style declarations for changeLocal.xhtml
+   ==============================================================*/
+/* BLOCK */
+.change-local {
+  /* ELEMENT */
+}
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+@media screen and (max-width: 768px) {
+  .change-local {
+    margin-bottom: 1.3125rem;
+  }
+}
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   Datatable Paginator
+   style declarations for dataTablePaginator.xhtml
+   ==============================================================*/
+/* DATATABLE PAGINATOR */
+/* BLOCK */
+.data-table-paginator {
+  /* ELEMENT */
+}
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   Download Modal
+   style declarations for external PDF, ePub and Toc download 
+   ==============================================================*/
+/* DOWNLOAD MODAL */
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   ePubs
+   style declarations for ePub.xhtml
+   ==============================================================*/
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   Image Controls
+   ==============================================================*/
+/* CONTROLS */
+/* BLOCK */
+.image-controls {
+  /* ELEMENT */
+}
+/* BLOCK */
+.image-control {
+  /* ELEMENT */
+  /* ELEMENT */
+}
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   Login Navigation
+   style declarations for loginNavigation.xhtml
+   ==============================================================*/
+/* LOGIN NAVIGATION */
+/* BLOCK */
+.login-navigation {
+  /* ELEMENT */
+  /* LOGIN DROPDOWN */
+  /* USER DROPDOWN */
+}
+.login-navigation__user-icon {
+  /* MODIFICATION */
+}
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   Template Navigation
+   style declarations for templateNavigation.xhtml
+   ==============================================================*/
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
@@ -283,46 +379,53 @@ body {
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
-   Template Navigation
-   style declarations for templateNavigation.xhtml
+   Navigation
+   style declarations for navigation.xhtml
+   ==============================================================*/
+/* NAVIGATION */
+/* BLOCK */
+.navigation {
+  /* ELEMENT */
+  /* STANDARD MENU */
+  /* MEGA MENU */
+}
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   Normdata
+   style declarations for normdata.xhtml 
    ==============================================================*/
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
-   Change Local
-   style declarations for changeLocal.xhtml
+   Responsive Column Gallery
+   style declarations for responsiveColumnGallery.xhtml
    ==============================================================*/
+/* RESPONSIVE COLUMN GALLERY LIGHTBOX */
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   Search Help text
+   style declarations for searchHelpText.xhtml
+   ==============================================================*/
+/* SEARCH HELP TEXT */
 /* BLOCK */
-.change-local {
+#searchHelpAccordion {
   /* ELEMENT */
 }
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
-@media screen and (max-width: 768px) {
-  .change-local {
-    margin-bottom: 1.3125rem;
-  }
-}
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
-   Breadcrumbs
-   style declarations for breadcrumbs.xhtml
-   ==============================================================*/
-/* BREADCRUMBS */
-/* BLOCK */
-.breadcrumbs {
-  /* ELEMENT */
-}
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOP */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   Alphabetic Paginator
-   style declarations for alphabeticPaginator.xhtml
+   Search Sorting Dropdown
+   style declarations for searchSortingDropdown.xhtml
    ==============================================================*/
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
@@ -345,21 +448,12 @@ body {
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
-   viewer Controls
-   style declarations for viewImageControls.xhtml
+   User Comments
+   style declarations for viewImageComments.xhtml
    ==============================================================*/
-/* BASIC STYLING FOR VIEWER-, FULLTEXT- AND PREVIEW-CONTROLS */
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOP */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   Image Controls
-   ==============================================================*/
-/* CONTROLS */
-/* BLOCK */
-.image-control {
-  /* ELEMENT */
+#viewImageComments {
+  /* ADD COMMENT */
+  /* EXSITING COMMENTS */
 }
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
@@ -374,72 +468,10 @@ body {
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
-   User Comments
-   style declarations for viewImageComments.xhtml
+   viewer Controls
+   style declarations for viewImageControls.xhtml
    ==============================================================*/
-#viewImageComments {
-  /* ADD COMMENT */
-  /* EXSITING COMMENTS */
-}
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOP */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   ePubs
-   style declarations for ePub.xhtml
-   ==============================================================*/
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOP */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   Responsive Column Gallery
-   style declarations for responsiveColumnGallery.xhtml
-   ==============================================================*/
-/* RESPONSIVE COLUMN GALLERY LIGHTBOX */
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOP */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   Datatable Paginator
-   style declarations for dataTablePaginator.xhtml
-   ==============================================================*/
-/* DATATABLE PAGINATOR */
-/* BLOCK */
-.data-table-paginator {
-  /* ELEMENT */
-}
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOP */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   Search Sorting Dropdown
-   style declarations for searchSortingDropdown.xhtml
-   ==============================================================*/
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOP */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   Normdata
-   style declarations for normdata.xhtml 
-   ==============================================================*/
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOP */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   Search Help text
-   style declarations for searchHelpText.xhtml
-   ==============================================================*/
-/* SEARCH HELP TEXT */
-/* BLOCK */
-#searchHelpAccordion {
-  /* ELEMENT */
-}
+/* BASIC STYLING FOR VIEWER-, FULLTEXT- AND PREVIEW-CONTROLS */
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
@@ -593,6 +625,14 @@ body {
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
+   Privacy
+   style declarations for privacy.xhtml
+   ==============================================================*/
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
    Statistics
    style declarations for statistics.xhtml
    ==============================================================*/
@@ -618,15 +658,54 @@ body {
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
+/* SEARCH VIEWS */
 /* ==============================================================
-   Privacy
-   style declarations for privacy.xhtml
+   Search Advanced
+   style declarations for searchAdvanced.xhtml 
    ==============================================================*/
+/* SAERCH ADVANCED */
+/* BLOCK */
+.search-advanced {
+  /* ELEMENT */
+}
+/* MODIFICATION */
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
-/* SEARCH VIEWS */
+/* ==============================================================
+   Search Calendar
+   style declarations for searchCalendar.xhtml 
+   ==============================================================*/
+/* BLOCK */
+.search-calendar {
+  /* ELEMENT */
+  /* MODIFICATION */
+}
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   SearchList
+   style declarations for searchList.xhtml
+   ==============================================================*/
+/* SEARCH LIST */
+/* VARIABLES */
+/* BLOCK */
+.search-list {
+  /* ELEMENT */
+  /* LINKS */
+  /* SORTING */
+  /* ADVANCED SEARCH INFO */
+  /* HITS */
+}
+/* MODIFICATION */
+/* STACKED MV THUMBNAIL */
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
    Search Standard
    style declarations for searchOptions.xhtml 
@@ -655,47 +734,12 @@ body {
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
-   Search Advanced
-   style declarations for searchAdvanced.xhtml 
-   ==============================================================*/
-/* SAERCH ADVANCED */
-/* BLOCK */
-.search-advanced {
-  /* ELEMENT */
-}
-/* MODIFICATION */
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOP */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   SearchList
-   style declarations for searchList.xhtml
-   ==============================================================*/
-/* SEARCH LIST */
-/* VARIABLES */
-/* BLOCK */
-.search-list {
-  /* ELEMENT */
-  /* LINKS */
-  /* SORTING */
-  /* ADVANCED SEARCH INFO */
-  /* HITS */
-}
-/* MODIFICATION */
-/* STACKED MV THUMBNAIL */
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOP */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   Search Calendar
-   style declarations for searchCalendar.xhtml 
+   SearchTermList
+   style declarations for searchTermList.xhtml
    ==============================================================*/
 /* BLOCK */
-.search-calendar {
+.search-termlist {
   /* ELEMENT */
-  /* MODIFICATION */
 }
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
@@ -714,28 +758,7 @@ body {
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   SearchTermList
-   style declarations for searchTermList.xhtml
-   ==============================================================*/
-/* BLOCK */
-.search-termlist {
-  /* ELEMENT */
-}
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOP */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
 /* USER VIEWS */
-/* ==============================================================
-   User Backend Tables
-   style declarations for user backend tables
-   ==============================================================*/
-/* data table styles */
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOP */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
    User
    style declarations for user.xhtml
@@ -743,6 +766,32 @@ body {
 /* USER */
 /* BLOCK */
 .user {
+  /* ELEMENT */
+}
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   User Account Create
+   style declarations for userAccountCreate.xhtml
+   ==============================================================*/
+/* USER ACCOUNT CREATE */
+/* BLOCK */
+.user-account-create {
+  /* ELEMENT */
+}
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   User Account Retrieve
+   style declarations for userAccountRetrieve.xhtml
+   ==============================================================*/
+/* USER ACCOUNT RETRIEVE */
+/* BLOCK */
+.user-account-retrieve {
   /* ELEMENT */
 }
 /* BREAKPOINT FOR LARGE DESKTOPS */
@@ -763,6 +812,15 @@ body {
 .user-activity {
   /* ELEMENT */
 }
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   User Backend Tables
+   style declarations for user backend tables
+   ==============================================================*/
+/* data table styles */
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
@@ -802,6 +860,19 @@ body {
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
+   User Bookshelf Send List
+   style declarations for userBookshelfSendList.xhtml
+   ==============================================================*/
+/* USER BOOKSHELF SEND LIST */
+/* BLOCK */
+.user-bookshelf-send-list {
+  /* ELEMENT */
+}
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
    User view Bookshelf
    style declarations for userBackendViewBookshelf.xhtml
    ==============================================================*/
@@ -831,6 +902,19 @@ body {
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* VIEWS */
+/* ==============================================================
+   View Download
+   style declarations for viewDownload.xhtml
+   ==============================================================*/
+/* DOWNLOAD */
+/* BLOCK */
+.download {
+  /* ELEMENT */
+}
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
    View Image Fullscreen
    style declarations for viewImageFullscreen.xhtml 
@@ -924,9 +1008,17 @@ body {
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
-   View Preview
-   style declarations for viewPreview.xhtml 
+   View Reading Mode
+   style declarations for viewReadingMode.xhtml 
    ==============================================================*/
+/* READING MODE */
+/* BLOCK */
+.reading-mode {
+  /* ELEMENT */
+  /* NAVIGATION */
+  /* CONTENT */
+}
+/* MODIFICATION */
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
@@ -967,35 +1059,6 @@ body {
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   View Download
-   style declarations for viewDownload.xhtml
-   ==============================================================*/
-/* DOWNLOAD */
-/* BLOCK */
-.download {
-  /* ELEMENT */
-}
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOP */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   View Reading Mode
-   style declarations for viewReadingMode.xhtml 
-   ==============================================================*/
-/* READING MODE */
-/* BLOCK */
-.reading-mode {
-  /* ELEMENT */
-  /* NAVIGATION */
-  /* CONTENT */
-}
-/* MODIFICATION */
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOP */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
 /* WIDGETS */
 /* ==============================================================
    Widgets
@@ -1009,6 +1072,26 @@ body {
    Widget Admin
    style declarations for widget_admin.xhtml
    ==============================================================*/
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   Widget Bookshelf List
+   style declarations for widget_bookshelfList.xhtml
+   ==============================================================*/
+/* WIDGET BOOKSHELF LIST */
+/* BLOCK */
+.widget-bookshelf-list {
+  /* BACK */
+}
+.widget-bookshelf-list ul {
+  margin-bottom: 15px;
+}
+.widget-bookshelf-list__back {
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
@@ -1033,6 +1116,19 @@ body {
    Widget CMS
    style declarations for widget_cms.xhtml
    ==============================================================*/
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   Widget CMS Page Links
+   style declarations for widget_cmsPageLinks.xhtml
+   ==============================================================*/
+/* CMS PAGE LINKS */
+/* BLOCK */
+[id*="widgetCmsPageLinks"] {
+  /* ELEMENT */
+}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
@@ -1066,9 +1162,28 @@ body {
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
+   Widget Custom Drilldown
+   style declarations for widget_customDrillDown.xhtml
+   ==============================================================*/
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
    Widget Downloads
    style declarations for widget_downloads.xhtml
    ==============================================================*/
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   Widget Geo Locations
+   style declarations for widget_geoLocations.xhtml
+   ==============================================================*/
+.widget-geo-locations {
+  /* CMS BACKEND WIDGET */
+}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
@@ -1085,6 +1200,26 @@ body {
    Widget my Searches
    style declarations for widget_mySearches.xhtml
    ==============================================================*/
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   Widget NER Facetting
+   style declarations for widget_nerFacetting.xhtml
+   ==============================================================*/
+/* OVERVIEW & SECTION */
+/* OVERVIEW */
+#overview .current-tags .page-tag.person {
+  color: #0174DF;
+}
+#overview .current-tags .page-tag.location {
+  color: #FF8000;
+}
+#overview .current-tags .page-tag.corporation {
+  color: #298A08;
+}
+/* SECTION */
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
@@ -1175,42 +1310,11 @@ body {
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
-   Widget NER Facetting
-   style declarations for widget_nerFacetting.xhtml
-   ==============================================================*/
-/* OVERVIEW & SECTION */
-/* OVERVIEW */
-#overview .current-tags .page-tag.person {
-  color: #0174DF;
-}
-#overview .current-tags .page-tag.location {
-  color: #FF8000;
-}
-#overview .current-tags .page-tag.corporation {
-  color: #298A08;
-}
-/* SECTION */
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOP */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
    Widget Work Count
    style declarations for widget_workCount.xhtml
    ==============================================================*/
 /* WIDGET WORKCOUNT */
 /* BLOCK */
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOP */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   Widget Geo Locations
-   style declarations for widget_geoLocations.xhtml
-   ==============================================================*/
-.widget-geo-locations {
-  /* CMS BACKEND WIDGET */
-}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
@@ -1518,6 +1622,11 @@ body {
    CMS Select Template
    style declarations for adminCmsSelectTemplate.xhtml
    ==============================================================*/
+/* CMS SELECT TEMPLATE */
+/* BLOCK */
+.cms-select-template {
+  /* ELEMENT */
+}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
