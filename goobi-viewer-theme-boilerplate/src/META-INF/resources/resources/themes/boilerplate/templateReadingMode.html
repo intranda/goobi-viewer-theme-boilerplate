@@ -133,9 +133,24 @@
         <h:outputText id="version_number" value="version: #{navigationHelper.version}" style="display: none;" />
         
         <!-- CUSTOM JAVASCRIPT -->
+        <!-- CUSTOM JAVASCRIPT -->
         <script type="text/javascript">
-            var currentPage = "#{navigationHelper.currentPage}";
-            var contextPath = "#{request.contextPath}";
+            var currentPage = '#{navigationHelper.currentPage}';
+            var currentLang = '#{navigationHelper.localeString}';
+            var currentPath = "#{request.contextPath}";
+            var userLoggedIn = #{userBean.loggedIn};
+            var bookshelvesEnabled = #{configurationBean.bookshelvesEnabled};
+            var watchlistConfig = {
+                root: '#{request.contextPath}',
+                msg: {
+                    resetBookshelves: '#{msg.bookshelf_reset}',
+                    resetBookshelvesConfirm: '#{msg.bookshelf_resetConfirm}',
+                    saveItemToSession: '#{msg.bookshelf_saveItemToSession}',
+                    noItemsAvailable: '#{msg.bookshelf_noItemsAvailable}',
+                    selectBookshelf: '#{msg.bookshelf_selectBookShelf}',
+                    addNewBookshelf: '#{msg.bookshelf_addNewBookShelf}'
+                }
+            };        
             
             $( document ).ready( function() {
                 var readingModeConfig = {
