@@ -28,16 +28,16 @@ function resetDom() {
  * Method to set the content height to a min-height, equal to the viewport height.
  */
 function setContentHeight() {
+    var pageHeaderHeight = $( '#pageHeader' ).outerHeight();
     var pageWrapper = $( '#pageContent' );
     var pageWrapperHeight = $( '#pageContent' ).outerHeight();
-    var pageHeaderHeight = $( '#pageHeader' ).outerHeight();
-    var pageNavigationHeight = $( '.main-navigation' ).outerHeight();
-    var pageFooterHeight = $( '#pageFooter' ).outerHeight();
-    var additionalHeight = pageHeaderHeight + pageNavigationHeight + pageFooterHeight + 15;
+    var pageFooterHeight = $( '#pageFooter' ).outerHeight() + 20;
+    var additionalHeight = pageHeaderHeight + pageWrapperHeight + pageFooterHeight;
     var windowHeight = $( window ).outerHeight();
+    var diff = windowHeight - additionalHeight;
     
-    if ( pageWrapperHeight < windowHeight ) {
-        pageWrapper.css( 'min-height', ( windowHeight - additionalHeight ) + 'px' );
+    if ( additionalHeight < windowHeight ) {
+        pageWrapper.css( 'min-height', ( pageWrapperHeight + diff ) + 'px' );
     }
 }
 
