@@ -61,6 +61,17 @@
     	a {}
     }
     &__fulltext {}
+    &__add-to-bookshelf {
+    	[data-bookshelf-type="add"] {
+		    .fa-heart-o {}
+		    .fa-heart {}
+		    &.added,
+		    &:hover {
+		    	.fa-heart-o {}
+			    .fa-heart {}
+		    }
+        }
+    }
 }
 
 /* BREAKPOINT FOR LARGE DESKTOPS */
