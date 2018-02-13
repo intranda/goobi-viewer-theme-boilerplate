@@ -2,6 +2,35 @@
    User view Bookshelf
    style declarations for userBackendViewBookshelf.xhtml
    ==============================================================*/
+/* USER VIEW BOOKSHELF */
+/* BLOCK */
+.view-bookshelf {
+	/* ELEMENT */
+	h2 {}
+	p {}
+	&__action {
+		a {}
+	}
+	&__item {
+		&:hover {}
+	}
+	&__item-image,
+	&__item-info,
+	&__item-action {}
+	&__item-image {
+		a {}
+	}
+	&__item-info {
+		h4 {}
+		textarea {}
+	}
+	&__item-action {
+		a {}
+		[data-bookshelf-type="delete"] {}
+	}
+}
+
+
 #viewBookshelf {
     h2 {}
     h3 {}
@@ -27,12 +56,15 @@
         }
     }
     #viewBookshelfControlsForm {
-        .btn {}
+        text-align: right;
+        .btn {
+            margin: 1.3125rem 0;
+        }
     }
 }
 
 /* BREAKPOINT FOR LARGE DESKTOPS */
-@media screen and (max-width: @largeBreakpoint) {}
+@media screen and (max-width: @largeBreakpoint) {} 
 
 /* BREAKPOINT FOR DESKTOP */
 @media screen and (max-width: @mediumBreakpoint) {}
