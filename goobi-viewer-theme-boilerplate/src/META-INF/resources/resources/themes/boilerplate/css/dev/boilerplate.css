@@ -83,9 +83,6 @@ body {
 @-ms-viewport {
   width: device-width;
 }
-@-o-viewport {
-  width: device-width;
-}
 @viewport {
   width: device-width;
 }
@@ -845,26 +842,13 @@ body {
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
-   User Bookshelves
-   style declarations for userBackendBookshelves.xhtml
-   ==============================================================*/
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOP */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   User edit Bookshelf
+   User Bookshelf Edit
    style declarations for userBackendEditBookshelf.xhtml
    ==============================================================*/
-#editBookshelf #userEditBookshelfForm .btn {
-  float: right;
-  margin: 0;
-}
-#editBookshelf #deleteBookshelfWrapp {
-  text-align: right;
-}
-#editBookshelf #editBookshelfItemControlsForm {
-  text-align: right;
+/* USER BOOKSHELF EDIT */
+/* BLOCK */
+.user-bookshelf-edit {
+  /* ELEMENT */
 }
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
@@ -895,6 +879,32 @@ body {
    User view Bookshelf
    style declarations for userBackendViewBookshelf.xhtml
    ==============================================================*/
+/* USER VIEW BOOKSHELF */
+/* BLOCK */
+.view-bookshelf {
+  /* ELEMENT */
+}
+#viewBookshelf #viewBookshelfControlsForm {
+  text-align: right;
+}
+#viewBookshelf #viewBookshelfControlsForm .btn {
+  margin: 1.3125rem 0;
+}
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   User Bookshelves
+   style declarations for userBackendBookshelves.xhtml
+   ==============================================================*/
+/* USER BOOKSHELVES */
+/* BLOCK */
+.user-bookshelves {
+  /* ELEMENT */
+  /* ADD */
+  /* PANEL */
+}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
