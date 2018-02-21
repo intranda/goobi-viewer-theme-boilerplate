@@ -79,6 +79,15 @@
     }
     &__hit-thumbnail {
         img {}
+        [data-bookshelf-type="add"] {
+		    .fa-heart-o {}
+		    .fa-heart {}
+		    &.added,
+		    &:hover {
+		    	.fa-heart-o {}
+			    .fa-heart {}
+		    }
+        }
     }
     &__hit-type {}
     &__hit-docstruct {
