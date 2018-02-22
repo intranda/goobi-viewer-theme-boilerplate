@@ -923,9 +923,15 @@ body {
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
-   User Searches
+   My Searches
    style declarations for userBackendSearches.xhtml
    ==============================================================*/
+/* MY SEARCHES */
+/* BLOCK */
+.my-searches {
+  /* ELEMENT */
+}
+/* DEPRECATED SINCE 3.4 */
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
