@@ -3,7 +3,7 @@
 **Kunde**: intranda GmbH\
 **Goobi viewer Version**: 3.4\
 **Boilerplate Version**: 3.4.0\
-**Goobi viewer Theme**: boilerplate\
+**Goobi viewer Theme**: boilerplate
 
 ## Besonderheiten
 
