@@ -2,13 +2,21 @@
    Alphabetic Paginator
    style declarations for alphabeticPaginator.xhtml
    ==============================================================*/
-#alphabeticPaginator {
-    ul {
-        li {
-            &.active {}
-            a {}
-        }
-    }
+/* ALPHABETIC PAGINATOR */
+/* BLOCK */
+.alphabetic-paginator {
+	/* ELEMENT */
+	ul {}
+	li {
+		&.active {
+			a {}
+		}
+	}
+	a {
+		&:hover,
+		&:active,
+		&:focus {}
+	}
 }
 
 /* BREAKPOINT FOR LARGE DESKTOPS */
