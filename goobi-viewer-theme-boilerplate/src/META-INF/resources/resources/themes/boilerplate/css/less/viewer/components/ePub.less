@@ -1,22 +1,21 @@
 /* ==============================================================
-   ePubs
+   ePub
    style declarations for ePub.xhtml
    ==============================================================*/
-#ePubWrapper {
-    h3 {}
-    p {}
-    ul {
-        li {
-            .dl-horizontal {
-                dt {
-                    a {
-                        img {}
-                    }
-                }
-                dd {}
-            }
-        }
-    }
+/* EPUB */
+/* BLOCK */
+.e-pub {
+	/* ELEMENT */
+	h3 {}
+	p {}
+	&__items {}
+	&__item {
+		&:before,
+		&:after {}
+		&:before {}
+		&:after {}
+	}
+	&__item-order-label {}
 }
 
 /* BREAKPOINT FOR LARGE DESKTOPS */
@@ -29,4 +28,4 @@
 @media screen and (max-width: @smallBreakpoint) {}
 
 /* BREAKPOINT FOR SMARTPHONES */
-@media screen and (max-width: @xSmallBreakpoint) {} 
+@media screen and (max-width: @xSmallBreakpoint) {}
