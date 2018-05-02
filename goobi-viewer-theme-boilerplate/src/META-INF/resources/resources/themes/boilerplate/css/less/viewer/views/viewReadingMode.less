@@ -14,15 +14,39 @@
     /* ELEMENT */
     /* NAVIGATION */
     &__navigation {}
-    &__navigation-logo {}
-    &__navigation-controls {
-		.image-controls {}
-    }
-    &__navigation-goback {
-        a {
-            &:hover {}
+    &__nav {
+        &.logo {
+        	a {
+        		&:hover,
+        		&:active,
+        		&:focus {}
+        	}
+        	img {}
         }
-        .fa {}
+        &.controls {
+        	[data-toggle="mobile-image-controls"] {}
+	    	.image-controls {
+		    	&__options {}
+		    	&__option {
+		    		a,
+		    		button {
+						&:hover,
+						&:active,
+						&:focus {}
+		    		}
+		    		&.add-to-bookshelf {}
+		    	}
+		    	&__actions {}
+		    	&__action {}
+	    	}        	
+        }
+        &.back {
+        	a {
+        		&:hover,
+        		&:active,
+        		&:focus {}
+        	}
+        }    	
     }
     /* CONTENT */
     &__content {}
