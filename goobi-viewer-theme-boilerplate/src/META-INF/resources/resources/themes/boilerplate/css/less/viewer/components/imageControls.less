@@ -1,18 +1,54 @@
 /* ==============================================================
    Image Controls
+   Style decalrations for imageControls.xhtml
    ==============================================================*/
 /* CONTROLS */
 /* BLOCK */
-.image-controls {
+.image-controls,
+.controls {
     /* ELEMENT */
     [data-toggle="mobile-image-controls"] {}
-    &__actions {
-	    ul {}
+	/* DOCUMENT OPTIONS */
+	&__options {
+		ul {}
 	    li {}
-	    a {}
-	    span {}
-    }
+	}
+	&__option {
+		a, 
+		span, 
+		button {
+			&:hover,
+			&:active,
+			&:focus {}
+		}
+		a, button {}
+		&.pdf {}
+		&.fulltext {}
+		&.add-to-bookshelf {
+			[data-bookshelf-type="add"] {
+			    span {
+				    .fa-bookmark-o {}
+				    .fa-bookmark {}
+			    }
+			    &.added, 
+			    &:hover {
+			    	span {
+				        .fa-bookmark-o {}
+				        .fa-bookmark {}		    		
+			    	}
+			    }
+			}
+		}
+		&.iiif {
+			a {}
+		}
+	}
+    /* ACTIONS */
+    &__actions {}
+    /* MODIFICATION */
+	.labeltext {}
 }
+
 /* BLOCK */
 .image-control {
     /* ELEMENT */
@@ -25,8 +61,7 @@
         &:hover {}
     }
     [class^="control-icon-"], 
-    [class*=" control-icon-"] {}
-    .labeltext {}
+    [class*=" control-icon-"] {}    
     /* ELEMENT */
     &__start {}
     &__page-browse,
@@ -54,29 +89,12 @@
     &__fullscreen {}
     &__zoom-slider {
         .zoom-slider {}
-        .zoom-slider-handle {}        
-    }
-    &__pdf,
-    &__fulltext {
-    	a {}
-    }
-    &__fulltext {}
-    &__add-to-bookshelf {
-    	[data-bookshelf-type="add"] {
-		    .fa-heart-o {}
-		    .fa-heart {}
-		    &.added,
-		    &:hover {
-		    	.fa-heart-o {}
-			    .fa-heart {}
-		    }
-        }
+        .zoom-slider-handle {}
     }
 }
 
-/* BREAKPOINT FOR LARGE DESKTOPS */
-@media screen and (max-width: @largeBreakpoint) {} 
-
+/* BREAKPOINT FOR LARGE DESKTOP */
+@media screen and (max-width: @largeBreakpoint) {}
 
 /* BREAKPOINT FOR DESKTOP */
 @media screen and (max-width: @mediumBreakpoint) {}
