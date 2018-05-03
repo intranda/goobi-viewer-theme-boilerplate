@@ -142,6 +142,16 @@ body {
   display: none !important;
   visibility: hidden !important;
 }
+/* VISUALLY HIDDEN */
+.mx-v-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* GRID */
 /* ==============================================================
    Print CSS
    style declarations for print views
@@ -184,6 +194,16 @@ body {
    Simple (Numeric) Paginator
    style declarations for simplePaginator.xhtml
    ==============================================================*/
+/* NUMERIC PAGINATOR */
+/* BLOCK */
+.numeric-paginator {
+  /* ELEMENT */
+  /* MODIFICATION */
+}
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */

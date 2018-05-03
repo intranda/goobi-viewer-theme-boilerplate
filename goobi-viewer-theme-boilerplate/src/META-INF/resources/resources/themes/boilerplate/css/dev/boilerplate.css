@@ -37,6 +37,16 @@
   display: none !important;
   visibility: hidden !important;
 }
+/* VISUALLY HIDDEN */
+.mx-v-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* GRID */
 /*
  * general styling
  */
@@ -248,6 +258,11 @@ body {
    Alphabetic Paginator
    style declarations for alphabeticPaginator.xhtml
    ==============================================================*/
+/* ALPHABETIC PAGINATOR */
+/* BLOCK */
+.alphabetic-paginator {
+  /* ELEMENT */
+}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
@@ -324,27 +339,35 @@ body {
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
-   ePubs
+   ePub
    style declarations for ePub.xhtml
    ==============================================================*/
+/* EPUB */
+/* BLOCK */
+.e-pub {
+  /* ELEMENT */
+}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
    Image Controls
+   Style declarations for imageControls.xhtml
    ==============================================================*/
 /* CONTROLS */
 /* BLOCK */
 .image-controls {
   /* ELEMENT */
+  /* DOCUMENT OPTIONS */
+  /* ACTIONS */
+  /* MODIFICATION */
 }
-/* BLOCK */
-.image-control {
+.image-controls__action {
   /* ELEMENT */
   /* ELEMENT */
 }
-/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR LARGE DESKTOP */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
@@ -410,6 +433,24 @@ body {
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
+   NER Popovers
+   style declarations for NER Popovers in viewFulltext.xhtml 
+   ==============================================================*/
+/* NER POPOVERS */
+.ner-person {
+  color: #0174DF;
+}
+.ner-location {
+  color: #FF8000;
+}
+.ner-institution {
+  color: #298A08;
+}
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
    Normdata
    style declarations for normdata.xhtml 
    ==============================================================*/
@@ -440,17 +481,19 @@ body {
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
-   Search Sorting Dropdown
-   style declarations for searchSortingDropdown.xhtml
+   Simple (Numeric) Paginator
+   style declarations for simplePaginator.xhtml
    ==============================================================*/
+/* NUMERIC PAGINATOR */
+/* BLOCK */
+.numeric-paginator {
+  /* ELEMENT */
+  /* MODIFICATION */
+}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   Simple (Numeric) Paginator
-   style declarations for simplePaginator.xhtml
-   ==============================================================*/
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
@@ -626,8 +669,13 @@ body {
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
    Error
-   style declarations for errorGeneral.xhtml
+   style declarations for error.xhtml
    ==============================================================*/
+/* ERROR */
+/* BLOCK */
+.view-error {
+  /* ELEMENT */
+}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
@@ -636,6 +684,18 @@ body {
    Feedback
    style declarations for feedback.xhtml
    ==============================================================*/
+/* FEEDBACK */
+/* BLOCK */
+.view-feedback {
+  /* ELEMENT */
+}
+.view-feedback .form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+.view-feedback .form-group .btn {
+  margin: 0;
+}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
@@ -962,28 +1022,11 @@ body {
    View Fulltext
    style declarations for viewFulltext.xhtml 
    ==============================================================*/
-/* NER-POPOVERS */
-.ner-person {
-  color: #0174DF;
+/* VIEW FULLTEXT */
+/* BLOCK */
+.view-fulltext {
+  /* ELEMENT */
 }
-.ner-location {
-  color: #FF8000;
-}
-.ner-institution {
-  color: #298A08;
-}
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOP */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   View Image
-   style declarations for viewImage.xhtml 
-   ==============================================================*/
-/* IMAGE VIEW */
-/* OPEN LAYERS */
-/* VIDEO IFRAME */
-/* META MUSEAL */
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
@@ -1020,6 +1063,25 @@ body {
   color: #298A08;
 }
 /* SECTION */
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   View Object
+   style declarations for viewObject.xhtml 
+   ==============================================================*/
+/* VIEW OBJECT */
+/* BLOCK */
+.view-object {
+  /* ELEMENT */
+  /* IMAGE */
+  /* IMAGE MOBILE */
+  /* VIDEO, AUDIO, TEXT */
+  /* VIDEO */
+  /* AUDIO */
+  /* TEXT */
+}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
@@ -1514,7 +1576,7 @@ body {
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
    CMS Template "Masonry"
-   style declarations for cms_template_12_masonry.xhtml
+   style declarations for cms_template_11_masonry.xhtml
    ==============================================================*/
 /* TPL MASONRY */
 /* BLOCK */
@@ -1528,7 +1590,7 @@ body {
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
    CMS Template Single Collection
-   style declarations for cms_template_13_singleCollection.xhtml
+   style declarations for cms_template_12_singleCollection.xhtml
    ==============================================================*/
 /* TPL SINGLE COLLECTION */
 /* BLOCK */
@@ -1542,7 +1604,7 @@ body {
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
    CMS Template Static Grid
-   style declarations for cms_template_14_staticGrid.xhtml
+   style declarations for cms_template_13_staticGrid.xhtml
    ==============================================================*/
 /* TPL STATIC GRID */
 /* BLOCK */
@@ -1556,7 +1618,7 @@ body {
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
    CMS Template RSS Feed
-   style declarations for cms_template_15_RSSFeed.xhtml
+   style declarations for cms_template_14_RSSFeed.xhtml
    ==============================================================*/
 /* TPL RSS FEED */
 /* BLOCK */
@@ -1570,7 +1632,7 @@ body {
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
    CMS Template Stacked Collection
-   style declarations for cms_template_16_stackedCollection.xhtml
+   style declarations for cms_template_15_stackedCollection.xhtml
    ==============================================================*/
 /* TPL STACKED COLLECTION */
 /* BLOCK */
@@ -1584,7 +1646,7 @@ body {
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
    CMS Template "Searchlist"
-   style declarations for cms_template_17_searchList.xhtml
+   style declarations for cms_template_16_searchList.xhtml
    ==============================================================*/
 /* SEARCHLIST */
 /* BLOCK */
@@ -1597,7 +1659,7 @@ body {
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
    CMS Template "Searchlist Advanced"
-   style declarations for cms_template_18_searchListAdvanced.xhtml
+   style declarations for cms_template_17_searchListAdvanced.xhtml
    ==============================================================*/
 /* SEARCHLIST ADVANCED */
 /* BLOCK */
@@ -1632,6 +1694,20 @@ body {
   /* MODIFICATION */
 }
 /* BREAKPOINT FOR LATGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   CMS Template "Glossary"
+   style declarations for cms_template_20_glossary.xhtml
+   ==============================================================*/
+/* TPL GLOSSARY */
+/* BLOCK */
+.tpl-glossary {
+  /* ELEMENT */
+  /* MODIFICATION */
+}
+/* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
