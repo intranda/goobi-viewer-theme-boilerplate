@@ -355,7 +355,7 @@ body {
    Image Controls
    Style declarations for imageControls.xhtml
    ==============================================================*/
-/* CONTROLS */
+/* IMAGE CONTROLS */
 /* BLOCK */
 .image-controls {
   /* ELEMENT */
@@ -508,11 +508,12 @@ body {
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
    User Comments
-   style declarations for viewImageComments.xhtml
+   style declarations for userComments.xhtml
    ==============================================================*/
-#viewImageComments {
-  /* ADD COMMENT */
-  /* EXSITING COMMENTS */
+/* USER COMMENTS */
+/* BLOCK */
+.user-comments {
+  /* ELEMENT */
 }
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
@@ -704,6 +705,24 @@ body {
    Privacy
    style declarations for privacy.xhtml
    ==============================================================*/
+/* PRIVACY */
+/* BLOCK */
+.view-privacy {
+  /* ELEMENT */
+}
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   Sitelinks
+   style declarations for sitelinks.xhtml
+   ==============================================================*/
+/* SITELINKS */
+/* BLOCK */
+.sitelinks {
+  /* ELEMENT */
+}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
@@ -1346,6 +1365,11 @@ body {
    Widget Searchfield
    style declarations for widget_searchField.xhtml
    ==============================================================*/
+/* WIDGET SEARCHFIELD */
+/* BLOCK */
+.widget-searchfield {
+  /* ELEMENT */
+}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
@@ -1354,6 +1378,11 @@ body {
    Widget SearchInCurrentItem
    style declarations for widget_searchInCurrentItem.xhtml
    ==============================================================*/
+/* WIDGET SEARCH IN CURRENT ITEM */
+/* BLOCK */
+.widget-search-in-current-item {
+  /* ELEMENT */
+}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
