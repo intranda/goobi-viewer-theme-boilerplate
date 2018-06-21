@@ -16,7 +16,8 @@
         a, button {
             &:hover,
             &:focus,
-            &:active {}
+            &:active,
+            &.active {}
         }
         form {}
     }
@@ -33,6 +34,13 @@
             img {}
         }
     }
+    &__views {
+    	button {}
+    	[data-view="search-list-default"] {}
+    	[data-view="search-list-grid"] {}
+    	[data-view="search-list-list"] {}
+    }
+    /* CURRENT SEARCH */
     &__label {}
     &__current-search {
         .form-group {}
