@@ -790,13 +790,43 @@ body {
 /* BLOCK */
 .search-list {
   /* ELEMENT */
+  /* CURRENT SEARCH */
   /* LINKS */
   /* SORTING */
   /* ADVANCED SEARCH INFO */
   /* HITS */
+  /* DRILLDOWN HEADING */
 }
 /* MODIFICATION */
 /* STACKED MV THUMBNAIL */
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   Searchlist Grid View
+   style declarations for searchList.xhtml
+   ==============================================================*/
+/* SEARCH LIST GRID */
+/* BLOCK */
+.search-list {
+  /* ELEMENT */
+  /* HITS */
+}
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   Searchlist List View
+   style declarations for searchList.xhtml
+   ==============================================================*/
+/* SEARCH LIST LIST */
+/* BLOCK */
+.search-list {
+  /* ELEMENT */
+  /* HITS */
+}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
@@ -1055,6 +1085,12 @@ body {
    style declarations for viewMetadata.xhtml 
    ==============================================================*/
 /* METADATA */
+/* BLOCK */
+.metadata {
+  /* ELEMENTS / EVENTS */
+  /* ELEMENT */
+  /* EVENT */
+}
 /* DOWNLOADS */
 #viewMetadataDownloads ul li {
   /* BLOCK */
@@ -1224,6 +1260,19 @@ body {
    Widget Browsing
    style declarations for widget_browsing.xhtml
    ==============================================================*/
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   Widget Chronology
+   style declarations for widget_chronology.xhtml
+   ==============================================================*/
+/* WIDGET CHRONOLOGY */
+/* BLOCK */
+.widget-chronology-slider {
+  /* ELEMENT */
+}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
@@ -1735,6 +1784,32 @@ body {
 .tpl-glossary {
   /* ELEMENT */
   /* MODIFICATION */
+}
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   CMS Template "FAQ"
+   style declarations for cms_template_21_faq.xhtml
+   ==============================================================*/
+/* FAQ */
+/* BLOCK */
+.tpl-faq {
+  /* ELEMENT */
+}
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   CMS Template "FAQ Single"
+   style declarations for cms_template_22_faqSingle.xhtml
+   ==============================================================*/
+/* FAQ SINGLE */
+/* BLOCK */
+.tpl-faq-single {
+  /* ELEMENT */
 }
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
