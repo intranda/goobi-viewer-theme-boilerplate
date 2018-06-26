@@ -57,7 +57,7 @@
 
 <h:body id="viewer">
     <f:view locale="#{navigationHelper.locale}">        
-        <!-- top anchor for scrolling to top -->
+        <!-- TOP ANCHOR FOR SCROLLING TO TOP -->
         <span id="top"></span>
         
         <!-- COinS -->
@@ -68,111 +68,11 @@
 			<h:messages infoClass="alert alert-success" errorClass="alert alert-danger" />
 		</div>
         
-        <!-- MOBILE TOGGLES -->
-        <viewerComponent:mobileToggles />
-
-        <!-- MOBILE NAVIGATION -->
-        <viewerComponent:mobileNavigation displayDropdown="false" />
-        
-        <!-- OFFCANVAS FADE -->
-        <div class="offcanvas-fade"></div>
-
-        <!-- HEADER -->
-        <header id="pageHeader" class="page-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-4">
-                        <!-- SEARCH FIELD -->
-                        <div class="page-header__search">
-	                        <h:panelGroup rendered="#{navigationHelper.currentPage != 'search' and navigationHelper.currentPage != 'searchadvanced' and navigationHelper.currentPage != 'searchlist'}">
-	                            <widgetComponent:widget_searchField />
-	                        </h:panelGroup>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <!-- CHANGE LOCAL -->
-                        <div class="page-header__language">
-	                        <viewerComponent:changeLocal toggleLanguage="false" />
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <!-- WATCHLIST/BOOKSHELVES -->
-                        <div class="page-header__bookshelves">
-                            <viewerComponent:bookshelfNavigation />
-                        </div>
-                    </div>
-                </div>
-
-                <!-- MAIN NAVIGATION -->
-                <div class="row">
-                    <div class="col-xs-12">
-                        <!-- DESKTOP NAVIGATION -->
-                        <viewerComponent:navigation megaMenu="false" />
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <!-- MAIN -->
-        <div id="pageContent" class="page-content">
-			<div class="container">
-				<!-- BREADCRUMBS -->
-				<ui:insert name="breadcrumbs" />
-
-				<aside id="sidebar" class="col-xs-9 col-sm-3 page-content__sidebar">
-					<!-- CLOSE SIDEBAR ON MOBILE -->
-					<div class="page-content__close-sidebar">
-						<button type="button" class="btn-clean" data-toggle="close-sidebar">
-							<i class="fa fa-times" aria-hidden="true"></i>
-						</button>
-					</div>
-
-					<!-- SIDEBAR WIDGETS -->
-					<ui:insert name="sidebar" />
-
-					<!-- RSS FEED -->
-					<ui:insert name="rssFeed" />
-				</aside>
-
-				<main id="main" class="col-xs-12 col-sm-9 page-content__main">
-					<!-- CONTENT --> 
-					<ui:insert name="content" />
-				</main>
-			</div>
-		</div>
-
-        <!-- FOOTER -->
-        <div id="pageFooter" class="page-footer">
-            <div class="container">
-                <templateComponent:footerNavigation />
-            </div>
-        </div>
-        
-        <!-- LINK FOR SCROLLING TO TOP -->
-        <span class="icon-totop" title="#{msg.topOfPage}">
-            <i class="fa fa-chevron-up" aria-hidden="true"></i>
-        </span>
+        <!-- LAYOUT -->
+        <ui:include src="includes/layout.xhtml" />
         
         <!-- CUSTOM JAVASCRIPT -->
-        <script type="text/javascript">
-            var currentPage = '#{navigationHelper.currentPage}';
-            var currentLang = '#{navigationHelper.localeString}';
-            var currentPath = "#{request.contextPath}";
-            var userLoggedIn = #{userBean.loggedIn};
-            var bookshelvesEnabled = #{configurationBean.bookshelvesEnabled};
-            var watchlistConfig = {
-                root: '#{request.contextPath}',
-    		    msg: {
-    		        resetBookshelves: '#{msg.bookshelf_reset}',
-    		        resetBookshelvesConfirm: '#{msg.bookshelf_resetConfirm}',
-    		        saveItemToSession: '#{msg.bookshelf_saveItemToSession}',
-    		        noItemsAvailable: '#{msg.bookshelf_noItemsAvailable}',
-    		        selectBookshelf: '#{msg.bookshelf_selectBookShelf}',
-    		        addNewBookshelf: '#{msg.bookshelf_addNewBookShelf}'
-    		    }
-            };
-        </script>
-        <script type="text/javascript" src="#{request.contextPath}/resources/themes/#{navigationHelper.theme}/javascript/dist/custom.min.js"></script>
+        <ui:include src="includes/customJS.xhtml" />        
     </f:view>
     
     <!-- PIWIK -->
