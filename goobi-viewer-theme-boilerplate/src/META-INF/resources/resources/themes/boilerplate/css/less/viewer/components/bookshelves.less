@@ -6,13 +6,14 @@
 /* BLOCK */
 .bookshelf-navigation {
 	/* ELEMENT */
-	&__icons {
-		&.no-padding {}
-		span {}
-	}
-	&__counter {}
 	&__dropdown-wrapper {}
+	/* TOOGLE DROPDOWN */
+	&__counter {}
+	&__string {}
+	&__icon {}
+	/* DROPDOWN */
 	&__dropdown {}
+	/* DROPDOWN LIST */
 	&__dropdown-list {
 		li {
 			&:last-child {}
@@ -22,23 +23,22 @@
 		a {}
 	}
 	&__dropdown-list-counter {}
-	&__dropdown-list-reset,
-	&__dropdown-list-send {
-		[data-bookshelf-type="reset"],
-		a {}
-	}
-	&__dropdown-list-reset {
-		[data-bookshelf-type="reset"] {}
-	}
-	&__dropdown-list-send {
-		a {}
-	}
 	&__dropdown-list-image {}
 	&__dropdown-list-remove {
-		&.no-padding {}
 		[data-bookshelf-type="delete"] {}
 	}
-	&__dropdown-action {}
+	/* DROPDOWN ACTIONS */
+	&__dropdown-list-actions {}
+	&__dropdown-list-reset,
+	&__dropdown-list-send {
+		a, button {}
+	}
+	&__dropdown-list-reset {
+		button {}
+	}
+	&__dropdown-list-send {
+		a {}
+	}
 }
 
 /* POPUPS */
@@ -83,22 +83,16 @@
 [data-bookshelf-type="delete"],
 [data-bookshelf-type="link"],
 [data-bookshelf-type="reset"] {}
-
 [data-bookshelf-type="dropdown"] {}
-
 [data-bookshelf-type="get"] {}
-
 [data-bookshelf-type="add"] {
 	&.white {}
 	&.added {
 		&.white {}	
 	}
 }
-
 [data-bookshelf-type="delete"] {}
-
 [data-bookshelf-type="link"] {}
-
 [data-bookshelf-type="reset"] {}
 
 /* BREAKPOINT FOR LARGE DESKTOPS */

@@ -6,54 +6,74 @@
 /* BLOCK */
 .login-navigation {
 	/* ELEMENT */
-	/* LOGIN DROPDOWN */
-	&__login-dropdown {
-		li {
-			&:hover {}
-		}
-		a, button {}
-		.control-label {}
-		.form-control {}
-	}
-	&__user-icon {
-		/* MODIFICATION */
-		&--loggedout {
+	/* NOT LOGGED IN */
+	[data-login="false"] {
+		button[data-toggle="login-dropdown"] {
+			span {}
 			.fa {}
 		}
-		&--loggedin {
-			.fa {}
+		.login-navigation {
+			/* LOGIN DROPDOWN */
+			&__login-dropdown {
+				li {}
+				a, button {}
+				.control-label {}
+				.form-control {}
+			}
+			/* DROPDOWN ACTIONS */
+			&__login-dropdown-action {
+				.btn {}
+			}
+			/* DROPDOWN OPTIONS */
+			&__login-dropdown-options {
+				ul {}
+				li {}
+				a, button {}
+				a {}
+			}
+			/* OPEN ID */
+			&__open-id {
+				h3 {}
+				li {
+					a {}
+					&:hover,
+					&:active,
+					&:focus {}
+				}
+			}
+		}		
+	}
+	/* LOGGED IN */
+	[data-login="true"] {
+		button[data-toggle="user-dropdown"] {}
+		.login-navigation {
+			/* TOGGLE USER DROPDOWN */
+			&__user-name {}			
+			&__user-icon {
+				img {}
+			}
+			/* USER DROPDOWN */
+			&__user-dropdown {
+				ul {}
+				li {}
+			}
+			&__user-dropdown-item {}
+			&__user-dropdown-item-icon {
+				.fa {}
+			}
+			&__user-dropdown-item-string {
+				a {
+					&:hover,
+					&:active,
+					&:focus {}
+				}
+			}
+			/* USER DROPDOWN ACTION */
+			&__user-dropdown-action {
+				.btn {}
+			}
 		}
-	}
-	&__login-dropdown-action {
-		.btn {}
-	}
-	&__login-dropdown-options {
-		li {
-			&:hover {}
-		}
-		a, button {}
-		a {}
-	}
-	&__open-id {
-		h3 {}
-		li {
-			a {}
-			&:hover,
-			&:active,
-			&:focus {}
-		}
-	}
-	/* USER DROPDOWN */
-	&__user-dropdown {
-		ul {}
-		li {
-			&:last-child {}
-			.fa {}
-			.col-xs-2 {}
-		}
-		a {}
-		.btn {}
-	}
+	}	
 }
 
 /* BREAKPOINT FOR LARGE DESKTOPS */
