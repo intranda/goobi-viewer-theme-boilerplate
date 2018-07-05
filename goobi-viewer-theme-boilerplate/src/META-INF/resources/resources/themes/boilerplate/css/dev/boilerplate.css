@@ -47,9 +47,9 @@
   overflow: hidden;
 }
 /* GRID */
-/*
- * general styling
- */
+/* ==============================================================
+   GEneral Styling
+   ==============================================================*/
 html,
 body {
   overflow-x: hidden;
@@ -75,26 +75,9 @@ body {
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
-/**
- * IE10 viewport hack for Surface/desktop Windows 8 bug
- * Copyright 2014-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- *
- * See the Getting Started docs for more information:
- * http://getbootstrap.com/getting-started/#support-ie10-width
- **/
-@-webkit-viewport {
-  width: device-width;
-}
-@-moz-viewport {
-  width: device-width;
-}
-@-ms-viewport {
-  width: device-width;
-}
-@viewport {
-  width: device-width;
-}
+/* ==============================================================
+   Layout
+   ==============================================================*/
 /* AJAX LOADER */
 /* OFFCANVAS FADE */
 .offcanvas-fade.in {
@@ -244,14 +227,6 @@ body {
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   Modals
-   style declarations for Bootstrap Modals
-   ==============================================================*/
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOP */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
 /* VIEWER COMPONENTS */
 /* ==============================================================
    Alphabetic Paginator
@@ -274,6 +249,10 @@ body {
 /* BLOCK */
 .bookshelf-navigation {
   /* ELEMENT */
+  /* TOOGLE DROPDOWN */
+  /* DROPDOWN */
+  /* DROPDOWN LIST */
+  /* DROPDOWN ACTIONS */
 }
 /* POPUPS */
 /* BLOCK */
@@ -378,11 +357,19 @@ body {
 /* BLOCK */
 .login-navigation {
   /* ELEMENT */
-  /* LOGIN DROPDOWN */
-  /* USER DROPDOWN */
+  /* NOT LOGGED IN */
+  /* LOGGED IN */
 }
-.login-navigation__user-icon {
-  /* MODIFICATION */
+.login-navigation [data-login="false"] .login-navigation {
+  /* LOGIN DROPDOWN */
+  /* DROPDOWN ACTIONS */
+  /* DROPDOWN OPTIONS */
+  /* OPEN ID */
+}
+.login-navigation [data-login="true"] .login-navigation {
+  /* TOGGLE USER DROPDOWN */
+  /* USER DROPDOWN */
+  /* USER DROPDOWN ACTION */
 }
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
@@ -1178,6 +1165,11 @@ body {
    View Thumbs
    style declarations for viewThumbs.xhtml 
    ==============================================================*/
+/* VIEW THUMBS */
+/* BLOCK */
+.view-thumbs {
+  /* ELEMENT */
+}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */

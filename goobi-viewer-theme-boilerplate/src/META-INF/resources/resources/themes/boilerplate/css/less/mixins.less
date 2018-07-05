@@ -21,7 +21,7 @@
 	background-size: @size;
 }
 /* CSS TRIANGLE */
-.mx-triangle(@top: 0; @left: 0; @bWidth: 10px; @bcTop: transparent; @bcRight: transparent; @bcBottom: #000; @bcLeft: transparent;) {
+.mx-triangle(@top: 0; @left: 0; @bWidth: 10px; @bcTop: transparent; @bcRight: transparent; @bcBottom: #000; @bcLeft: transparent) {
 	position: relative;
 	&:after {
 		content: "";
@@ -35,6 +35,11 @@
 		border-style: solid;
 		border-color: @bcTop @bcRight @bcBottom @bcLeft;
 	}
+}
+/* HIDDEN */
+.mx-visible {
+	display: block !important;
+	visibility: visible !important;
 }
 /* HIDDEN */
 .mx-hidden {
@@ -55,4 +60,10 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(@width, 1fr));
   grid-gap: @gap;
+}
+/* LIST RESET */
+.mx-list-reset {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
