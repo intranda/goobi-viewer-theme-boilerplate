@@ -28,6 +28,17 @@
     			addNewBookshelf: "#{msg.bookshelf_addNewBookShelf}"
     		}
     	};
+    	
+    	// set readingmode config
+    	if ( currentPage === "readingmode" ) {
+    		var readingModeConfig = {
+    			msg: {
+            		fileNotFound: "#{msg.noImage_fileNotFound}"
+            	}
+            };
+                
+            viewImage.readingMode.init( readingModeConfig );
+    	}
     </script>
     <script type="text/javascript" src="#{request.contextPath}/resources/themes/#{navigationHelper.theme}/javascript/dist/custom.min.js"></script>
 </ui:composition>
