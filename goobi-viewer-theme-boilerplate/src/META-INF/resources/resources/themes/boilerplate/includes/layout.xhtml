@@ -24,7 +24,7 @@
     <header id="pageHeader" class="page-header">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-4">
+                <div class="col-xs-12 col-sm-3">
                     <!-- SEARCH FIELD -->
                     <div class="page-header__search">
                         <ui:fragment rendered="#{navigationHelper.currentPage != 'search' and navigationHelper.currentPage != 'searchadvanced' and navigationHelper.currentPage != 'searchlist'}">
@@ -32,17 +32,23 @@
                         </ui:fragment>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4">
+                <div class="col-xs-12 col-sm-3">
                     <!-- CHANGE LOCAL -->
                     <div class="page-header__language">
                         <viewerComponent:changeLocal toggleLanguage="false" />
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4">
+                <div class="col-xs-12 col-sm-3">
                     <!-- WATCHLIST/BOOKSHELVES -->
                     <div class="page-header__bookshelves">
                         <viewerComponent:bookshelfNavigation />
                     </div>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <!-- LOGIN NAVIGATION -->
+                    <ui:fragment rendered="#{navigationHelper.currentPage != 'user'}">
+                        <viewerComponent:loginNavigation />
+                    </ui:fragment>
                 </div>
             </div>
 
