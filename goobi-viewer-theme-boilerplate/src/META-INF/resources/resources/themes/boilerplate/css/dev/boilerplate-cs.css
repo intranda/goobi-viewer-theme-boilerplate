@@ -11,12 +11,19 @@
    Theme Fonts
    ==============================================================*/
 /* ==============================================================
-   GEneral Styling
+   General Styling
    ==============================================================*/
 html,
 body {
   overflow-x: hidden;
   /* Prevent scroll on narrow devices */
+}
+body {
+  font-feature-settings: "kern" 1;
+  -webkit-font-kerning: normal;
+          font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
@@ -120,6 +127,11 @@ body {
 /* BACKGROUND IMAGE */
 /* CSS TRIANGLE */
 /* HIDDEN */
+.mx-visible {
+  display: block !important;
+  visibility: visible !important;
+}
+/* HIDDEN */
 .mx-hidden {
   display: none !important;
   visibility: hidden !important;
@@ -134,6 +146,12 @@ body {
   overflow: hidden;
 }
 /* GRID */
+/* LIST RESET */
+.mx-list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 /* ==============================================================
    Print CSS
    style declarations for print views

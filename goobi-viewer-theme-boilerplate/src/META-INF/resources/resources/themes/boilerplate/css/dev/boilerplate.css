@@ -33,6 +33,11 @@
 /* BACKGROUND IMAGE */
 /* CSS TRIANGLE */
 /* HIDDEN */
+.mx-visible {
+  display: block !important;
+  visibility: visible !important;
+}
+/* HIDDEN */
 .mx-hidden {
   display: none !important;
   visibility: hidden !important;
@@ -47,13 +52,26 @@
   overflow: hidden;
 }
 /* GRID */
+/* LIST RESET */
+.mx-list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 /* ==============================================================
-   GEneral Styling
+   General Styling
    ==============================================================*/
 html,
 body {
   overflow-x: hidden;
   /* Prevent scroll on narrow devices */
+}
+body {
+  font-feature-settings: "kern" 1;
+  -webkit-font-kerning: normal;
+          font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
@@ -71,6 +89,9 @@ body {
    Resets for CSS Libs
    ==============================================================*/
 /* BOOTSTRAP */
+/* TABS */
+/* FORMS */
+/* MODALS */
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
@@ -413,6 +434,10 @@ body {
   /* ELEMENT */
   /* STANDARD MENU */
   /* MEGA MENU */
+}
+.navigation__user-login {
+  display: none !important;
+  visibility: hidden !important;
 }
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
@@ -1807,6 +1832,15 @@ body {
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* CMS VIEWS */
+/* ==============================================================
+   CMS Collections
+   style declarations for adminCmsCollections.xhtml
+   ==============================================================*/
+/* CMS COLLECTIONS */
+/* BLOCK */
+.cms-collections {
+  /* ELEMENT */
+}
 /* ==============================================================
    CMS Create Page
    style declarations for adminCmsCreatePage.xhtml
