@@ -11,6 +11,8 @@
     xmlns:widgetComponent="http://xmlns.jcp.org/jsf/composite/components/widgets"
     xmlns:templateComponent="http://xmlns.jcp.org/jsf/composite/themes/boilerplate/components">
 
+    <!-- ### COMPONENTS ### -->
+    
     <!-- MOBILE TOGGLES -->
     <viewerComponent:mobileToggles />
 
@@ -20,73 +22,53 @@
     <!-- OFFCANVAS FADE -->
     <div class="offcanvas-fade"></div>
 
+    <!-- SEARCH FIELD -->
+    <ui:fragment 
+        rendered="#{navigationHelper.currentPage != 'search' and 
+                    navigationHelper.currentPage != 'searchadvanced' and 
+                    navigationHelper.currentPage != 'searchlist'}">
+        <widgetComponent:widget_searchField />
+    </ui:fragment>
+
+    <!-- CHANGE LOCAL -->
+    <viewerComponent:changeLocal toggleLanguage="false" />
+
+    <!-- WATCHLIST/BOOKSHELVES -->
+    <viewerComponent:bookshelfNavigation />
+
+    <!-- LOGIN NAVIGATION -->
+    <ui:fragment rendered="#{navigationHelper.currentPage != 'user'}">
+        <viewerComponent:loginNavigation />
+    </ui:fragment>
+
+    <!-- DESKTOP NAVIGATION -->
+    <viewerComponent:navigation megaMenu="false" />
+
+    <!-- BREADCRUMBS -->
+    <ui:insert name="breadcrumbs" />
+
+    <!-- SIDEBAR WIDGETS -->
+    <ui:insert name="sidebar" />
+
+    <!-- RSS FEED -->
+    <ui:insert name="rssFeed" />
+
+    <!-- CONTENT -->
+    <ui:insert name="content" />
+    
+    <!-- ### LAYOUT ### -->
+
     <!-- HEADER -->
     <header id="pageHeader" class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-3">
-                    <!-- SEARCH FIELD -->
-                    <div class="page-header__search">
-                        <ui:fragment rendered="#{navigationHelper.currentPage != 'search' and navigationHelper.currentPage != 'searchadvanced' and navigationHelper.currentPage != 'searchlist'}">
-                            <widgetComponent:widget_searchField />
-                        </ui:fragment>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    <!-- CHANGE LOCAL -->
-                    <div class="page-header__language">
-                        <viewerComponent:changeLocal toggleLanguage="false" />
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    <!-- WATCHLIST/BOOKSHELVES -->
-                    <div class="page-header__bookshelves">
-                        <viewerComponent:bookshelfNavigation />
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    <!-- LOGIN NAVIGATION -->
-                    <ui:fragment rendered="#{navigationHelper.currentPage != 'user'}">
-                        <viewerComponent:loginNavigation />
-                    </ui:fragment>
-                </div>
-            </div>
-
-            <!-- MAIN NAVIGATION -->
-            <div class="row">
-                <div class="col-xs-12">
-                    <!-- DESKTOP NAVIGATION -->
-                    <viewerComponent:navigation megaMenu="false" />
-                </div>
-            </div>
-        </div>
+        <div class="container"></div>
     </header>
 
     <!-- MAIN -->
     <div id="pageContent" class="page-content">
         <div class="container">
-            <!-- BREADCRUMBS -->
-            <ui:insert name="breadcrumbs" />
+            <aside id="sidebar" class="page-content__sidebar"></aside>
 
-            <aside id="sidebar" class="col-xs-9 col-sm-3 page-content__sidebar">
-                <!-- CLOSE SIDEBAR ON MOBILE -->
-                <div class="page-content__close-sidebar">
-                    <button type="button" class="btn-clean" data-toggle="close-sidebar">
-                        <i class="fa fa-times" aria-hidden="true"></i>
-                    </button>
-                </div>
-
-                <!-- SIDEBAR WIDGETS -->
-                <ui:insert name="sidebar" />
-
-                <!-- RSS FEED -->
-                <ui:insert name="rssFeed" />
-            </aside>
-
-            <main id="main" class="col-xs-12 col-sm-9 page-content__main"> 
-                <!-- CONTENT --> 
-                <ui:insert name="content" />
-            </main>
+            <main id="main" class="page-content__main"></main>
         </div>
     </div>
 
