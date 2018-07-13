@@ -1,26 +1,23 @@
 /* ==============================================================
-   Template Navigation
-   style declarations for templateNavigation.xhtml
+   Mobile Navigation
+   style declarations for mobileNavigation.xhtml
    ==============================================================*/
-#toggleMobileNav {
-    .icon-bar {}
-}
-
-#mobileNav {
-    ul {
-        li {
-            a {
-                &.mainnav-active {}
-            }
-            &:hover > ul {}
-            &:last-child {}
-        }
-    }
+/* MOBILE NAVIGATION */
+/* BLOCK */
+.mobile-navigation {
+    /* ELEMENT */
+    ul {}
+    li {}
+	a {
+		&.mainnav-active {}
+	}
+	/* USER LOGIN */
+	&__user-login {}
+	/* SUBNAV */
     .mainsubnav {
         h3 {}
-        li {
-            a {}
-        }
+        li {}
+        a {}
     }
 }
 
