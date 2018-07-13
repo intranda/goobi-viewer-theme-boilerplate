@@ -2,7 +2,8 @@ module.exports = function(grunt) {
 	// ---------- PROJECT CONFIG ----------
     grunt.initConfig({
         theme: {
-            name: 'boilerplate'
+            name: 'boilerplate',
+            subThemeOne: 'boilerplate-subtheme'
         },
         pkg: grunt.file.readJSON('package.json'),
         src: {
@@ -10,6 +11,7 @@ module.exports = function(grunt) {
             jsDistFolder: 'src/META-INF/resources/resources/themes/<%=theme.name%>/javascript/dist/',
             lessDevCsFolder: 'src/META-INF/resources/resources/themes/<%=theme.name%>/css/less/cs/',
             lessDevViewerFolder: 'src/META-INF/resources/resources/themes/<%=theme.name%>/css/less/viewer/',
+            lessDevSubThemeOneFolder: 'src/META-INF/resources/resources/themes/<%=theme.name%>/css/less/subthemes/<%=theme.subThemeOne%>/',
             cssDevFolder: 'src/META-INF/resources/resources/themes/<%=theme.name%>/css/dev/',
             cssDistFolder: 'src/META-INF/resources/resources/themes/<%=theme.name%>/css/dist/'
         },
@@ -26,6 +28,7 @@ module.exports = function(grunt) {
                 files: {
                     '<%=src.cssDevFolder %><%=theme.name%>.css': '<%=src.lessDevViewerFolder%>constructor.less',
                     '<%=src.cssDevFolder %><%=theme.name%>-cs.css': '<%=src.lessDevCsFolder%>csConstructor.less',
+                    '<%=src.cssDevFolder %><%=theme.subThemeOne%>.css': '<%=src.lessDevSubThemeOneFolder%>subThemeConstructor.less',
                 }
             },
             production: {
@@ -41,6 +44,7 @@ module.exports = function(grunt) {
                 files: {
                     '<%=src.cssDistFolder %><%=theme.name%>.min.css': '<%=src.lessDevViewerFolder%>constructor.less',
                     '<%=src.cssDistFolder %><%=theme.name%>-cs.min.css': '<%=src.lessDevCsFolder%>csConstructor.less',
+                    '<%=src.cssDistFolder %><%=theme.subThemeOne%>.min.css': '<%=src.lessDevSubThemeOneFolder%>subThemeConstructor.less',
                 }
             }
         },

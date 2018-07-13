@@ -34,6 +34,11 @@
     <!-- custom CSS -->
     <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/themes/#{navigationHelper.theme}/css/dist/#{navigationHelper.theme}.min.css" />
     
+    <!-- SUBTHEME CSS -->
+    <h:panelGroup rendered="#{navigationHelper.subThemeDiscriminatorValue != null and navigationHelper.subThemeDiscriminatorValue != '-'}">
+        <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/themes/#{navigationHelper.theme}/css/dist/#{navigationHelper.subThemeDiscriminatorValue}.min.css" />
+    </h:panelGroup>
+    
     <!-- JavaScript -->
     <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/reactiveX/rx.lite.min.js"></script>
     <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/q-promises/q.min.js"></script>

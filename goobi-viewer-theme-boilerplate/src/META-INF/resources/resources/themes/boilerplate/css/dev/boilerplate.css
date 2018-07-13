@@ -397,9 +397,16 @@ body {
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
-   Template Navigation
-   style declarations for templateNavigation.xhtml
+   Mobile Navigation
+   style declarations for mobileNavigation.xhtml
    ==============================================================*/
+/* MOBILE NAVIGATION */
+/* BLOCK */
+.mobile-navigation {
+  /* ELEMENT */
+  /* USER LOGIN */
+  /* SUBNAV */
+}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
@@ -1107,6 +1114,19 @@ body {
   /* BLOCK */
 }
 #viewMetadataDownloads ul li.dl-links {
+  /* ELEMENT */
+}
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   View Mirador
+   style declarations for viewMirador.xhtml 
+   ==============================================================*/
+/* VIEW MIRADOR */
+/* BLOCK */
+.view-mirador {
   /* ELEMENT */
 }
 /* BREAKPOINT FOR LARGE DESKTOPS */
