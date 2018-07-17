@@ -50,12 +50,16 @@
                 &:focus,
                 &:active {}
             }
-            &.reset {}
+            &.reset {
+            	&.focus {}
+            }
             &.search {
                 a {}
             }
         }
-        .form-control {}
+        .form-control {
+        	&:focus {}
+        }
     }
     /* LINKS */
     &__links {
