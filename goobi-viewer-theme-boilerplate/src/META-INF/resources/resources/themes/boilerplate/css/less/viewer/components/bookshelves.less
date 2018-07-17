@@ -20,25 +20,47 @@
 			.empty {}
 		}
 		h4 {}
-		a {}
+		a {
+			&:hover,
+			&:active,
+			&:focus {}
+		}
 	}
 	&__dropdown-list-counter {}
 	&__dropdown-list-image {}
 	&__dropdown-list-remove {
-		[data-bookshelf-type="delete"] {}
+		[data-bookshelf-type="delete"] {
+			&:hover,
+			&:active,
+			&:focus {}
+		}
 	}
 	/* DROPDOWN ACTIONS */
 	&__dropdown-list-actions {}
 	&__dropdown-list-reset,
-	&__dropdown-list-send {
-		a, button {}
+	&__dropdown-list-send,
+	&__dropdown-list-mirador {
+		a, button {
+			&:hover,
+			&:active,
+			&:focus {}
+		}
 	}
 	&__dropdown-list-reset {
-		button {}
+		button {
+			span {}
+			.fa {}
+		}
 	}
-	&__dropdown-list-send {
-		a {}
+	&__dropdown-list-send,
+	&__dropdown-list-mirador {
+		a {
+			span {}
+			.fa {}
+		}
 	}
+	&__dropdown-list-send {}
+	&__dropdown-list-mirador {}
 }
 
 /* POPUPS */
