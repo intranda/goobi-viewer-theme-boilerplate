@@ -13,6 +13,7 @@
 /* FONTS */
 /* BASIC COLORS */
 /* CI COLORS */
+/* MESSAGE COLORS */
 /* STATISTICS COLORS */
 /* NER COLORS */
 /* READING MODE COLORS */
@@ -508,10 +509,6 @@ body {
   /* ELEMENT */
   /* MODIFICATION */
 }
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOP */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
@@ -1058,7 +1055,6 @@ body {
 .my-searches {
   /* ELEMENT */
 }
-/* DEPRECATED SINCE 3.4 */
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
@@ -1530,6 +1526,18 @@ body {
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
+/* CMS MODULES */
+/* ==============================================================
+   CMS Module Options
+   ==============================================================*/
+/* OPTIONS */
+.cms-module {
+  /* OPTION GROUP */
+}
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
 /* CMS COMPONENTS */
 /* ==============================================================
    CMS Component "Collection Tiled"
@@ -1704,12 +1712,15 @@ body {
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
    CMS Template Single Collection
-   style declarations for cms_template_12_singleCollection.xhtml
+   style declarations for cms_template_13_singleCollection.xhtml
    ==============================================================*/
 /* TPL SINGLE COLLECTION */
 /* BLOCK */
 .tpl-single-collection {
   /* ELEMENT */
+}
+.tpl-single-collection .search-list {
+  /* OPTIONS */
 }
 /* MODIFICATION */
 /* BREAKPOINT FOR LARGE DESKTOPS */
@@ -1893,6 +1904,17 @@ body {
    CMS Menu Items
    style declarations for adminCmsMenuItems.xhtml
    ==============================================================*/
+/* CMS MENU */
+.cms-menu {
+  /* HEADER */
+  /* SAVE */
+  /* SELECT THEME */
+  /* MENU EDITOR */
+  /* VISIBLE/AVAILABLE ITEMS */
+  /* AVAILABLE ITEMS */
+  /* PAGES */
+  /* ITEMS */
+}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
