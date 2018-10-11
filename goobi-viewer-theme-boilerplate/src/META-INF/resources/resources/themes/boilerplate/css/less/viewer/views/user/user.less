@@ -2,16 +2,34 @@
    User
    style declarations for user.xhtml
    ==============================================================*/
-/* USER */
+/* USER LOGIN */
 /* BLOCK */
-.user {
-	/* ELEMENT */
+.user-login {
+	/* LOCAL */
 	&__local {}
+	/* EXTERNAL */
+	&__external {
+		.user-login {
+			&__options {
+				li {}
+			}
+		}
+	}
+	/* OPEN ID */
+	&__openid {}
+	/* ELMENTS */
 	&__action {
 		.btn {}
 	}
 	&__options {}
-	&__openid {}
+}
+
+/* USER LOGIN CARD */
+.user-login {
+	&__card {
+		h3 {}
+	}
+	&__card-body {}
 }
 
 /* BREAKPOINT FOR LARGE DESKTOPS */

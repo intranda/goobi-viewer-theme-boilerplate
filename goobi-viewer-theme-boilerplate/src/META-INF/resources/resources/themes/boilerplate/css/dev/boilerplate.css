@@ -903,11 +903,15 @@ body {
    User
    style declarations for user.xhtml
    ==============================================================*/
-/* USER */
+/* USER LOGIN */
 /* BLOCK */
-.user {
-  /* ELEMENT */
+.user-login {
+  /* LOCAL */
+  /* EXTERNAL */
+  /* OPEN ID */
+  /* ELMENTS */
 }
+/* USER LOGIN CARD */
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
