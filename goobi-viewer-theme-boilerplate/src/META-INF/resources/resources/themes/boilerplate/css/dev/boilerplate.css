@@ -197,7 +197,11 @@ body {
    Buttons
    style declarations for buttons
    ==============================================================*/
-/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BUTTONS */
+.btn {
+  /* MODIFICATION */
+}
+/* MODIFICATIONS */
 /* BREAKPOINT FOR DESKTOP */
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */

@@ -2,40 +2,51 @@
    Buttons
    style declarations for buttons
    ==============================================================*/
-.btn,
-.btn.ui-button,
-a.btn,
-input.btn,
-.btn.ui-button,
-.btn-search,
-.btn-clean,
-.btn-inactive {
+/* BUTTONS */
+.btn {
+	&:hover,
+	&:active,
 	&:focus,
-    &:active {}
+	&.active {}
+	/* MODIFICATION */
+	&--default {
+		&:hover,
+		&:active,
+		&:focus {}
+	}
+	&--success {
+		&:hover,
+		&:active,
+		&:focus {}
+	}
+	&--danger {
+		&:hover,
+		&:active,
+		&:focus {}
+	}
+	&--full {
+		&:hover,
+		&:active,
+		&:focus {}
+	}
+	&--clean {}
+	&--link {
+		&:hover,
+		&:active,
+		&:focus {}
+	}
+	&--hidden {}
+	&--inactive {}
+	&--icon {
+		&:hover,
+		&:focus,
+		&:active {}
+	}
 }
 
-.btn,
-.btn.ui-button {
-    &:hover {}
-}
+/* MODIFICATIONS */
+a.btn--icon {}
 
-a.btn {}
-
-input.btn,
-.btn.ui-button {
-    .ui-button-text {}
-    &:hover {
-        .ui-button-text {}
-    }    
-}
-
-.btn-search {}
-
-.btn-clean {}
-
-.btn-inactive {}
-
-/* BREAKPOINT FOR LARGE DESKTOPS */
 @media screen and (max-width: @largeBreakpoint) {} 
 
 /* BREAKPOINT FOR DESKTOP */
