@@ -20,7 +20,7 @@ module.exports = function(grunt) {
                 options: {
                     paths: [ '<%=src.lessDevViewerFolder%>', '<%=src.lessDevCsFolder%>' ],
                     plugins: [
-                        new ( require( 'less-plugin-autoprefix' ) ) ( { browsers: ["last 2 versions"] } )
+                        new ( require( 'less-plugin-autoprefix' ) ) ( { browsers: ["last 2 versions"], grid: true } )
                     ],
                     compress: false,
                     optimization: 9
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
                 options: {
                     paths: [ '<%=src.lessDevViewerFolder%>', '<%=src.lessDevCsFolder%>'  ],
                     plugins: [
-                        new ( require( 'less-plugin-autoprefix' ) ) ( { browsers: ["last 2 versions"] } )
+                        new ( require( 'less-plugin-autoprefix' ) ) ( { browsers: ["last 2 versions"], grid: true } )
                     ],
                     compress: true,
                     sourceMap: true,
