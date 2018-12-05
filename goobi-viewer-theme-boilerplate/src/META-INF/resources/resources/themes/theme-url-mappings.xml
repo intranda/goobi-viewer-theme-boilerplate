@@ -19,5 +19,12 @@
         <view-id value="/resources/themes/boilerplate/pages/styles.xhtml" />
         <action onPostback="false">#{searchBean.setActiveSearchType(0)}</action>
     </url-mapping>
-
+    
+    <!-- LIDO MAPPING -->
+    <url-mapping>
+		<pattern value="/id/#{pi:activeDocumentBean.persistentIdentifier}/" />
+		<view-id value="/viewObject.xhtml" />
+		<action onPostback="false">#{activeDocumentBean.open}</action>
+		<action phaseId="RENDER_RESPONSE">#{navigationHelper.changeTheme}</action>
+	</url-mapping>
 </pretty-config>
