@@ -2,55 +2,57 @@
    Widget Toc
    style declarations for widget_toc.xhtml
    ==============================================================*/
-#widgetToc {
-    #AJAXLoaderSidebarToc {}
-    .widget-toc-title {
-        h3 {}
-        .widget-toc-title-expand {
-            li {
-                a {
-                	.fa-stack {}
-                }
-            }
-        }
-    }
-    .widget-toc-elem-wrapp {
-        ul {
-            li {
-                &.parent {
-                    .widget-toc-elem-link {
-                        a {}
-                    }
-                }
-                &.last-child {                
-                    .widget-toc-elem-link {
-                        &:after {}
-                    }
-                }
-                .widget-toc-elem-expand {
-                    a {
-                        .fa-stack {}
-                    }
-                }
-                .widget-toc-elem-link {
-                    &:before {}
-                    &:hover,
-                    &:focus,
-                    &:active {}
-                    &:hover {}
-                    a {
-                        &.active {}
-                    }
-                }
-            }
-        }
-    }
+/* WIDGET TOC */
+.widget-toc {
+	/* TITLE */
+	&__title {
+		h3 {}
+	}
+	&__title-expand {
+		a {
+			&:hover,
+			&:active,
+			&:focus {}
+			&:first-child {}
+		}
+	}
+	/* ELEMENTS */
+	&__elements {
+		ul {}
+	}
+	&__element {
+		&:hover {}
+		&.parent {}
+		&.child {}
+		&.active {}
+	}
+	&__element-expand {}
+	&__element-link {
+		a {
+			&:hover,
+			&:active,
+			&:focus {}
+		}
+		&.has-pagenumber {}
+		&.non-tree-view {
+			&.has-pagenumber {}			
+		}
+		&.active {
+			a {}
+		}
+	}
+	&__element-pagenumber {}
+	/* LOADING */
+	&__loader,
+	&__overlay {}
+	&__loader {}
+	&__overlay {}
 }
 
 /* BREAKPOINT FOR LARGE DESKTOPS */
 @media screen and (max-width: @largeBreakpoint) {}
 
-/* BREAKPOINT FOR DESKTOPS */
+/* BREAKPOINT FOR DESKTOP */
 @media screen and (max-width: @mediumBreakpoint) {}
 
 /* BREAKPOINT FOR TABLETS */
