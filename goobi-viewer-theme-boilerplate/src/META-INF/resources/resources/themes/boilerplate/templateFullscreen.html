@@ -22,14 +22,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title><h:outputText value="#{activeDocumentBean.titleBarLabel} - " rendered="#{activeDocumentBean.titleBarLabel != null}" />Theme Boilerplate</title>
+    <title><h:outputText value="#{activeDocumentBean.titleBarLabel} - " rendered="#{activeDocumentBean.titleBarLabel != null}" />intranda GmbH</title>
     
     <!-- Favicon -->
     <link rel="shortcut icon" href="#{request.contextPath}/resources/themes/#{navigationHelper.theme}/images/template/favicon.ico" />
     
     <!-- RELATIVE URL TAGS -->
     <h:outputText escape="false" value="#{activeDocumentBean.relativeUrlTags}" />
-
+    
     <!-- basic CSS -->
     <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/libs/bs/bootstrap.min.css" />
     <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/libs/jQueryUI-1.11.0/jquery-ui.min.css" />
@@ -69,10 +69,10 @@
 
 <ui:insert name="metadata" />
 
-<h:body id="readingMode">
+<h:body id="fullscreen">
     <f:view locale="#{navigationHelper.locale}">    
         <!-- CONTENT READINGMODE -->
-        <ui:insert name="content-readingmode" />
+        <ui:insert name="content-fullscreen" />
         
         <!-- CUSTOM JS -->
         <ui:include src="includes/customJS.xhtml" />
