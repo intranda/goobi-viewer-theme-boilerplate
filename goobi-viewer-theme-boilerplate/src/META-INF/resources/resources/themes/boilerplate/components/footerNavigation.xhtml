@@ -12,19 +12,17 @@
 
     <!-- component content -->
 	<composite:implementation>
-		<nav id="footerNavigation">
+		<nav class="page-footer__navigation">
             <ul>
                 <li>
                     <a href="#{request.contextPath}/sitelinks/">#{msg.sitelinks}</a>
                 </li>
 				<li>
-					<a href="#{request.contextPath}/feedback/">#{msg.feedbackLeaveFeedback}</a> |
+					<a href="#{request.contextPath}/feedback/">#{msg.feedbackLeaveFeedback}</a>
 				</li>
-				<h:panelGroup rendered="#{configurationBean.piwikTracking}">
-					<li>
-						<a href="#{request.contextPath}/privacy/">#{msg.privacy}</a> |
-					</li>
-				</h:panelGroup>
+                <li>
+                    <a href="#{request.contextPath}/privacy/">#{msg.privacy}</a>
+                </li>
                 <li>
                     powered by <a href="#{msg.intrandaViewer}" target="_blank">Goobi viewer</a>
                 </li>
