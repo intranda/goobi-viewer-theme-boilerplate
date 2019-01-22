@@ -42,7 +42,7 @@
     <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/themes/#{navigationHelper.theme}/css/dist/#{navigationHelper.theme}.min.css" />
     
     <!-- SUBTHEME CSS -->
-    <h:panelGroup rendered="#{navigationHelper.subThemeDiscriminatorValue != null and navigationHelper.subThemeDiscriminatorValue != '-'}">
+    <h:panelGroup rendered="#{navigationHelper.subthemeSelected}">
         <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/themes/#{navigationHelper.theme}/css/dist/#{navigationHelper.subThemeDiscriminatorValue}.min.css" />
     </h:panelGroup>
 
