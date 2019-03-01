@@ -14,11 +14,36 @@
 /* BASIC COLORS */
 /* CI COLORS */
 /* MESSAGE COLORS */
-/* STATISTICS COLORS */
+/* BUTTON COLORS */
+/* STATISTICS */
 /* NER COLORS */
 /* READING MODE COLORS */
 /* CROWDSOURCING COLORS */
 /* MEDIA QUERY BREAK POINTS */
+/* ==============================================================
+   Theme Fonts
+   ==============================================================*/
+/* ==============================================================
+   General Styling
+   ==============================================================*/
+body {
+  font-feature-settings: "kern" 1;
+  -webkit-font-kerning: normal;
+          font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOPS */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   Layout
+   ==============================================================*/
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOPS */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
    LESS Mixins
    ==============================================================*/
@@ -60,117 +85,6 @@
   list-style: none;
 }
 /* ==============================================================
-   General Styling
-   ==============================================================*/
-body {
-  font-feature-settings: "kern" 1;
-  -webkit-font-kerning: normal;
-          font-kerning: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOPS */
-/* BREAKPOINT FOR TABLETS */
-@media screen and (max-width: 768px) {
-  body {
-    padding-top: 52px;
-  }
-}
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   Theme Fonts
-   ==============================================================*/
-/* ==============================================================
-   Resets for CSS Libs
-   ==============================================================*/
-/* BOOTSTRAP */
-/* TABS */
-/* FORMS */
-/* MODALS */
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOPS */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   Layout
-   ==============================================================*/
-/* AJAX LOADER */
-/* OFFCANVAS FADE */
-.offcanvas-fade.in {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-}
-/* HEADER */
-/* BLOCK */
-.page-header {
-  /* ELEMENT */
-}
-/* CONTENT */
-/* BLOCK */
-.page-content {
-  /* ELEMENT */
-}
-.page-content__close-sidebar {
-  display: none;
-  margin-bottom: 1.3125rem;
-}
-.page-content__close-sidebar button {
-  display: block;
-  width: 100%;
-  text-align: right;
-}
-/* FOOTER */
-/* BLOCK */
-.page-footer {
-  /* ELEMENT */
-}
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOPS */
-/* BREAKPOINT FOR TABLETS */
-@media screen and (max-width: 768px) {
-  /* HEADER */
-  /* CONTENT */
-  /* SIDEBAR */
-  .page-content #sidebar {
-    position: fixed;
-    float: none;
-    top: 0;
-    left: -50%;
-    bottom: 0;
-    width: 50%;
-    padding: 15px;
-    border-right: 1px solid #ccc;
-    background-color: #fff;
-    overflow-y: auto;
-    transition: all .3s linear;
-    z-index: 1000;
-  }
-  .page-content #sidebar.in {
-    left: 0;
-  }
-  .page-content__close-sidebar {
-    display: block;
-  }
-  /* FOOTER */
-}
-/* BREAKPOINT FOR SMARTPHONES */
-@media screen and (max-width: 480px) {
-  /* HEADER */
-  /* CONTENT */
-  /* SIDEBAR */
-  .page-content #sidebar {
-    left: -90%;
-    width: 90%;
-  }
-  /* FOOTER */
-}
-/* ==============================================================
    Print CSS
    style declarations for print views
    ==============================================================*/
@@ -187,63 +101,13 @@ body {
     content: "";
   }
 }
-/* BASIC COMPONENTS */
 /* ==============================================================
-   Buttons
-   style declarations for buttons
+   Resets for CSS Libs
    ==============================================================*/
-/* BUTTONS */
-.btn {
-  /* MODIFICATION */
-}
-/* MODIFICATIONS */
-/* BREAKPOINT FOR DESKTOPS */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   Icons
-   style declarations for icons used in viewer
-   ==============================================================*/
-.icon-totop {
-  font-size: 1.5rem;
-  text-align: center;
-}
-/* SEARCHDRILLDOWN ICONS */
-/* SOCIAL MEDIA ICONS */
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOPS */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   Forms
-   style declarations for forms
-   ==============================================================*/
-/* INPUT MODIFICATIONS */
-/* CUSTOM CONTROL */
-/* BLOCK */
-.custom-control {
-  /* ELEMENT */
-  /* MODIFICATION */
-}
-/* INPUT PLACEHOLDER */
-/* WebKit, Blink, Edge */
-::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.25);
-}
-/* Mozilla Firefox 4 to 18 */
-:-moz-placeholder {
-  color: rgba(0, 0, 0, 0.25);
-  opacity: 1;
-}
-/* Mozilla Firefox 19+ */
-::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.25);
-  opacity: 1;
-}
-/* Internet Explorer 10-11 */
-:-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.25);
-}
+/* BOOTSTRAP */
+/* TABS */
+/* FORMS */
+/* MODALS */
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOPS */
 /* BREAKPOINT FOR TABLETS */
@@ -299,6 +163,18 @@ body {
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
+   Buttons
+   style declarations for buttons
+   ==============================================================*/
+/* BUTTONS */
+.btn {
+  /* MODIFICATION */
+}
+/* MODIFICATIONS */
+/* BREAKPOINT FOR DESKTOPS */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
    Change Local
    style declarations for changeLocal.xhtml
    ==============================================================*/
@@ -346,6 +222,54 @@ body {
 .e-pub {
   /* ELEMENT */
 }
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOPS */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   Forms
+   style declarations for forms
+   ==============================================================*/
+/* INPUT MODIFICATIONS */
+/* CUSTOM CONTROL */
+/* BLOCK */
+.custom-control {
+  /* ELEMENT */
+  /* MODIFICATION */
+}
+/* INPUT PLACEHOLDER */
+/* WebKit, Blink, Edge */
+::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.25);
+}
+/* Mozilla Firefox 4 to 18 */
+:-moz-placeholder {
+  color: rgba(0, 0, 0, 0.25);
+  opacity: 1;
+}
+/* Mozilla Firefox 19+ */
+::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.25);
+  opacity: 1;
+}
+/* Internet Explorer 10-11 */
+:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.25);
+}
+/* BREAKPOINT FOR LARGE DESKTOPS */
+/* BREAKPOINT FOR DESKTOPS */
+/* BREAKPOINT FOR TABLETS */
+/* BREAKPOINT FOR SMARTPHONES */
+/* ==============================================================
+   Icons
+   style declarations for icons used in viewer
+   ==============================================================*/
+.icon-totop {
+  font-size: 1.5rem;
+  text-align: center;
+}
+/* SEARCHDRILLDOWN ICONS */
+/* SOCIAL MEDIA ICONS */
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOPS */
 /* BREAKPOINT FOR TABLETS */
@@ -405,41 +329,6 @@ body {
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
-   Mobile Navigation
-   style declarations for mobileNavigation.xhtml
-   ==============================================================*/
-/* MOBILE NAVIGATION */
-/* BLOCK */
-.mobile-navigation {
-  /* ELEMENT */
-  /* USER LOGIN */
-  /* SUBNAV */
-}
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOPS */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   Mobile Toggle Wrapper
-   style declarations for mobileToggles.xhtml
-   ==============================================================*/
-/* MOBILE TOGGLE WRAPPER */
-/* BLOCK */
-#mobileToggleWrapper {
-  /* ELEMENT */
-}
-#mobileToggleWrapper .customer-header-logo span {
-  display: none;
-}
-#mobileToggleWrapper .language,
-#mobileToggleWrapper .search {
-  display: none;
-}
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOPS */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
    Navigation
    style declarations for navigation.xhtml
    ==============================================================*/
@@ -480,15 +369,6 @@ body {
    Normdata
    style declarations for normdata.xhtml 
    ==============================================================*/
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOPS */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   Responsive Column Gallery
-   style declarations for responsiveColumnGallery.xhtml
-   ==============================================================*/
-/* RESPONSIVE COLUMN GALLERY LIGHTBOX */
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOPS */
 /* BREAKPOINT FOR TABLETS */
@@ -1111,24 +991,6 @@ body {
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
-   View Overview
-   style declarations for viewOverview.xhtml 
-   ==============================================================*/
-/* VIEW OVERVIEW */
-/* BLOCK */
-.overview {
-  /* ELEMENT */
-  /* DELETE */
-  /* METADATA */
-  /* DESCRIPTION */
-  /* PUBLICATION */
-  /* HISTORY */
-}
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOPS */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
    View Thumbs
    style declarations for viewThumbs.xhtml 
    ==============================================================*/
@@ -1186,13 +1048,6 @@ body {
 /* BLOCK */
 .widget-bookshelf-list {
   /* BACK */
-}
-.widget-bookshelf-list ul {
-  margin-bottom: 15px;
-}
-.widget-bookshelf-list__back {
-  padding-top: 10px;
-  border-top: 1px solid #ccc;
 }
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOPS */
@@ -1271,14 +1126,6 @@ body {
 /* ==============================================================
    Widget Custom Drilldown
    style declarations for widget_customDrillDown.xhtml
-   ==============================================================*/
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOPS */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   Widget Downloads
-   style declarations for widget_downloads.xhtml
    ==============================================================*/
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOPS */
@@ -1454,43 +1301,6 @@ body {
    ==============================================================*/
 /* WIDGET WORKCOUNT */
 /* BLOCK */
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOPS */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* CMS MODULES */
-/* ==============================================================
-   CMS Module Options
-   ==============================================================*/
-/* OPTIONS */
-.cms-module {
-  /* OPTION GROUP */
-}
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOPS */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* CMS COMPONENTS */
-/* ==============================================================
-   CMS Component "Collection Tiled"
-   ==============================================================*/
-/* COLLECTION TILED */
-/* BLOCK */
-.collection-tiled {
-  /* ELEMENT */
-}
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOPS */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   CMS Component "SOLR Query Collection"
-   ==============================================================*/
-/* SOLR QUERY COLLECTION */
-/* BLOCK */
-.solr-query-collection {
-  /* ELEMENT */
-}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOPS */
 /* BREAKPOINT FOR TABLETS */
@@ -1823,94 +1633,33 @@ body {
 /* BREAKPOINT FOR DESKTOPS */
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
-/* CMS VIEWS */
 /* ==============================================================
-   CMS Collections
-   style declarations for adminCmsCollections.xhtml
+   CMS Template "Overview Page"
+   style declarations for cms_template_25_overviewPage.xhtml
    ==============================================================*/
-/* CMS COLLECTIONS */
-/* BLOCK */
-.cms-collections {
-  /* ELEMENT */
-}
-/* ==============================================================
-   CMS Create Page
-   style declarations for adminCmsCreatePage.xhtml
-   ==============================================================*/
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOPS */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   CMS Media
-   style declarations for adminCmsOverviewMedia.xhtml
-   ==============================================================*/
-/* TRIGGER UPLOAD */
-/* BLOCK */
-/* MEDIA GALLERY */
-/* BLOCK */
-.media-gallery {
-  /* ELEMENT */
-}
-/* MEDIA UPLOAD MODAL */
-/* BLOCK */
-.media-modal {
-  /* ELEMENT */
-}
-/* BREAKPOINT FOR SMARTPHONES */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR DESKTOPS */
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* ==============================================================
-   CMS Menu Items
-   style declarations for adminCmsMenuItems.xhtml
-   ==============================================================*/
-/* CMS MENU */
-.cms-menu {
-  /* HEADER */
-  /* SAVE */
-  /* SELECT THEME */
-  /* MENU EDITOR */
-  /* VISIBLE/AVAILABLE ITEMS */
-  /* AVAILABLE ITEMS */
-  /* PAGES */
-  /* ITEMS */
+/* OVERVIEW PAGE */
+.tpl-overviewpage {
+  /* OVERVIEW */
+  /* LITERATURE / HISTORY */
+  /* LITERATURE */
+  /* HISTORY */
 }
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOPS */
 /* BREAKPOINT FOR TABLETS */
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
-   CMS Overview
-   style declarations for adminCmsOverview.xhtml
+   CMS Template "Overview Page Legacy"
+   style declarations for cms_template_25_overviewPage.xhtml
    ==============================================================*/
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOPS */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   CMS Select Template
-   style declarations for adminCmsSelectTemplate.xhtml
-   ==============================================================*/
-/* CMS SELECT TEMPLATE */
-/* BLOCK */
-.cms-select-template {
-  /* ELEMENT */
+/* OVERVIEW PAGE LEGACY */
+.tpl-overviewpage-legacy {
+  /* OVERVIEW */
+  /* DESCRIPTION / LITERATURE / HISTORY */
+  /* DESCRIPTION */
+  /* LITERATURE */
+  /* HISTORY */
 }
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOPS */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   CMS Static Pages
-   style declarations for adminCmsStaticPages.xhtml
-   ==============================================================*/
-/* STATIC PAGES */
-/* BLOCK */
-.cms-static-pages {
-  /* ELEMENT */
-}
-/* MODIFICATION */
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOPS */
 /* BREAKPOINT FOR TABLETS */

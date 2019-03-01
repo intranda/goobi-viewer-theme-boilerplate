@@ -23,90 +23,14 @@ body {
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOPS */
 /* BREAKPOINT FOR TABLETS */
-@media screen and (max-width: 768px) {
-  body {
-    padding-top: 52px;
-  }
-}
 /* BREAKPOINT FOR SMARTPHONES */
 /* ==============================================================
    Layout
    ==============================================================*/
-/* AJAX LOADER */
-/* OFFCANVAS FADE */
-.offcanvas-fade.in {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-}
-/* HEADER */
-/* BLOCK */
-.page-header {
-  /* ELEMENT */
-}
-/* CONTENT */
-/* BLOCK */
-.page-content {
-  /* ELEMENT */
-}
-.page-content__close-sidebar {
-  display: none;
-  margin-bottom: 1.3125rem;
-}
-.page-content__close-sidebar button {
-  display: block;
-  width: 100%;
-  text-align: right;
-}
-/* FOOTER */
-/* BLOCK */
-.page-footer {
-  /* ELEMENT */
-}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOPS */
 /* BREAKPOINT FOR TABLETS */
-@media screen and (max-width: 768px) {
-  /* HEADER */
-  /* CONTENT */
-  /* SIDEBAR */
-  .page-content #sidebar {
-    position: fixed;
-    float: none;
-    top: 0;
-    left: -50%;
-    bottom: 0;
-    width: 50%;
-    padding: 15px;
-    border-right: 1px solid #ccc;
-    background-color: #fff;
-    overflow-y: auto;
-    transition: all .3s linear;
-    z-index: 1000;
-  }
-  .page-content #sidebar.in {
-    left: 0;
-  }
-  .page-content__close-sidebar {
-    display: block;
-  }
-  /* FOOTER */
-}
 /* BREAKPOINT FOR SMARTPHONES */
-@media screen and (max-width: 480px) {
-  /* HEADER */
-  /* CONTENT */
-  /* SIDEBAR */
-  .page-content #sidebar {
-    left: -90%;
-    width: 90%;
-  }
-  /* FOOTER */
-}
 /* ==============================================================
    LESS Mixins
    ==============================================================*/
@@ -171,7 +95,8 @@ body {
 /* BASIC COLORS */
 /* CI COLORS */
 /* MESSAGE COLORS */
-/* STATISTICS COLORS */
+/* BUTTON COLORS */
+/* STATISTICS */
 /* NER COLORS */
 /* READING MODE COLORS */
 /* CROWDSOURCING COLORS */
