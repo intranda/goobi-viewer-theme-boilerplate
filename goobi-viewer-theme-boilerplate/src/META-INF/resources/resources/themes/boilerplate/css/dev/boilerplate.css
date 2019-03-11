@@ -40,6 +40,11 @@ body {
 /* ==============================================================
    Layout
    ==============================================================*/
+/* ICON TO SCROLL PAGE UP */
+.icon-totop {
+  font-size: 1.5rem;
+  text-align: center;
+}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOPS */
 /* BREAKPOINT FOR TABLETS */
@@ -256,20 +261,6 @@ body {
 :-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.25);
 }
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOPS */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   Icons
-   style declarations for icons used in viewer
-   ==============================================================*/
-.icon-totop {
-  font-size: 1.5rem;
-  text-align: center;
-}
-/* SEARCHDRILLDOWN ICONS */
-/* SOCIAL MEDIA ICONS */
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOPS */
 /* BREAKPOINT FOR TABLETS */
