@@ -2,38 +2,45 @@
    Widgets
    style declarations for sidebar widgets
    ==============================================================*/
+/* WIDGETS */
 .widget {
     h3 {}
-    ul {
-        li {
-            a {
-                &:hover {}
-            }
-            &.active {
-                a {}
-            }
-        }
+    ul {}
+    li {
+    	&.active {
+    		a {}
+    	}
+    	&.unpublished {
+    		a {}
+    	}
     }
-    dl {
-        dt {}
-        dd {}
+    a {
+    	&:hover,
+    	&:active,
+    	&:focus {}
     }
+    dl {}
+    dt,
+    dd {}
+    dt {}
+    dd {}
     &__title {
     	.fa {}
     	&.collapseable {
     		.fa {}
 	    	&.in {
-	    		.fa-chevron-down {}
+	    		.fa-chevron-down {
+	    		}
 	    	}    		
     	}
     }
     &__body {
     	&.collapseable {}
-    }
+    }    
 }
 
 /* BREAKPOINT FOR LARGE DESKTOPS */
-@media screen and (max-width: @largeBreakpoint) {}
+@media screen and (max-width: @largeBreakpoint) {} 
 
 /* BREAKPOINT FOR DESKTOPS */
 @media screen and (max-width: @mediumBreakpoint) {}
