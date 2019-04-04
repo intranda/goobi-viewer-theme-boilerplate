@@ -33,6 +33,11 @@
     <!-- OPENSEARCH -->
     <link rel="search" type="application/opensearchdescription+xml" title="#{configurationBean.name}" href="#{request.contextPath}/rest/opensearch/getxml/" />
     
+    <!-- OEMBED -->
+    <ui:fragment rendered="#{activeDocumentBean.recordLoaded}">
+        <link rel="alternate" type="application/json+oembed" href="#{navigationHelper.applicationUrl}oembed?url=#{navigationHelper.encodedUrl}&amp;format=json" title="Goobi viewer oEmbed Profile" />
+    </ui:fragment>
+    
     <!-- BASIC CSS -->
     <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/libs/bs/bootstrap.min.css" />
     <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/libs/jQueryUI-1.12.1/jquery-ui.min.css" />
