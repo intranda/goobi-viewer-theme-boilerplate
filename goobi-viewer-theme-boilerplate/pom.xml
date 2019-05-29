@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+		http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>io.goobi.viewer.theme</groupId>
+	<artifactId>theme-boilerplate</artifactId>
+	<version>3.4</version>
+	<packaging>war</packaging>
+
+
+	<name>Goobi viewer - Theme Boilerplate</name>
+	<url>https://github.com/intranda/goobi-viewer-theme-boilerplate</url>
+
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jdk.version>1.8</jdk.version>
+	</properties>
+
+
+	<repositories>
+		<repository>
+			<id>maven-intranda</id>
+			<url>https://nexus.intranda.com/repository/maven-intranda</url>
+		</repository>
+	</repositories>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>io.goobi.viewer</groupId>
+			<artifactId>viewer-core</artifactId>
+			<version>3.4-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>io.goobi.viewer</groupId>
+			<artifactId>viewer-core-config</artifactId>
+			<version>3.4-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
+
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<testSourceDirectory>test</testSourceDirectory>
+		<resources>
+			<resource>
+				<directory>src</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		<plugins>
+			<!-- Maven Compiler Plugin -->
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+			<!-- Maven Dependency Plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>3.1.1</version>
+				<executions>
+					<!-- Config files -->
+					<execution>
+						<id>unpack-config</id>
+						<goals>
+							<goal>unpack-dependencies</goal>
+						</goals>
+						<phase>prepare-package</phase>
+						<configuration>
+							<outputDirectory>${project.build.directory}/config/WEB-INF/classes/</outputDirectory>
+							<excludeGroupIds>io.goobi.viewer.module</excludeGroupIds>
+							<excludeArtifactIds>viewer-core</excludeArtifactIds>
+							<includeArtifacIds>viewer-core-config</includeArtifacIds>
+							<excludes>MANIFEST.MF,**/pom.*</excludes>
+							<excludeTransitive>true</excludeTransitive>
+						</configuration>
+					</execution>
+					<!-- CMS core templates -->
+					<execution>
+						<id>unpack-cms-templates</id>
+						<goals>
+							<goal>unpack-dependencies</goal>
+						</goals>
+						<phase>prepare-package</phase>
+						<configuration>
+							<outputDirectory>${project.build.directory}/templates</outputDirectory>
+							<excludeGroupIds>io.goobi.viewer.module</excludeGroupIds>
+							<excludeArtifactIds>viewer-core-config</excludeArtifactIds>
+							<includeArtifacIds>viewer-core</includeArtifacIds>
+							<includes>META-INF/resources/resources/cms/templates/*</includes>
+							<excludeTransitive>true</excludeTransitive>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- Maven WAR Plugin -->
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.2</version>
+				<configuration>
+					<warSourceDirectory>WebContent</warSourceDirectory>
+					<warName>viewer</warName>
+					<wtpversion>2.0</wtpversion>
+					<wtpContextName>viewer</wtpContextName>
+					<packagingExcludes>**/rebel.xml</packagingExcludes>
+					<webResources>
+						<webResource>
+							<directory>${project.build.directory}/config</directory>
+						</webResource>
+						<webResource>
+							<directory>${project.build.directory}/templates/META-INF/resources</directory>
+						</webResource>
+					</webResources>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
