@@ -4,7 +4,7 @@
  * Write {LESS}, do more!
  *
  * This file overwrites the basic style declarations for the
- * Goobi viewer Crowdsourcing (reference-cs.css)
+ * Goobi viewer Crowdsourcing
  **************************************************************/
 /* CORE VARIABLES AND MIXINS */
 /* ==============================================================
@@ -13,8 +13,13 @@
 /* ==============================================================
    General Styling
    ==============================================================*/
+html {
+  font-size: 62.5%;
+}
 body {
-  font-feature-settings: "kern" 1;
+  font-size: 1.6rem;
+  -webkit-font-feature-settings: "kern" 1;
+          font-feature-settings: "kern" 1;
   -webkit-font-kerning: normal;
           font-kerning: normal;
   -webkit-font-smoothing: antialiased;
