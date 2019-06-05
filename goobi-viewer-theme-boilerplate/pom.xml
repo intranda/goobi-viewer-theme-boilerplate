@@ -10,7 +10,7 @@
 	<packaging>war</packaging>
 
 
-	<name>Goobi viewer - Theme Boilerplate</name>
+	<name>goobi-viewer-theme-boilerplate</name>
 	<url>https://github.com/intranda/goobi-viewer-theme-boilerplate</url>
 
 

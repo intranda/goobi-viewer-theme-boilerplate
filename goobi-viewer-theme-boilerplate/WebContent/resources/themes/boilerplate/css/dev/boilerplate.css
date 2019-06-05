@@ -26,8 +26,13 @@
 /* ==============================================================
    General Styling
    ==============================================================*/
+html {
+  font-size: 62.5%;
+}
 body {
-  font-feature-settings: "kern" 1;
+  font-size: 1.6rem;
+  -webkit-font-feature-settings: "kern" 1;
+          font-feature-settings: "kern" 1;
   -webkit-font-kerning: normal;
           font-kerning: normal;
   -webkit-font-smoothing: antialiased;
@@ -292,15 +297,8 @@ body {
 /* LOGIN NAVIGATION */
 /* BLOCK */
 .login-navigation {
-  /* ELEMENT */
   /* NOT LOGGED IN */
   /* LOGGED IN */
-}
-.login-navigation [data-login="false"] .login-navigation {
-  /* LOGIN DROPDOWN */
-  /* DROPDOWN ACTIONS */
-  /* DROPDOWN OPTIONS */
-  /* OPEN ID */
 }
 .login-navigation [data-login="true"] .login-navigation {
   /* TOGGLE USER DROPDOWN */
@@ -828,6 +826,7 @@ body {
   padding: 0;
   list-style: none;
 }
+/* MODIFICATION */
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOPS */
 /* BREAKPOINT FOR TABLETS */
