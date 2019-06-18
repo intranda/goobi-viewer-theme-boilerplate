@@ -6,6 +6,9 @@
 **/.DS_Store
 /package-lock.json
 /target/
+/src/rebel.xml
 /.metadata/
-/.settings/org.eclipse.wst.commons.component
+/.settings/org.eclipse.core.resources.prefs
+/.settings/org.eclipse.wst.common.component
+/.classpath
 /.project
