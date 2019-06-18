@@ -6,3 +6,6 @@
 **/.DS_Store
 /package-lock.json
 /target/
+/.metadata/
+/.settings/org.eclipse.wst.commons.component
+/.project
