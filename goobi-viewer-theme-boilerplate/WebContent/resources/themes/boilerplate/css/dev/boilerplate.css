@@ -124,6 +124,36 @@ body {
 /* BREAKPOINT FOR SMARTPHONES */
 /* VIEWER COMPONENTS */
 /* ==============================================================
+   Forms
+   style declarations for forms
+   ==============================================================*/
+/* INPUT PLACEHOLDER */
+::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.25);
+}
+/* Mozilla Firefox 4 to 18 */
+:-moz-placeholder {
+  color: rgba(0, 0, 0, 0.25);
+  opacity: 1;
+}
+/* Mozilla Firefox 19+ */
+::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.25);
+  opacity: 1;
+}
+/* Internet Explorer 10-11 */
+:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.25);
+}
+/* iOS Webkit Hack to prevent input zoom in */
+/* ==============================================================
+   Form Conrols
+   style declarations for form controls
+   ==============================================================*/
+/* MODIFICATIONS */
+/* DEPRECATED */
+/* WILL BE REMOVED IN NEXT VERSION */
+/* ==============================================================
    Alphabetic Paginator
    style declarations for alphabeticPaginator.xhtml
    ==============================================================*/
@@ -177,9 +207,6 @@ body {
    style declarations for buttons
    ==============================================================*/
 /* BUTTONS */
-.btn {
-  /* MODIFICATION */
-}
 /* MODIFICATIONS */
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOPS */
@@ -232,40 +259,6 @@ body {
 /* BLOCK */
 .e-pub {
   /* ELEMENT */
-}
-/* BREAKPOINT FOR LARGE DESKTOPS */
-/* BREAKPOINT FOR DESKTOPS */
-/* BREAKPOINT FOR TABLETS */
-/* BREAKPOINT FOR SMARTPHONES */
-/* ==============================================================
-   Forms
-   style declarations for forms
-   ==============================================================*/
-/* INPUT MODIFICATIONS */
-/* CUSTOM CONTROL */
-/* BLOCK */
-.custom-control {
-  /* ELEMENT */
-  /* MODIFICATION */
-}
-/* INPUT PLACEHOLDER */
-/* WebKit, Blink, Edge */
-::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.25);
-}
-/* Mozilla Firefox 4 to 18 */
-:-moz-placeholder {
-  color: rgba(0, 0, 0, 0.25);
-  opacity: 1;
-}
-/* Mozilla Firefox 19+ */
-::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.25);
-  opacity: 1;
-}
-/* Internet Explorer 10-11 */
-:-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.25);
 }
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOPS */
@@ -394,6 +387,11 @@ body {
    Title
    style declarations for title.xhtml
    ==============================================================*/
+/* TITLE */
+.title {
+  /* HEADER */
+  /* BODY */
+}
 /* BREAKPOINT FOR LARGE DESKTOPS */
 /* BREAKPOINT FOR DESKTOPS */
 /* BREAKPOINT FOR TABLETS */
