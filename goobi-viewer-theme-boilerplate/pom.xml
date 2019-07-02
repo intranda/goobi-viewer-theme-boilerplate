@@ -6,11 +6,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.goobi.viewer.theme</groupId>
 	<artifactId>theme-boilerplate</artifactId>
-	<version>3.4</version>
+	<version>3.4.0</version>
 	<packaging>war</packaging>
 
 
-	<name>Goobi viewer - Theme Boilerplate</name>
+	<name>goobi-viewer-theme-boilerplate</name>
 	<url>https://github.com/intranda/goobi-viewer-theme-boilerplate</url>
 
 
@@ -22,8 +22,8 @@
 
 	<repositories>
 		<repository>
-			<id>maven-intranda</id>
-			<url>https://nexus.intranda.com/repository/maven-intranda</url>
+			<id>intranda-public</id>
+			<url>https://nexus.intranda.com/repository/maven-public</url>
 		</repository>
 	</repositories>
 
@@ -32,12 +32,13 @@
 		<dependency>
 			<groupId>io.goobi.viewer</groupId>
 			<artifactId>viewer-core</artifactId>
-			<version>3.4-SNAPSHOT</version>
+			<version>3.4.0</version>
 		</dependency>
 		<dependency>
 			<groupId>io.goobi.viewer</groupId>
 			<artifactId>viewer-core-config</artifactId>
 			<version>3.4.1</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 

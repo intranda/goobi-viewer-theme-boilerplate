@@ -7,50 +7,58 @@
 	&:hover,
 	&:active,
 	&:focus,
-	&.active {}
-	/* MODIFICATION */
-	&--default {
-		&:hover,
-		&:active,
-		&:focus {}
-	}
-	&--success {
-		&:hover,
-		&:active,
-		&:focus {}
-	}
-	&--danger {
-		&:hover,
-		&:active,
-		&:focus {}
-	}
-	&--full {
-		&:hover,
-		&:active,
-		&:focus {}
-	}
-	&--clean {}
-	&--link {
-		&:hover,
-		&:active,
-		&:focus {}
-	}
-	&--hidden {}
-	&--inactive {}
-	&--icon {
-		&:hover,
-		&:focus,
-		&:active {}
-	}
+	&:active:focus,
+	&.active,
+	&.active.focus, 
+	&.active:focus, 
+	&.focus, 
+	&:active.focus {}
 }
 
 /* MODIFICATIONS */
-a.btn--icon {}
-button.btn {
+.btn--default {
+	&:hover, 
 	&:active, 
-	&:focus, 
-	&:active:focus {}
+	&:focus {}
 }
+
+.btn--success {
+	&:hover, 
+	&:active, 
+	&:focus {}
+}
+
+.btn--danger {
+	&:hover, 
+	&:active, 
+	&:focus {}
+}
+
+.btn--full {
+	&:hover, 
+	&:active, 
+	&:focus {}
+}
+
+.btn--clean {}
+
+.btn--link {
+	&:hover, 
+	&:active, 
+	&:focus {}
+}
+
+.btn--hidden {}
+
+.btn--inactive {}
+
+.btn--icon {
+	&:hover, 
+	&:active, 
+	&:focus {}
+}
+
+a.btn--icon {}
 
 /* BREAKPOINT FOR LARGE DESKTOPS */
 @media screen and (max-width: @largeBreakpoint) {} 
