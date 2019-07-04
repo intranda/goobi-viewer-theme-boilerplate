@@ -1,6 +1,6 @@
 {
   "name": "goobi-viewer-theme-boilerplate",
-  "version": "3.4.0",
+  "version": "3.5.0",
   "description": "This is a theme template for the Goobi viewer.",
   "author": "intranda GmbH",
   "repository": {
@@ -10,9 +10,7 @@
   "license": "GPL-2.0-or-later",
   "devDependencies": {
     "grunt": "*",
-    "grunt-contrib-concat": "*",
     "grunt-contrib-less": "*",
-    "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
     "grunt-riot": "*",
     "less-plugin-autoprefix": "*"

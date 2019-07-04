@@ -1,19 +1,25 @@
 /***************************************************************
- * viewer custom Stylesheet v3.4.0
+ * viewer custom Stylesheet v3.5.0
  * 
  * Write {LESS}, do more!
  *
  * This file overwrites the basic style declarations for the
  * Goobi viewer
  **************************************************************/
-/* CORE VARIABLES AND MIXINS */
-@import "../variables.less";
-@import "../fonts.less";
-@import "../general.less";
-@import "../layout.less";
-@import "../mixins.less";
-@import "../print.less";
-@import "../resets.less";
+/* MISCELLANEOUS */
+@import "misc/variables.less";
+@import "misc/fonts.less";
+@import "misc/mixins.less";
+@import "misc/resets.less";
+
+/* LAYOUT */
+@import "layout/basics.less";
+@import "layout/header.less";
+@import "layout/sidebar.less";
+@import "layout/content.less";
+@import "layout/footer.less";
+@import "layout/misc.less";
+@import "layout/print.less";
 
 /* VIEWER COMPONENTS */
 @import "components/forms/basics.less";
@@ -130,7 +136,7 @@
 @import "cms/templates/12_templateSingleCollection.less";
 @import "cms/templates/13_templateStaticGrid.less";
 @import "cms/templates/14_templateRSSFeed.less";
-@import "cms/templates/15_templateStackedCollection.less"; 
+@import "cms/templates/15_templateStackedCollection.less";
 @import "cms/templates/16_templateSearchList.less";
 @import "cms/templates/17_templateSearchListAdvanced.less";
 @import "cms/templates/18_templatePrivacy.less";

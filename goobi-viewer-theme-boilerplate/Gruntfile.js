@@ -6,38 +6,44 @@ module.exports = function(grunt) {
             subThemeOne: 'boilerplate-subtheme'
         },
         pkg: grunt.file.readJSON('package.json'),
+        banner: {
+            text: '/*!\n ============================================================\n <%= pkg.name %> \n\n Version: <%= pkg.version %> \n License: <%= pkg.license %> \n Author: <%= pkg.author %> \n Description: <%= pkg.description %> \n ============================================================ \n*/'
+        },
         src: {
-        	jsDevFolder: 'WebContent/resources/themes/<%=theme.name%>/javascript/dev/',
+        	jsFolder: 'WebContent/resources/themes/<%=theme.name%>/javascript/',
             jsDistFolder: 'WebContent/resources/themes/<%=theme.name%>/javascript/dist/',
-            lessDevCsFolder: 'WebContent/resources/themes/<%=theme.name%>/css/less/cs/',
-            lessDevViewerFolder: 'WebContent/resources/themes/<%=theme.name%>/css/less/viewer/',
-            lessDevSubThemeOneFolder: 'WebContent/resources/themes/<%=theme.name%>/css/less/subthemes/<%=theme.subThemeOne%>/',
+            lessFolder: 'WebContent/resources/themes/<%=theme.name%>/css/less/',
+            lessCsFolder: 'WebContent/resources/themes/<%=theme.name%>/css/less/crowdsourcing/',
+            lessSubThemeOneFolder: 'WebContent/resources/themes/<%=theme.name%>/css/less/subthemes/<%=theme.subThemeOne%>/',
+            cssFolder: 'WebContent/resources/themes/<%=theme.name%>/css/',
             cssDistFolder: 'WebContent/resources/themes/<%=theme.name%>/css/dist/'
         },
         less: {
             dist: {
                 options: {
-                    paths: [ '<%=src.lessDevViewerFolder%>', '<%=src.lessDevCsFolder%>'  ],
-                    plugins: [
-                        new ( require( 'less-plugin-autoprefix' ) ) ( { browsers: ["last 2 versions"], grid: true } )
-                    ],
+                	paths: [ '<%=src.lessFolder%>' ],
+                	plugins: [
+                		new (require('less-plugin-autoprefix'))({browsers: ["last 2 versions"]})
+                	],
                     compress: true,
                     sourceMap: true,
-                    outputSourceFiles: true,
-                    banner: '/*!\n ============================================================\n <%= pkg.name %> \n\n Version: <%= pkg.version %> \n License: <%= pkg.license %> \n Author: <%= pkg.author %> \n Description: <%= pkg.description %> \n ============================================================ \n*/',
+                    banner: '<%=banner.text%>',
                 },
                 files: {
-                    '<%=src.cssDistFolder %><%=theme.name%>.min.css': '<%=src.lessDevViewerFolder%>constructor.less',
-                    '<%=src.cssDistFolder %><%=theme.name%>-cs.min.css': '<%=src.lessDevCsFolder%>csConstructor.less',
-                    '<%=src.cssDistFolder %><%=theme.subThemeOne%>.min.css': '<%=src.lessDevSubThemeOneFolder%>subThemeConstructor.less',
-                }
+                	'<%=src.cssDistFolder%><%=theme.name%>Styles.css': '<%=src.lessFolder%>build.less',
+                	'<%=src.cssDistFolder%><%=theme.name%>CrowdsourcingStyles.css': '<%=src.lessCsFolder%>build.less',
+                	'<%=src.cssDistFolder%><%=theme.name%>SubthemeOneStyles.css': '<%=src.lessSubThemeOneFolder%>build.less',
+                },
             }
         },
-        uglify: {
-            my_target: {
-                files: {
-                    '<%=src.jsDistFolder %>custom.min.js': ['<%=src.jsDevFolder %>custom.js']
-                }
+        riot: {
+            options:{
+                concat: true
+            },
+            dist: {
+                expand: false,
+                src: '<%=src.jsFolder %>**/*.tag',
+                dest: '<%=src.jsDistFolder%><%=theme.name%>Tags.js'
             }
         },
         watch: {
@@ -48,47 +54,29 @@ module.exports = function(grunt) {
 				}
 			},
             css: {
-                files: [ 'WebContent/resources/themes/<%=theme.name%>/css/**/*.less' ],
+                files: [ '<%=src.lessFolder%>**/*.less' ],
                 tasks: [ 'less' ],
                 options: {
                     spawn: false,
                 }
             },
-            scripts: {
-                files: [ '<%=src.jsDevFolder %>*.js' ],
-                tasks: [ 'uglify' ],
-                options: {
-                	spawn: false,
-                }
-            },
             riot: {
-				files : [
-					'<%=src.jsDevFolder %>tags/**/*.tag'
-				],
-				tasks : [ 'riot' ],
-				options : {
-					spawn : false,
-				}
+            	files : [
+            		'<%=src.jsFolder %>**/*.tag'
+			 	],
+			 	tasks : [ 'riot' ],
+			 	options : {
+			 		spawn : false,
+			 	}
 			}
 		},
-		riot: {
-            options:{
-                concat: true
-            },
-            dist: {
-                expand: false,
-                src: '<%=src.jsDevFolder %>tags/**/*.tag',
-                dest: '<%=src.jsDistFolder%><%=theme.name%>-tags.js'
-            }
-        },
     });
     
 	// ---------- LOAD TASKS ----------
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks( 'grunt-contrib-watch' );
-    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-riot');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     
 	// ---------- REGISTER DEVELOPMENT TASKS ----------
-    grunt.registerTask( 'default', [ 'watch' ] );
+    grunt.registerTask('default', [ 'watch' ]);
 };
