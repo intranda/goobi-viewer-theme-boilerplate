@@ -12,7 +12,6 @@
     "grunt": "*",
     "grunt-contrib-less": "*",
     "grunt-contrib-watch": "*",
-    "grunt-criticalcss": "*",
     "grunt-riot": "*",
     "less-plugin-autoprefix": "*"
   }

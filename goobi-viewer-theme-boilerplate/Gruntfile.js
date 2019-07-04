@@ -36,19 +36,6 @@ module.exports = function(grunt) {
                 },
             }
         },
-        criticalcss: {
-    		custom: {
-    			options: {
-    				url: "http://localhost:8080/viewer/",
-    				width: 1200,
-    				height: 900,
-    				outputfile: "<%=src.cssDistFolder%><%=theme.name%>Critical.css",
-    				filename: "<%=src.cssDistFolder%><%=theme.name%>Styles.css",
-    				buffer: 800*1024,
-    				ignoreConsole: false
-    			}
-    		}
-    	},
         riot: {
             options:{
                 concat: true
@@ -68,7 +55,7 @@ module.exports = function(grunt) {
 			},
             css: {
                 files: [ '<%=src.lessFolder%>**/*.less' ],
-                tasks: [ 'less', 'criticalcss' ],
+                tasks: [ 'less' ],
                 options: {
                     spawn: false,
                 }
@@ -87,7 +74,6 @@ module.exports = function(grunt) {
     
 	// ---------- LOAD TASKS ----------
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-criticalcss');
     grunt.loadNpmTasks('grunt-riot');
     grunt.loadNpmTasks('grunt-contrib-watch');
     
