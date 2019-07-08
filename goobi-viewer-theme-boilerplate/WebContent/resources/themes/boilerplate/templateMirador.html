@@ -31,15 +31,15 @@
     <h:outputText escape="false" value="#{activeDocumentBean.relativeUrlTags}" />
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="#{request.contextPath}/resources/javascript/libs/mirador/css/mirador-combined.min.css" />
-    <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/dist/viewer.min.css" />
-    <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/themes/#{navigationHelper.theme}/css/dist/#{navigationHelper.theme}.min.css" />
+    <link rel="stylesheet" href="#{request.contextPath}/resources/javascript/libs/mirador/css/mirador-combined.min.css" />
+    <link rel="stylesheet" href="#{request.contextPath}/resources/css/dist/viewer.min.css" />
+    <link rel="stylesheet" href="#{request.contextPath}/resources/themes/#{navigationHelper.theme}/css/dist/#{navigationHelper.theme}.min.css" />
 
     <!-- JS -->
-    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/reactiveX/rx.lite.min.js"></script>
-    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/q-promises/q.min.js"></script>
-    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/mirador/mirador.min.js"></script>
-    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/dist/viewer.min.js"></script>
+    <script src="#{request.contextPath}/resources/javascript/libs/reactiveX/rx.lite.min.js"></script>
+    <script src="#{request.contextPath}/resources/javascript/libs/q-promises/q.min.js"></script>
+    <script src="#{request.contextPath}/resources/javascript/libs/mirador/mirador.min.js"></script>
+    <script src="#{request.contextPath}/resources/javascript/dist/viewer.min.js"></script>
 </h:head>
 
 <ui:insert name="metadata" />
@@ -54,7 +54,7 @@
 
         <!-- TODO: REST-Aufrufe entwickeln, die die notwendigen Parameter an Mirador übergeben. -->
 
-        <script type="text/javascript">
+        <script>
             var miradorConfig = {
             	root: "#{request.contextPath}",
             	userLoggedIn: #{userBean.loggedIn},
