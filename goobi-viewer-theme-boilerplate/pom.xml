@@ -32,6 +32,11 @@
 		</repository>
 	</repositories>
 
+	<scm>
+		<url>scm:git:https://github.com/intranda/goobi-viewer-theme-boilerplate/</url>
+		<connection>scm:git:https://github.com/intranda/goobi-viewer-theme-boilerplate/</connection>
+	</scm>
+
 
 	<dependencies>
 		<dependency>
