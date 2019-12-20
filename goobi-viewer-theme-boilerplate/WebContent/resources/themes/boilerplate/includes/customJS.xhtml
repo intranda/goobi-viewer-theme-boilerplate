@@ -31,15 +31,17 @@
     		}
     	};
     	
-    	// set fullscreen config
-    	if ( currentPage === "fullscreen" ) {
-    		var fullscreenConfig = {
-    			msg: {
-            		fileNotFound: "#{msg.noImage_fileNotFound}"
-            	}
+        // set fullscreen config
+        if (currentPage === "fullscreen") {
+            var fullscreenConfig = {
+                msg: {
+                    fileNotFound: "#{msg.noImage_fileNotFound}"
+                },
+                // set standard open panel for sidebar in fullscreen mode
+           openPanel:"panel-1"
             };
-            viewerJS.fullscreen.init( fullscreenConfig );
-    	}
+            viewerJS.fullscreen.init(fullscreenConfig);
+        }
     	
     	// init admin module
     	if ( currentPage.indexOf( 'admin' ) > -1 ) {
