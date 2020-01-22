@@ -30,9 +30,9 @@ module.exports = function(grunt) {
                     banner: '<%=banner.text%>',
                 },
                 files: {
-                	'<%=src.cssDistFolder%><%=theme.name%>Styles.css': '<%=src.lessFolder%>build.less',
-                	'<%=src.cssDistFolder%><%=theme.name%>CrowdsourcingStyles.css': '<%=src.lessCsFolder%>build.less',
-                	'<%=src.cssDistFolder%><%=theme.name%>SubthemeOneStyles.css': '<%=src.lessSubThemeOneFolder%>build.less',
+                	'<%=src.cssDistFolder%><%=theme.name%>Styles.css': '<%=src.lessFolder%>constructor.less',
+                	'<%=src.cssDistFolder%><%=theme.name%>CrowdsourcingStyles.css': '<%=src.lessCsFolder%>constructor.less',
+                	'<%=src.cssDistFolder%><%=theme.name%>SubthemeOneStyles.css': '<%=src.lessSubThemeOneFolder%>constructor.less',
                 },
             }
         },

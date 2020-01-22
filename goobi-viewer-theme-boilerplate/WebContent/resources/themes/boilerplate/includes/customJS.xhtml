@@ -17,19 +17,10 @@
     	var currentPath = "#{request.contextPath}";
     	var currentTheme = "#{navigationHelper.theme}";
     	var userLoggedIn = #{userBean.loggedIn};
-    	var bookshelvesEnabled = #{configurationBean.bookshelvesEnabled};
     	var subTheme = "#{navigationHelper.subThemeDiscriminatorValue}";
-    	var watchlistConfig = {
-    		root: "#{request.contextPath}",
-    		msg: {
-    			resetBookshelves: "#{msg.bookshelf_reset}",
-    			resetBookshelvesConfirm: "#{msg.bookshelf_resetConfirm}",
-    			saveItemToSession: "#{msg.bookshelf_saveItemToSession}",
-    			noItemsAvailable: "#{msg.bookshelf_noItemsAvailable}",
-    			selectBookshelf: "#{msg.bookshelf_selectBookShelf}",
-    			addNewBookshelf: "#{msg.bookshelf_addNewBookShelf}"
-    		}
-    	};
+    	var bookmarksEnabled = #{configurationBean.bookmarksEnabled};
+    	var rootURL = "#{request.contextPath}";
+    	var restURL = "#{configurationBean.restApiUrl}";
     	
         // set fullscreen config
         if (currentPage === "fullscreen") {

@@ -1,11 +1,34 @@
 /* ==============================================================
-   Widget my Searches
-   style declarations for widget_mySearches.xhtml
+   User Bookmark
+   style declarations for userBackendBookmarkList.xhtml
    ==============================================================*/
-#widgetMySearches {}
+/* USER BOOKMARKS */
+/* BLOCK */
+.user-bookmark {
+	/* ELEMENT */
+	h2 {}
+	/* ADD */
+	&__add-bookmark {
+		input {}
+		button {}
+	}
+	/* PANEL */
+	&__panel {}
+	&__panel-header {
+		h4 {}
+		a {}
+		small {}
+	}
+	&__panel-body {
+		p {}
+	}
+	&__panel-action {
+		a {}
+	}
+}
 
 /* BREAKPOINT FOR LARGE DESKTOPS */
-@media screen and (max-width: @largeBreakpoint) {}
+@media screen and (max-width: @largeBreakpoint) {} 
 
 /* BREAKPOINT FOR DESKTOPS */
 @media screen and (max-width: @mediumBreakpoint) {}
