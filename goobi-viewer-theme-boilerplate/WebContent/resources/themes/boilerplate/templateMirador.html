@@ -22,7 +22,8 @@
 	<meta name="version" content="#{navigationHelper.version}" />
 	<meta name="public version" content="#{navigationHelper.publicVersion}" />
 	<meta name="build date" content="#{navigationHelper.buildDate}" />
-	<meta name="git-revision" content="#{navigationHelper.buildVersion}" />    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="git-revision" content="#{navigationHelper.buildVersion}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <title>#{msg.viewMirador} - intranda GmbH</title>
@@ -35,14 +36,14 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="#{request.contextPath}/resources/javascript/libs/mirador/css/mirador-combined.min.css" />
-    <link rel="stylesheet" href="#{request.contextPath}/resources/css/dist/viewer.min.css" />
-    <link rel="stylesheet" href="#{request.contextPath}/resources/themes/#{navigationHelper.theme}/css/dist/#{navigationHelper.theme}.min.css" />
+    <link rel="stylesheet" href="#{request.contextPath}/resources/css/dist/viewer.min.css?${buildNumber}" />
+    <link rel="stylesheet" href="#{request.contextPath}/resources/themes/#{navigationHelper.theme}/css/dist/#{navigationHelper.theme}.min.css?${buildNumber}" />
 
     <!-- JS -->
     <script src="#{request.contextPath}/resources/javascript/libs/reactiveX/rxjs.umd.min.js"></script>
     <script src="#{request.contextPath}/resources/javascript/libs/q-promises/q.min.js"></script>
     <script src="#{request.contextPath}/resources/javascript/libs/mirador/mirador.min.js"></script>
-    <script src="#{request.contextPath}/resources/javascript/dist/viewer.min.js"></script>
+    <script src="#{request.contextPath}/resources/javascript/dist/viewer.min.js?${buildNumber}"></script>
 </h:head>
 
 <ui:insert name="metadata" />

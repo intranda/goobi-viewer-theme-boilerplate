@@ -18,11 +18,12 @@
     <meta charset="utf-8" />
     <meta name="description" content="" />
     <meta name="generator" content="Goobi viewer" />
-	<meta name="application" content="#{navigationHelper.applicationName}" />
-	<meta name="version" content="#{navigationHelper.version}" />
-	<meta name="public version" content="#{navigationHelper.publicVersion}" />
-	<meta name="build date" content="#{navigationHelper.buildDate}" />
-	<meta name="git-revision" content="#{navigationHelper.buildVersion}" />    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="application" content="#{navigationHelper.applicationName}" />
+    <meta name="version" content="#{navigationHelper.version}" />
+    <meta name="public version" content="#{navigationHelper.publicVersion}" />
+    <meta name="build date" content="#{navigationHelper.buildDate}" />
+    <meta name="git-revision" content="#{navigationHelper.buildVersion}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <title>Goobi viewer - Crowdsourcing</title>
@@ -38,7 +39,7 @@
     <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/libs/jQueryUI-1.12.1/jquery-ui.min.css" />
     <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/libs/jQueryUI-1.12.1/jquery-ui.structure.min.css" />
     <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/libs/font-awesome.min.css" />
-	<link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/dist/viewer.min.css" />
+    <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/dist/viewer.min.css?${buildNumber}" />
 
     <!-- FORCES PRIMEFACES TO INCLUDE JQUERY & JQUERY-UI -->
     <h:outputScript library="primefaces" name="/jquery/jquery.js" target="head" />
@@ -52,11 +53,11 @@
     <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/q-promises/q.min.js"></script>
     <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/clipboard/clipboard.min.js"></script>
     <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/riot/riot.min.js"></script>
-    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/dist/viewer.min.js"></script>
+    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/dist/viewer.min.js?${buildNumber}"></script>
     <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/openseadragon/openseadragon.min.js"></script>
     <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/openseadragon/openseadragon-viewerinputhook.js"></script>
-    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/dist/imageView.min.js"></script>
-    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/dist/riot-tags.js"></script>
+    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/dist/imageView.min.js?${buildNumber}"></script>
+    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/dist/riot-tags.js?${buildNumber}"></script>
 </h:head>
 
 <ui:insert name="metadata" />
