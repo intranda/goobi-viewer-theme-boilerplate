@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.goobi.viewer.theme</groupId>
 	<artifactId>theme-boilerplate</artifactId>
-	<version>4.3.6</version>
+	<version>4.4.0</version>
 	<packaging>war</packaging>
 
 
@@ -32,6 +32,7 @@
 		</repository>
 	</repositories>
 
+
 	<scm>
 		<url>scm:git:https://github.com/intranda/goobi-viewer-theme-boilerplate/</url>
 		<connection>scm:git:https://github.com/intranda/goobi-viewer-theme-boilerplate/</connection>
@@ -47,7 +48,7 @@
 		<dependency>
 			<groupId>io.goobi.viewer</groupId>
 			<artifactId>viewer-core-config</artifactId>
-			<version>4.3.4</version>
+			<version>4.3.6</version>
 		</dependency>
 	</dependencies>
 
@@ -57,14 +58,35 @@
 		<testSourceDirectory>test</testSourceDirectory>
 		<resources>
 			<resource>
-				<directory>src</directory>
+				<directory>WebContent</directory>
+				<filtering>true</filtering>
 				<excludes>
 					<exclude>**/*.java</exclude>
 				</excludes>
 			</resource>
 		</resources>
+
 		<plugins>
-			<!-- Maven Compiler Plugin -->
+                        <plugin>
+                                <groupId>org.apache.maven.plugins</groupId>
+                                <artifactId>maven-enforcer-plugin</artifactId>
+                                <version>3.0.0-M3</version>
+                                <executions>
+                                        <execution>
+                                                <id>enforce-maven</id>
+                                                <goals>
+                                                        <goal>enforce</goal>
+                                                </goals>
+                                                <configuration>
+                                                        <rules>
+                                                                <requireMavenVersion>
+                                                                        <version>3.3.9</version>
+                                                                </requireMavenVersion>
+                                                        </rules>
+                                                </configuration>
+                                        </execution>
+                                </executions>
+                        </plugin>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
@@ -73,7 +95,6 @@
 					<target>${jdk.version}</target>
 				</configuration>
 			</plugin>
-			<!-- Maven Dependency Plugin -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
@@ -113,10 +134,9 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- Maven WAR Plugin -->
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>3.2.2</version>
+				<version>3.2.3</version>
 				<configuration>
 					<warSourceDirectory>WebContent</warSourceDirectory>
 					<warName>viewer</warName>
@@ -142,11 +162,10 @@
 					</archive>
 				</configuration>
 			</plugin>
-			<!-- get git version number -->
 			<plugin>
 				<groupId>pl.project13.maven</groupId>
 				<artifactId>git-commit-id-plugin</artifactId>
-				<version>2.2.1</version>
+				<version>4.0.0</version>
 				<executions>
 					<execution>
 						<goals>
