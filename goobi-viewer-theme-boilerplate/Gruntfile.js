@@ -1,3 +1,13 @@
+const fs = require("fs"); 
+
+let homedir = require("os").homedir();
+let rawdata = fs.readFileSync(homedir + '/.config/grunt_userconfig.json');
+let config = JSON.parse(rawdata);
+
+function getTomcatDir() {
+	return config.tomcat_dir;
+}
+
 module.exports = function(grunt) {
 	// ---------- PROJECT CONFIG ----------
     grunt.initConfig({
@@ -18,6 +28,17 @@ module.exports = function(grunt) {
             cssFolder: 'WebContent/resources/themes/<%=theme.name%>/css/',
             cssDistFolder: 'WebContent/resources/themes/<%=theme.name%>/css/dist/'
         },
+        sync: {
+        	main: {
+        		files: [{
+        			cwd: 'WebContent',
+        			src: [
+        				'**'
+        			],
+        			dest: getTomcatDir() + '\\goobi-viewer-theme-<%=theme.name%>'
+        		}]
+        	}
+        },        
         less: {
             dist: {
                 options: {
@@ -53,9 +74,21 @@ module.exports = function(grunt) {
 					reload : true
 				}
 			},
+			xhtml: {
+                files: [ 
+                		'WebContent/resources/themes/<%=theme.name%>/**/*html',
+                		'WebContent/resources/themes/<%=theme.name%>/**/*svg',
+                		'WebContent/resources/themes/<%=theme.name%>/**/*png',
+                		'WebContent/resources/themes/<%=theme.name%>/**/*jpg'
+                	],
+                tasks: [ 'sync' ],
+                options: {
+                    spawn: false,
+                }
+            },
             css: {
                 files: [ '<%=src.lessFolder%>**/*.less' ],
-                tasks: [ 'less' ],
+                tasks: [ 'less', 'sync' ],
                 options: {
                     spawn: false,
                 }
@@ -64,7 +97,7 @@ module.exports = function(grunt) {
             	files : [
             		'<%=src.jsFolder %>**/*.tag'
 			 	],
-			 	tasks : [ 'riot' ],
+			 	tasks : [ 'riot', 'sync' ],
 			 	options : {
 			 		spawn : false,
 			 	}
@@ -76,7 +109,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-riot');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-sync');
     
 	// ---------- REGISTER DEVELOPMENT TASKS ----------
-    grunt.registerTask('default', [ 'watch' ]);
+    grunt.registerTask('default', [ 'watch', 'sync' ]);
 };
