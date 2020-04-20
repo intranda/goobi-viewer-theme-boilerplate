@@ -58,7 +58,7 @@
     <link rel="stylesheet" href="#{request.contextPath}/resources/themes/#{navigationHelper.theme}/css/dist/#{navigationHelper.theme}Styles.css?${buildNumber}" />
 
     <!-- SUBTHEME CSS -->
-    <h:panelGroup rendered="#{navigationHelper.subthemeSelected}">
+    <h:panelGroup rendered="#{navigationHelper.subthemeSelected and navigationHelper.subThemeDiscriminatorValue!='-'}">
         <link rel="stylesheet" href="#{request.contextPath}/resources/themes/#{navigationHelper.theme}/css/dist/#{navigationHelper.subThemeDiscriminatorValue}Styles.css?${buildNumber}" />
     </h:panelGroup>
 
