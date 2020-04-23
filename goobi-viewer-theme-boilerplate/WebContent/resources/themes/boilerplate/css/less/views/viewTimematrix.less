@@ -2,71 +2,91 @@
    View Timematrix
    style declarations for viewTimematrix.xhtml
    ==============================================================*/
-#timeMatrix {
+.timematrix {
     h2 {}
     p {}
     h3 {}
-    .timematrix-selection {
+    &__subarea {}
+    &__selection-header {}
+    &__loader {
+    	img {}
+    }
+    &__loaderImg {
+    	img {}
+    }
+    &__selection {
+        #locateTimematrix {}
         #slider-range {
             .ui-slider-range {}
             .ui-slider-handle {
+                &.top {}
+                &:focus {}
                 .timematrix-slider-bubble-startDate,
-                .timematrix-slider-bubble-endDate {
-                    &:before {}
-                }
-                .timematrix-slider-bubble-startDate {}
+                .timematrix-slider-bubble-endDate {}
                 .timematrix-slider-bubble-endDate {}
             }
-        }
-    }
-    .btn {}
-}
-
-#timematrixCanvas {
-    .timematrix-box {
-        .timematrix-header {
-            h3 {}
-        }
-        .timematrix-body {
-            .timematrix-thumb {
-                &:hover {}
-                img {}
-                &.marker:before {}
+			.ui-slider-handle {
+                &::before {}
+                &:last-child {
+                	&::before {}
+                }
             }
         }
-        .timematrix-footer {}
+        .btn {}
+    	button {}
     }
+    &__selectionRangeInput {}
+    &__bar {}
+    &__period {
+    	span {
+			&:last-of-type {}
+    	}
+    }
+    &__hitsForm {
+		label, input {}
+		label::after {}
+	}
+	&__hitsInput {
+		span {}
+		input {}
+	}
+	&__objects {}
+
+	&__content {}
+	&__img {
+		img {}
+		img[onError] {}
+	}
+	&__text {
+		&:hover {}
+		 p {}
+		a {
+			&:hover,
+			&:focus,
+			&:active {}
+		}
+	}
+	&__img img:hover + &__text {}
+	&__footer {
+		a {
+		&:hover,
+		&:active,
+		&:focus {}
+		}
+	}
 }
 
-.timematrix-popover {
-    .timematrix-popover-close {}
-    .timematrix-popover-header,
-    .timematrix-popover-body,
-    .timematrix-popover-footer {}
-    .timematrix-popover-header {
-        h4 {}
-    }
-    .timematrix-popover-body {
-        .timematrix-popover-imageloader {}
-        a {
-            img {}
-        }
-    }
-    .timematrix-popover-footer {
-        a {}
-    }
-}
+.tpl-timeMatrix__text {}
+
 
 /* BREAKPOINT FOR LARGE DESKTOPS */
-@media screen and (max-width: @largeBreakpoint) {}
+@media screen and (max-width: @largeBreakpoint) {} 
 
 /* BREAKPOINT FOR DESKTOPS */
 @media screen and (max-width: @mediumBreakpoint) {}
 
 /* BREAKPOINT FOR TABLETS */
 @media screen and (max-width: @smallBreakpoint) {}
-
-@media screen and (max-width: 400px) {}
 
 /* BREAKPOINT FOR SMARTPHONES */
 @media screen and (max-width: @xSmallBreakpoint) {}
