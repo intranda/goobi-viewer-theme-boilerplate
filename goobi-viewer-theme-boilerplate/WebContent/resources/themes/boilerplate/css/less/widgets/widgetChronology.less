@@ -1,42 +1,46 @@
 /* ==============================================================
-   Widget Convolutes
-   style declarations for widget_convolutes.xhtml
+   Widget Chronology
+   style declarations for widget_chronology.xhtml
    ==============================================================*/
-	.widget-convolutes {
-		ul {}
-		a {
-			&:hover,
-			&:focus,
-			&:active {}
-		}
-		&__series {
-	    	h3 {}
-			ul {
-			a {
-				&:hover,
-				&:focus,
-				&:active {}
-			} 
-		    }
-		   }
-		&__list { 
-	    	h3 {} 
-			a {
-				&:hover,
-				&:focus,
-				&:active {}
+/* WIDGET CHRONOLOGY */
+/* BLOCK */
+.widget-chronology-slider {
+	&__topbar {}	
+	&__item {
+		&.chronology-slider-label,
+		&.chronology-slider-actions {}
+		&.chronology-slider-label {}
+		&.chronology-slider-actions { 
 			ul {}
-			}
+			li {}
+			img {}
+			[data-reset="chrono-slider"] {}
 		}
-			&__anchor {
-	    	h3 {}
-			ul {
-			a {}
-			} 
-		    }
-} 
+		&.chronology-slider-action-loader,
+		&.chronology-slider-action-reset {
+			&.active {}
+		}
+		&.chronology-slider-action-loader {}
+		&.chronology-slider-action-reset {}
+		&.chronology-slider-start,
+		&.chronology-slider-end {}
+		&.chronology-slider-start {}
+		&.chronology-slider-end {}
+		&.chronology-slider {}
+	}
+}
+
+#chronoSlider {
+	.ui-slider-range,
+	.ui-slider-handle {
+        &:focus {}
+	}
+	.ui-slider-range {}
+	.ui-slider-handle {}
+}
+
 /* BREAKPOINT FOR LARGE DESKTOPS */
-@media screen and (max-width: @largeBreakpoint) {} 
+@media screen and (max-width: @largeBreakpoint) {}
 
 /* BREAKPOINT FOR DESKTOPS */
 @media screen and (max-width: @mediumBreakpoint) {}
