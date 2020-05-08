@@ -8,9 +8,10 @@
 	/* ELEMENT */
 	li {
 		&.active > a,
-		&.active > button {}
+		&.active > button,
+		&.active > .btn {}
 	}
-	a, button {
+	a, button, .btn {
 		&:hover,
 		&:focus,
 		&:active {}
@@ -25,7 +26,7 @@
 		li {
 			&.divider {}
 		}
-		a, button {}
+		a, button, .btn {}
 		&.in {}
 		&.level-2,
 		&.level-3,

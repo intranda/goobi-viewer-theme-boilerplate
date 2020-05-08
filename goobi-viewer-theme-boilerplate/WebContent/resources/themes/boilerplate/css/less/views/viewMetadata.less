@@ -22,6 +22,8 @@
 	}
 	/* ELEMENT */
 	&__elements {
+		border-bottom: 1px solid @lightgray;
+		margin-bottom: 2rem;
 		&.level-0 {}
         &.level-1 {}
         &.level-2 {}
@@ -34,7 +36,12 @@
         &.level-9 {}
 	}
 	&__elements-h3 {}
-	&__element {}
+	&__element {
+		margin-bottom: 1rem;
+		&:last-child {
+			padding-bottom: 1rem;
+		}
+	}
 	&__element-dl {
 		dt {}
 		dd {}

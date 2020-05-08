@@ -5,8 +5,31 @@
 #widgetConvolutes {}
 
 .widget-convolutes {
-    &__series {}
-    &__anchor {}
+	&__series {
+    	h3 {}
+		ul {
+		a {
+			&:hover,
+			&:focus,
+			&:active {}
+		} 
+	    }
+	}
+	&__list {
+    	h3 {} 
+		a {
+			&:hover,
+			&:focus,
+			&:active {}
+		ul {}
+		}
+	}
+	&__anchor {
+    	h3 {}
+		ul {
+		a {}
+		} 
+    }
 }
 
 /* BREAKPOINT FOR LARGE DESKTOPS */

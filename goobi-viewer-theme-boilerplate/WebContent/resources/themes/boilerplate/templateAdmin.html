@@ -9,7 +9,8 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:viewerComponent="http://xmlns.jcp.org/jsf/composite/components"
       xmlns:widgetComponent="http://xmlns.jcp.org/jsf/composite/components/widgets"
-      xmlns:templateComponent="http://xmlns.jcp.org/jsf/composite/themes/boilerplate/components">
+      xmlns:templateComponent="http://xmlns.jcp.org/jsf/composite/themes/boilerplate/components"
+      lang="#{navigationHelper.localeString}">
 
 <h:head profile="http://dublincore.org/documents/dcq-html/">
 
@@ -39,6 +40,7 @@
     <link rel="stylesheet" href="#{request.contextPath}/resources/css/libs/jQueryUI-1.12.1/jquery-ui.min.css" />
     <link rel="stylesheet" href="#{request.contextPath}/resources/css/libs/jQueryUI-1.12.1/jquery-ui.structure.min.css" />
     <link rel="stylesheet" href="#{request.contextPath}/resources/css/libs/font-awesome.min.css" />
+    <link rel="stylesheet" href="#{request.contextPath}/resources/css/libs/leaflet/leaflet.css?${buildNumber}" />
     <link rel="stylesheet" href="#{request.contextPath}/resources/css/dist/viewer.min.css?${buildNumber}" />
 
     <!-- FORCES PRIMEFACES TO INCLUDE JQUERY & JQUERY-UI -->
@@ -53,6 +55,7 @@
     <script src="#{request.contextPath}/resources/javascript/libs/q-promises/q.min.js"></script>
     <script src="#{request.contextPath}/resources/javascript/libs/clipboard/clipboard.min.js"></script>
     <script src="#{request.contextPath}/resources/javascript/libs/riot/riot.min.js"></script>
+    <script src="#{request.contextPath}/resources/javascript/libs/leaflet/leaflet.js"></script>
     <script src="#{request.contextPath}/resources/javascript/dist/viewer.min.js?${buildNumber}"></script>
     <script src="#{request.contextPath}/resources/javascript/dist/riot-tags.js?${buildNumber}"></script>
 </h:head>

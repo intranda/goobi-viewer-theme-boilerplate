@@ -9,7 +9,8 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:viewerComponent="http://xmlns.jcp.org/jsf/composite/components"
       xmlns:widgetComponent="http://xmlns.jcp.org/jsf/composite/components/widgets"
-      xmlns:templateComponent="http://xmlns.jcp.org/jsf/composite/themes/boilerplate/components">
+      xmlns:templateComponent="http://xmlns.jcp.org/jsf/composite/themes/boilerplate/components"
+      lang="#{navigationHelper.localeString}">
 
 <h:head profile="http://dublincore.org/documents/dcq-html/">
 
@@ -57,7 +58,7 @@
     <link rel="stylesheet" href="#{request.contextPath}/resources/themes/#{navigationHelper.theme}/css/dist/#{navigationHelper.theme}Styles.css?${buildNumber}" />
 
     <!-- SUBTHEME CSS -->
-    <h:panelGroup rendered="#{navigationHelper.subthemeSelected}">
+    <h:panelGroup rendered="#{navigationHelper.subthemeSelected and navigationHelper.subThemeDiscriminatorValue!='-'}">
         <link rel="stylesheet" href="#{request.contextPath}/resources/themes/#{navigationHelper.theme}/css/dist/#{navigationHelper.subThemeDiscriminatorValue}Styles.css?${buildNumber}" />
     </h:panelGroup>
 
