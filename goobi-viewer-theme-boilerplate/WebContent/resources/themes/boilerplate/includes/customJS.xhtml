@@ -23,17 +23,19 @@
     	var rootURL = "#{request.contextPath}";
     	var restURL = "#{configurationBean.restApiUrl}";
     	
-        // set fullscreen config
-        if (currentPage === "fullscreen") {
-            var fullscreenConfig = {
-                msg: {
-                    fileNotFound: "#{msg.noImage_fileNotFound}"
-                },
-                // set standard open panel for sidebar in fullscreen mode
-           openPanel:"panel-1"
+    	// set fullscreen config
+    	if ( currentPage === "fullscreen" ) {
+    		var fullscreenConfig = {
+    			msg: {
+            		fileNotFound: "#{msg.noImage_fileNotFound}"
+            	},
+                // set standard open panel for sidebar in fullscreen mode, openPanel: "none" for all panels closed
+            	openPanel: "panel-1",
+            	persistentIdentifier: "#{activeDocumentBean.topDocumentIddoc}"
             };
-            viewerJS.fullscreen.init(fullscreenConfig);
-        }
+                
+    		viewerJS.fullscreen.init( fullscreenConfig );
+    	}
     	
     	// init admin module
     	if ( currentPage.indexOf( 'admin' ) > -1 ) {
