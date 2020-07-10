@@ -1,0 +1,52 @@
+/* ==============================================================
+   style declarations for sidebarMenu component
+   ==============================================================*/
+
+.sidebar-menu {
+	button, a {
+	    &:hover, 
+	    &:focus, 
+	    &:active {}
+	}
+	button {}
+	a {	
+	}
+	ul {}
+	li {}
+	span {}
+	&__submenu-container {}
+	&__submenu-button {
+		&.-active {}
+	}
+	&__submenu {
+		ul {}
+		li {
+			&:hover, 
+		    &:focus, 
+		    &:active {
+			    a {}
+		    }
+		    &:last-of-type {
+				span {}
+			}
+		}
+		a {
+			&:hover, 
+		    &:focus, 
+		    &:active {}
+	    }
+	    span {}
+	}
+}
+	
+/* BREAKPOINT FOR LARGE DESKTOPS */
+@media screen and (max-width: @largeBreakpoint) {} 
+
+/* BREAKPOINT FOR DESKTOPS */
+@media screen and (max-width: @mediumBreakpoint) {}
+
+/* BREAKPOINT FOR TABLETS */
+@media screen and (max-width: @smallBreakpoint) {}
+
+/* BREAKPOINT FOR SMARTPHONES */
+@media screen and (max-width: @xSmallBreakpoint) {}
