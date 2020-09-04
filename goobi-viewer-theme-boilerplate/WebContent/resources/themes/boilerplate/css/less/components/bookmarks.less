@@ -79,10 +79,25 @@
 	&__body-loader {}
 	&__body-list {
 		li {
+			&:hover,
+			&:active,
+			&:focus {} 
+			button {
+				&.btn {
+					&:hover,
+					&:active,
+					&:focus {
+					}
+				}
+				span {
+					background-color: @ci-color1;
+				}
+			}
 			.empty {}
 		}
-			.fa {}
-			span {}
+			&:hover {} 
+			.fa {} 
+			span {}  
 	}
 	&__footer {
 		input {}
