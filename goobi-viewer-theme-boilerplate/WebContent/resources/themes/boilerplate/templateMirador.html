@@ -24,27 +24,28 @@
 	<meta name="public version" content="#{navigationHelper.publicVersion}" />
 	<meta name="build date" content="#{navigationHelper.buildDate}" />
 	<meta name="git-revision" content="#{navigationHelper.buildVersion}" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>#{msg.viewMirador} - intranda GmbH</title>
-
+    <title>#{msg.viewMirador} - #{configurationBean.name}</title>
+    
     <!-- FAVICON -->
     <link rel="shortcut icon" href="#{request.contextPath}/resources/themes/#{navigationHelper.theme}/images/template/favicon.ico" />
-
+    
     <!-- RELATIVE URL TAGS -->
     <h:outputText escape="false" value="#{activeDocumentBean.relativeUrlTags}" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="#{request.contextPath}/resources/javascript/libs/mirador/css/mirador-combined.min.css" />
-    <link rel="stylesheet" href="#{request.contextPath}/resources/css/dist/viewer.min.css?${navigationHelper.buildVersion}" />
-    <link rel="stylesheet" href="#{request.contextPath}/resources/themes/#{navigationHelper.theme}/css/dist/#{navigationHelper.theme}.min.css?${navigationHelper.buildVersion}" />
+    <link rel="stylesheet" type="text/css" href="#{request.contextPath}/resources/javascript/libs/mirador/css/mirador-combined.min.css" />
+    <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/dist/viewer.min.css?${navigationHelper.buildVersion}" />
+    <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/themes/#{navigationHelper.theme}/css/dist/#{navigationHelper.theme}.min.css" />
 
     <!-- JS -->
-    <script src="#{request.contextPath}/resources/javascript/libs/reactiveX/rxjs.umd.min.js"></script>
-    <script src="#{request.contextPath}/resources/javascript/libs/q-promises/q.min.js"></script>
-    <script src="#{request.contextPath}/resources/javascript/libs/mirador/mirador.min.js"></script>
-    <script src="#{request.contextPath}/resources/javascript/dist/viewer.min.js?${buildNumber}"></script>
+    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/reactiveX/rxjs.umd.min.js"></script>
+    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/q-promises/q.min.js"></script>
+    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/mirador/mirador.min.js"></script>
+    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/dist/viewer.min.js?${navigationHelper.buildVersion}"></script>
+
 </h:head>
 
 <ui:insert name="metadata" />
@@ -59,14 +60,28 @@
 
         <!-- TODO: REST-Aufrufe entwickeln, die die notwendigen Parameter an Mirador übergeben. -->
 
-        <script>
+        <script type="text/javascript">
             var miradorConfig = {
             	root: "#{request.contextPath}",
-            	userLoggedIn: #{userBean.loggedIn},
-            };
-
+            	restEndpoint : "#{configurationBean.restApiUrl}",
+			};
             viewerJS.mirador.init( miradorConfig );
+
         </script>
+        
+<!--         <script type="text/javascript"> -->
+// 	        $(function() {
+// 	            Mirador({
+// 	              "id": "miradorViewer", // The CSS ID selector for the containing element.
+// 	              "data": [ 
+// 	              	{
+// 	              	    "collectionUri": "http://localhost:8082/viewer/rest/iiif/collections/DC/dcnewspaper/"
+// 	              	}
+// 	              ],
+// 	            });
+// 	          });
+<!--         </script> -->
+        
     </f:view>
 
     <!-- PIWIK -->
