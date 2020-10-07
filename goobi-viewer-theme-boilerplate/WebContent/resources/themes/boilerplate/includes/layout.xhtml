@@ -103,7 +103,8 @@
     </span>
     
     <!-- USER LOGIN -->
-    <ui:include src="/resources/includes/user/userLogin.xhtml" />
+	<viewerComponent:modalUserLogin id="userLoginModal"/>
+	<viewerComponent:modalUserTerms id="userTermsModal"/>
     <ui:include src="/resources/includes/overlay.xhtml" />
     
     <!-- IE 11 NOT SUPPORTED -->
