@@ -10,7 +10,7 @@
 	<packaging>war</packaging>
 
 
-	<name>goobi-viewer-theme-boilerplate</name>
+	<name>Goobi viewer - Theme boilerplate</name>
 	<url>https://github.com/intranda/goobi-viewer-theme-boilerplate</url>
 
 
@@ -37,8 +37,7 @@
 		<url>scm:git:https://github.com/intranda/goobi-viewer-theme-boilerplate/</url>
 		<connection>scm:git:https://github.com/intranda/goobi-viewer-theme-boilerplate/</connection>
 	</scm>
-
-
+	
 	<dependencies>
 		<dependency>
 			<groupId>io.goobi.viewer</groupId>
@@ -49,8 +48,28 @@
 			<groupId>io.goobi.viewer</groupId>
 			<artifactId>viewer-core-config</artifactId>
 			<version>4.12.0-SNAPSHOT</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>crowdsourcing</id>
+			<repositories>
+				<repository>
+					<id>intranda-internal</id>
+					<url>https://nexus.intranda.com/repository/maven-internal</url>
+				</repository>
+			</repositories>
+			<dependencies>
+				<dependency>
+					<groupId>io.goobi.viewer.module</groupId>
+					<artifactId>module-crowdsourcing</artifactId>
+					<version>4.12.0-SNAPSHOT</version>
+				</dependency>
+			</dependencies>
+		</profile>
+	</profiles>
 
 
 	<build>
@@ -65,37 +84,29 @@
 				</excludes>
 			</resource>
 		</resources>
-
 		<plugins>
-                        <plugin>
-                                <groupId>org.apache.maven.plugins</groupId>
-                                <artifactId>maven-enforcer-plugin</artifactId>
-                                <version>3.0.0-M3</version>
-                                <executions>
-                                        <execution>
-                                                <id>enforce-maven</id>
-                                                <goals>
-                                                        <goal>enforce</goal>
-                                                </goals>
-                                                <configuration>
-                                                        <rules>
-                                                                <requireMavenVersion>
-                                                                        <version>3.3.9</version>
-                                                                </requireMavenVersion>
-                                                        </rules>
-                                                </configuration>
-                                        </execution>
-                                </executions>
-                        </plugin>
 			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
-				<configuration>
-					<source>${jdk.version}</source>
-					<target>${jdk.version}</target>
-				</configuration>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<version>3.0.0-M3</version>
+				<executions>
+					<execution>
+						<id>enforce-maven</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<requireMavenVersion>
+									<version>3.3.9</version>
+								</requireMavenVersion>
+							</rules>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 
+			<!-- Maven Resource Plugin - important: nonfilteredfileextensions to prevend file corruption -->
 			<plugin>
 		        <groupId>org.apache.maven.plugins</groupId>
 		        <artifactId>maven-resources-plugin</artifactId>
@@ -111,7 +122,17 @@
 				</nonFilteredFileExtensions>
 		        </configuration>
 		     </plugin>
-
+			
+			<!-- Maven Compiler Plugin -->
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+			<!-- Maven Dependency Plugin -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
@@ -151,6 +172,7 @@
 					</execution>
 				</executions>
 			</plugin>
+			<!-- Maven WAR Plugin -->
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>3.2.3</version>
@@ -179,6 +201,7 @@
 					</archive>
 				</configuration>
 			</plugin>
+			<!-- get git version number -->
 			<plugin>
 				<groupId>pl.project13.maven</groupId>
 				<artifactId>git-commit-id-plugin</artifactId>
