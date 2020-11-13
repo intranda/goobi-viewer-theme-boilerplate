@@ -51,9 +51,9 @@ module.exports = function(grunt) {
                     banner: '<%=banner.text%>',
                 },
                 files: {
-                	'<%=src.cssDistFolder%><%=theme.name%>Styles.css': '<%=src.lessFolder%>constructor.less',
-                	'<%=src.cssDistFolder%><%=theme.name%>CrowdsourcingStyles.css': '<%=src.lessCsFolder%>constructor.less',
-                	'<%=src.cssDistFolder%><%=theme.name%>SubthemeOneStyles.css': '<%=src.lessSubThemeOneFolder%>constructor.less',
+                	'<%=src.cssDistFolder%><%=theme.name%>.min.css': '<%=src.lessFolder%>constructor.less',
+                	'<%=src.cssDistFolder%><%=theme.name%>-cs.css': '<%=src.lessCsFolder%>constructor.less',
+                	'<%=src.cssDistFolder %><%=theme.subThemeOne%>.min.css': '<%=src.lessSubThemeOneFolder%>constructor.less',
                 },
             }
         },
