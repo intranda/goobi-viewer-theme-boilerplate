@@ -20,7 +20,7 @@ function setContentHeight() {
 
 $( document ).ready( function() {
     var viewerConfig = {
-        currentPage: currentPage,
+        currentPage: currentPage, 
         theme: currentTheme,
         localStoragePossible: viewerJS.localStoragePossible,
         widgetNerSidebarRight: true,
