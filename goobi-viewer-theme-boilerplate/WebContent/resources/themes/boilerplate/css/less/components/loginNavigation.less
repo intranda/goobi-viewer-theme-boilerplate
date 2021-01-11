@@ -30,12 +30,11 @@
 			&__user-dropdown-item-icon {
 				.fa {}
 			}
-			&__user-dropdown-item-string {
-				a {
-					&:hover,
-					&:active,
-					&:focus {}
-				}
+			&__user-dropdown-item-string a,
+			&__bookmarks-trigger {
+				&:hover,
+				&:active,
+				&:focus {}
 			}
 			/* USER DROPDOWN ACTION */
 			&__user-dropdown-action {
@@ -57,7 +56,10 @@
 			&__bookmarks-name a, 
 			&__bookmarks-icon-list .fa, 
 			&__bookmarks-overview-link {
-				&:hover {}
+				&:hover,
+				&:active,
+				&:focus {
+				}
 			}
 			&__bookmarks-icon-list {
 				a {}

@@ -35,21 +35,32 @@
 	}
 	/* DROPDOWN ACTIONS */
 	&__dropdown-list-actions {}
+	&__dropdown-list-single-entry {}
+	&__dropdown-list-title {}
 	&__dropdown-list-reset,
 	&__dropdown-list-send,
+	&__dropdown-list-search,
 	&__dropdown-list-mirador {
-		a, button {
+		&:hover,
+		&:active,
+		&:focus {}
+	}
+	/* COLOR OF ALL LINKS/BUTTONS OF LOGGED OUT BOOKMARK LIST */
+	&__dropdown-list-single-entry,
+	&__dropdown-list-title,
+	&__dropdown-list-remove,
+	&__dropdown-list-reset,
+	&__dropdown-list-send,	
+	&__dropdown-list-search,
+	&__dropdown-list-mirador {
+		button, a, span, h4
+		{
 			&:hover,
-			&:active,
-			&:focus {}
+			&:focus,
+			&:active {}
 		}
 	}
-	&__dropdown-list-reset {
-		button {
-			span {}
-			.fa {}
-		}
-	}
+	&__dropdown-list-reset {}
 	&__dropdown-list-send,
 	&__dropdown-list-mirador {
 		a {
