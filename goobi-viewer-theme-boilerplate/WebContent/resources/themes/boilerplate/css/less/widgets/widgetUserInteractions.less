@@ -4,22 +4,31 @@
    ==============================================================*/
 /* WIDGET USER INTERACTIONS */
 #widgetUserInteractions {
-	ul {}
+		ul {
+		li:first-of-type {
+			a {}
+		}
+		&:last-of-type {
+		}
+	}
 }
 .widget-user-interactions {
-	&__delete-record,
-	&__delete-record-message {}
+	&__info-text {}
+	&__delete-record {}
 	&__delete-record-message {
 		span {}
 	}
-	&__delete-record-action {
+	&__delete-record-action,
+	&__clear-cache-action {
 		&.has-no-urn {
 			.btn {}
+			a {}
 		}
 		&.has-urn {
 			.btn {}			
 		}
 	}
+	h4 {}
 }
 
 /* BREAKPOINT FOR LARGE DESKTOPS */
