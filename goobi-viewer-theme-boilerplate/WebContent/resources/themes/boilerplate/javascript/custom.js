@@ -8,23 +8,39 @@
  This method MUST be called before document.ready for them to show up in the styles dropdown in the cms backend
 */
 function initSliders() {
-	//update swiper config with
-	    // var partialConfig = {
-        // swiperConfig: {
-        //        loop: true,
-        //        slidesPerView: 2
-        //    }
-        // }
-	// viewerJS.slideshows.update('styleName', partialConfig);
-        // add new swiper config
-        // var config = {
-        //    swiperConfig: {
-        //        slidesPerView: 3,
-        //        spaceBetween: 50,
-        //        loop: true
-        //    }
-        //}
-	// viewerJS.slideshows.set('myNewStyleName', config);
+	
+// EXAMPLE SLIDER
+
+//	var sliderExampleConfig = {
+//		maxSlides: 8,
+//		timeout: 10000,
+//		imageWidth: 1100,
+//		imageHeight: 500,
+//		 swiperConfig: {
+//			  slidesPerView: 3,
+//			  spaceBetween: 30,
+//			  loop: true,
+//			  speed: 400,
+//		      pagination: {
+//		          el: '.slider-example__dots',
+//		          clickable: true
+//		      },
+//		      breakpoints: {
+//		          300: { 
+//		             slidesPerView: 1.2,
+//		          },
+//		          600: {  
+//		             slidesPerView: 2.3,
+//		          },
+//		          900: {
+//		             slidesPerView: 3.5,   
+//		          } 
+//		      }
+//		}
+//	}
+
+//	viewerJS.slider.set('example-slider', sliderExampleConfig);
+
 }
 initSliders();
 
