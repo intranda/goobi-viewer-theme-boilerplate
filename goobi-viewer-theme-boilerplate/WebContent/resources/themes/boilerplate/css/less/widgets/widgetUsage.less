@@ -6,18 +6,25 @@
 .widget-usage {
 	h3 {}
 	h4 {}
-	&__subtitle {}
+	&__subtitle {
+	}
 	/* LICENSE TEXT */
-	&__license-text {}
+	&__license-text {
+		a {
+		}
+	}
 	/* DOWNLOADS */
 	&__work-downloads,
+	&__struct-downloads,
 	&__page-downloads,
+	&__image-fragment, 
 	&__citelinks {
 		a {}
 		.badge {
-			&:hover,
+			&:hover,  
 			&:active,
-			&:focus {}
+			&:focus {
+			}
 		}
 	}
 	/* WORK DOWNLOADS */
@@ -34,51 +41,119 @@
 	&__work-download-alto {}
 	&__work-download-fulltext {}
 	&__work-download-tei {}
-	&__work-download-pdf {}
+	&__work-download-pdf {
+		i {
+		}
+	}
 	&__work-download-epub {}
 	&__work-download-iiif {}
+	/* STRUCTURE DOWNLOADS */
+	&__struct-downloads {
+		i {
+		}
+	}
 	/* PAGE DOWNLOADS */
 	&__page-downloads {
 		a {}
-		.badge {}
+		.badge {
+		}
 	}
 	&__page-download-alto {}
 	&__page-download-fulltext {}
 	&__page-download-tei {}
-	&__page-download-pdf {}
-	&__page-download-jpeg {}
+	&__page-download-pdf {
+		i {
+		}
+	}
+	&__page-download-jpeg {
+	}
+	/*IMAGE FRAGMENT */
+	&__image-fragment__wrapper {
+	}
+	&__image-fragment {
+		
+	}
+	
+	/* NEW MODAL */
 	/* CITE LINKS */
-	&__citelinks {}
+	&__open-modal {
+		&:hover {
+			
+		}
+	}
+	&__citelinks {
+		
+	}
+	&__citelinks-block {
+	}
+	&__citelinks-subtitle {
+	}
+	&__citelinks-row {
+		&.-internal {
+		}
+	}
+	&__citelinks-info-text {
+	}
+	&__citelinks-input-wrapper {
+	}
+	&__citelinks-input {
+	}
+	&__citelinks-label {
+	}
+	&__citelinks-internal {
+	}
+	&__citelinks-copy-to-clipboard {
+		.fa {
+		}
+	}
 	&__citelink-work {}
 	&__citelink-page {}
-	&__citerecommendation-dropdown {}
+	&__citerecommendation-dropdown {
+	}
 	&__citerecommendation-text-wrapper {
-		.fa-quote-right {}
+		.fa-quote-right {
+		}
 	}
 	&__citerecommendation-copy-text {
 		&:hover,
 		&:active,
-		&:focus {}
+		&:focus {
+		}
 	}
-	&__citerecommendation-text-info {}
+	&__citerecommendation-text-info {
+	}
+	&__citelinks-box {
+	}
 }
 
+/* MODIFICATION */
+.widget .widget-usage__citerecommendation-copy-text {
+}
 
-// WIDGET USAGE DOWNLOAD IMAGE SIZES POPOVER
+/* WIDGET USAGE DOWNLOAD IMAGES SIZES POPOVER */
 #downloadImagePopover {
 	fieldset {}
-	label {}
-	input[type="radio"]:checked + label {}
+	label {
+	}
+	input[type="radio"]:checked + label {
+	}
 	.widget-usage {
-		&__download-image-size-option-wrapper {}
-		&__download-image-size-input {}
-		&__download-image-size-form {
-			label {}
+		&__download-image-size-option-wrapper {
 		}
-		&__download-image-size-radio-label {}
-		&__download-image-size-radio-size {}
-		&__download-image-size-radio-format {}
-		&__download-image-size-button {}
+		&__download-image-size-input {
+		}
+		&__download-image-size-form {
+			label {
+			}
+		}
+		&__download-image-size-radio-label {
+	    }
+		&__download-image-size-radio-size {
+	    }
+		&__download-image-size-radio-format {
+	    }
+		&__download-image-size-button {
+		}
 	}
 }
 

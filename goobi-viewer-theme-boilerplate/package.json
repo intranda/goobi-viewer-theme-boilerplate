@@ -9,11 +9,12 @@
   },
   "license": "GPL-2.0-or-later",
   "devDependencies": {
-    "grunt": "*",
-    "grunt-contrib-less": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-riot": "*",
-    "less-plugin-autoprefix": "*",
-    "grunt-sync": "^0.8.1"
+    "grunt": "^1.4.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-riot": "^0.1.8",
+    "grunt-sync": "^0.8.2",
+    "less-plugin-autoprefix": "^1.5.1"
   }
 }
