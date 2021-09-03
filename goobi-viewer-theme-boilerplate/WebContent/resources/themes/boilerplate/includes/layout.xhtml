@@ -84,7 +84,7 @@
 	                    <a href="#{request.contextPath}/sitelinks/">#{msg.sitelinks}</a>
 	                </li>
 					<li>
-						<a href="#{request.contextPath}/feedback/">#{msg.feedbackLeaveFeedback}</a>
+						<button data-toggle="modal" data-target="#feedbackModal">#{msg.contact}</button>
 					</li>
 	                <li>
 	                    <a href="#{request.contextPath}/privacy/">#{msg.privacy}</a>
@@ -109,6 +109,7 @@
 	<viewerComponent:modalUserLogin id="userLoginModal" />
 	<viewerComponent:modalUserTerms id="userTermsModal" />
     <ui:include src="/resources/includes/overlay.xhtml" />
+	<ui:include src="/resources/includes/loadingOverlay.xhtml" />
 
     <!-- IE 11 NOT SUPPORTED -->
     <div class="support-overlay">

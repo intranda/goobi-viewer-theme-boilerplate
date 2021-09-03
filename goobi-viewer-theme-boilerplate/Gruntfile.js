@@ -21,6 +21,7 @@ module.exports = function(grunt) {
         },
         src: {
         	jsFolder: 'WebContent/resources/themes/<%=theme.name%>/javascript/',
+			jsDevFolder: 'WebContent/resources/themes/<%=theme.name%>/javascript/dev/',
             jsDistFolder: 'WebContent/resources/themes/<%=theme.name%>/javascript/dist/',
             lessFolder: 'WebContent/resources/themes/<%=theme.name%>/css/less/',
             lessCsFolder: 'WebContent/resources/themes/<%=theme.name%>/css/less/crowdsourcing/',
@@ -67,6 +68,15 @@ module.exports = function(grunt) {
                 dest: '<%=src.jsDistFolder%><%=theme.name%>Tags.js'
             }
         },
+		concat : {
+		    options : {
+		        separator : ';',
+		    },
+		    dist : {
+		        src : [ '<%=src.jsDevFolder %>custom.js' ],
+		        dest : '<%=src.jsDistFolder %>custom.min.js',
+		    },
+		},
         watch: {
         	configFiles : {
 				files : [ 'Gruntfile.js' ],
@@ -93,6 +103,13 @@ module.exports = function(grunt) {
                     spawn: false,
                 }
             },
+            scripts: {
+                files: [ '<%=src.jsDevFolder %>*.js' ],
+                tasks: [ 'concat', 'sync' ],
+                options: {
+                	spawn: false,
+                }
+            },
             riot: {
             	files : [
             		'<%=src.jsFolder %>**/*.tag'
@@ -108,8 +125,10 @@ module.exports = function(grunt) {
 	// ---------- LOAD TASKS ----------
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-riot');
+	grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-sync');
+
     
 	// ---------- REGISTER DEVELOPMENT TASKS ----------
     grunt.registerTask('default', [ 'watch', 'sync' ]);
