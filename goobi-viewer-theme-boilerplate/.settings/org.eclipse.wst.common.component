@@ -1,28 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-            
+<<<<<<< HEAD
+                
+=======
+                            
+    
+    
+    
+>>>>>>> branch 'develop' of git@gitea.intranda.com:goobi-viewer/goobi-viewer-theme-boilerplate.git
+    
     
     <wb-module deploy-name="viewer">
-                        
+<<<<<<< HEAD
+                                
+=======
+                                                        
+        
+        
+        
+>>>>>>> branch 'develop' of git@gitea.intranda.com:goobi-viewer/goobi-viewer-theme-boilerplate.git
+        
         
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
-                        
+<<<<<<< HEAD
+                                
+=======
+                                                        
+        
+        
+        
+>>>>>>> branch 'develop' of git@gitea.intranda.com:goobi-viewer/goobi-viewer-theme-boilerplate.git
+        
         
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
-                        
+<<<<<<< HEAD
+                                
+=======
+                                                        
+        
+        
+        
+>>>>>>> branch 'develop' of git@gitea.intranda.com:goobi-viewer/goobi-viewer-theme-boilerplate.git
+        
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/WebContent"/>
-        <dependent-module archiveName="viewer-core-21.05-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/goobi-viewer-core/goobi-viewer-core">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-                        
+<<<<<<< HEAD
+                                
+=======
+                                                        
+        
+        
+        
+>>>>>>> branch 'develop' of git@gitea.intranda.com:goobi-viewer/goobi-viewer-theme-boilerplate.git
+        
         
         <property name="context-root" value="viewer"/>
-                        
+<<<<<<< HEAD
+                                
+=======
+                                                        
+        
+        
+        
+>>>>>>> branch 'develop' of git@gitea.intranda.com:goobi-viewer/goobi-viewer-theme-boilerplate.git
+        
         
         <property name="component.exclusion.patterns" value="**/rebel.xml"/>
-                    
+<<<<<<< HEAD
+                            
+=======
+                                                    
+    
+    
+    
+>>>>>>> branch 'develop' of git@gitea.intranda.com:goobi-viewer/goobi-viewer-theme-boilerplate.git
+    
     
     </wb-module>
-        
+<<<<<<< HEAD
+            
+=======
+                        
+
+
+
+>>>>>>> branch 'develop' of git@gitea.intranda.com:goobi-viewer/goobi-viewer-theme-boilerplate.git
+
 
 </project-modules>
