@@ -1,7 +1,7 @@
 /* ==============================================================
    Basic Elements Styling
    ==============================================================*/
-html, 
+html,
 body {}
 
 html {
@@ -14,6 +14,13 @@ body {
 	font-kerning: normal;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+
+	// Style focused elements when navigating with the keyboard
+	// Define rules in the mixin `.mx-focus-visible`
+	&.using-keyboard :focus-visible {
+		.mx-focus-visible !important;
+	}
+
 }
 
 h1, h2, h3, h4, h5, h6,
