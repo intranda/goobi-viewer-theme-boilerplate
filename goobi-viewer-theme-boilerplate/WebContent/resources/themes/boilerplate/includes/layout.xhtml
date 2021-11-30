@@ -1,5 +1,4 @@
-<ui:composition 
-    xmlns="http://www.w3.org/1999/xhtml" 
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" 
     xmlns:ui="http://xmlns.jcp.org/jsf/facelets" 
     xmlns:c="http://java.sun.com/jsp/jstl/core"
     xmlns:h="http://xmlns.jcp.org/jsf/html" 
@@ -44,8 +43,8 @@
     <!-- DESKTOP NAVIGATION -->
     <viewerComponent:navigation megaMenu="false" />
 
-    <!-- BREADCRUMBS -->
-    <ui:insert name="breadcrumbs" />
+	<!-- BREADCRUMBS -->
+	<viewerComponent:breadcrumbs showIcon="false" showStartText="true" />
     
 	<!-- ALTERNATIVE SIDEBAR MENU COMPONENT -->
 	<!-- <viewerComponent:sidebarMenu /> -->
@@ -63,7 +62,15 @@
 
     <!-- HEADER -->
     <header id="pageHeader" class="page-header">
-        <div class="container"></div>
+        <div class="container">
+			<div class="page-header__logo">
+				<a href="#{request.contextPath}/"> <img
+					src="#{adminThemesBean.getLogo(request.contextPath.concat(&quot;/resources/themes/boilerplate/images/template/goobi_logo.svg&quot;), 80, 53)}"
+					alt="#{adminThemesBean.getThemeLabel(configurationBean.name)} Logo" />
+					<span class="page-header__span">#{adminThemesBean.getThemeLabel(configurationBean.name)}</span>
+				</a>
+			</div>
+        </div>
     </header>
 
     <!-- MAIN -->
@@ -75,30 +82,113 @@
         </div>
     </div>
 
-    <!-- FOOTER -->
-    <div id="pageFooter" class="page-footer">
-        <div class="container">
-            <nav class="page-footer__navigation">
-	            <ul>
-	                <li>
-	                    <a href="#{request.contextPath}/sitelinks/">#{msg.sitelinks}</a>
-	                </li>
-					<li>
-						<button data-toggle="modal" data-target="#feedbackModal">#{msg.contact}</button>
-					</li>
-	                <li>
-	                    <a href="#{request.contextPath}/privacy/">#{msg.privacy}</a>
-	                </li>
-	                <li>
-	                	<a href="#{request.contextPath}/imprint/">#{msg.imprint}</a>
-	                </li>	                
-	                <li>
-	                    powered by <a href="#{msg.intrandaViewer}" target="_blank">Goobi viewer</a>
-	                </li>
-	            </ul>
-			</nav>
-        </div>
-    </div>
+	<!-- FOOTER -->
+	<footer id="pageFooter" class="page-footer">
+		<div class="container">
+			<div class="page-footer__wrapper">
+				<!-- FOOTER LINKS -->
+				<div class="page-footer__links">
+				
+					<a href="#{request.contextPath}/sitelinks/">#{msg.sitelinks}</a>
+					
+					<c:if test="#{not empty adminThemesBean.currentTheme.getFooterLink('contact').linkUrl}">
+						<a href="#{adminThemesBean.getFooterUrl('contact', 'default_contact_link')}">#{msg.contact}</a>
+					</c:if>
+					
+					<c:if test="#{empty adminThemesBean.currentTheme.getFooterLink('contact').linkUrl}">
+						<button class="btn btn--icon" data-toggle="modal" data-target="#feedbackModal">#{msg.contact}</button>
+					</c:if>
+					
+					<a href="#{adminThemesBean.getFooterUrl('privacy', request.contextPath.concat(&quot;/privacy&quot;))}">#{msg.privacy}</a>
+					
+					<a href="#{adminThemesBean.getFooterUrl('legal', request.contextPath.concat(&quot;/imprint&quot;))}">#{msg.imprint}</a> <span>powered by</span> 
+					
+					<a href="#{msg.intrandaViewer}" target="_blank" rel="noopener">Goobi viewer</a>
+
+				</div>
+
+				<!-- FOOTER SOCIAL MEDIA -->
+				<div class="page-footer__social">
+
+				<c:if test="#{adminThemesBean.hasSocialMediaUrl('facebook')}">
+					
+					<a href="https://facebook.com/#{adminThemesBean.currentTheme.getSocialMediaLink('facebook').linkUrl}"
+						title="#{msg.social__follow_on_facebook}" data-toggle="tooltip"
+						target="_blank" rel="noopener"
+						aria-label="#{msg.social__follow_on_facebook}"> <span
+						class="sr-only">#{msg.social__follow_on_slideshare}</span> <i
+						class="fa fa-facebook" aria-hidden="true"></i>
+					</a>
+					
+				</c:if>
+
+				<c:if test="#{adminThemesBean.hasSocialMediaUrl('github')}">
+					
+					<a href="https://github.com/#{adminThemesBean.currentTheme.getSocialMediaLink('github').linkUrl}"
+						title="#{msg.social__follow_on_github}" data-toggle="tooltip"
+						target="_blank" rel="noopener"
+						aria-label="#{msg.social__follow_on_github}"> <span
+						class="sr-only">#{msg.social__follow_on_github}</span> <i
+						class="fa fa-github" aria-hidden="true"></i>
+					</a> 
+					
+				</c:if>
+					
+				<c:if test="#{adminThemesBean.hasSocialMediaUrl('twitter')}">
+
+					<a href="https://twitter.com/#{adminThemesBean.currentTheme.getSocialMediaLink('twitter').linkUrl}"
+
+						title="#{msg.social__follow_on_twitter}" data-toggle="tooltip"
+						target="_blank" rel="noopener"
+						aria-label="#{msg.social__follow_on_twitter}"> <span
+						class="sr-only">#{msg.social__follow_on_twitter}</span> <i
+						class="fa fa-twitter" aria-hidden="true"></i>
+					</a>
+					
+				</c:if>	
+				
+				<c:if test="#{adminThemesBean.hasSocialMediaUrl('youtube')}">
+					
+					<a href="https://youtube.com/#{adminThemesBean.currentTheme.getSocialMediaLink('youtube').linkUrl}"
+
+						title="#{msg.social__follow_on_youtube}" data-toggle="tooltip"
+						target="_blank" rel="noopener"
+						aria-label="#{msg.social__follow_on_youtube}"> <span
+						class="sr-only">#{msg.social__follow_on_youtube}</span> <i
+						class="fa fa-youtube" aria-hidden="true"></i>
+					</a> 
+					
+				</c:if>
+				
+				<c:if test="#{adminThemesBean.hasSocialMediaUrl('slideshare')}">
+					
+					<a href="https://slideshare.net/#{adminThemesBean.currentTheme.getSocialMediaLink('slideshare').linkUrl}"
+
+						title="#{msg.social__follow_on_slideshare}" data-toggle="tooltip"
+						target="_blank" rel="noopener"
+						aria-label="#{msg.social__follow_on_slideshare}"> <span
+						class="sr-only">#{msg.social__follow_on_slideshare}</span> <i
+						class="fa fa-slideshare" aria-hidden="true"></i>
+					</a>
+					
+				</c:if>
+				
+				<c:if test="#{adminThemesBean.hasSocialMediaUrl('instagram')}">
+					
+					<a href="https://instagram.com/#{adminThemesBean.currentTheme.getSocialMediaLink('instagram').linkUrl}"
+						title="#{msg.social__follow_on_instagram}" data-toggle="tooltip"
+						target="_blank" rel="noopener"
+						aria-label="#{msg.social__follow_on_slideshare}"> <span
+						class="sr-only">#{msg.social__follow_on_slideshare}</span> <i
+						class="fa fa-instagram" aria-hidden="true"></i>
+					</a>
+					
+				</c:if>
+				
+				</div>
+			</div>
+		</div>
+	</footer>
 
     <!-- LINK FOR SCROLLING TO TOP -->
     <span class="icon-totop" title="#{msg.topOfPage}">

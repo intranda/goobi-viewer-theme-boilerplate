@@ -37,9 +37,9 @@
     
     <!-- RELATIVE URL TAGS -->
     <h:outputText escape="false" value="#{activeDocumentBean.relativeUrlTags}" />
-    
-    <!-- JAVASCRIPT LIBS -->
-	<script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/jquery/jquery.min.js?${navigationHelper.buildVersion}"></script>  
+
+    <!-- JAVASCRIPT LIBS -->   
+    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/jquery/jquery.min.js?${navigationHelper.buildVersion}"></script>
     <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/bs/bootstrap.bundle.min.js?${navigationHelper.buildVersion}"></script>
     <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/reactiveX/rxjs.umd.min.js?${navigationHelper.buildVersion}"></script>
     <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/q-promises/q.min.js?${navigationHelper.buildVersion}"></script>
@@ -64,12 +64,11 @@
         <!-- TODO: REST-Aufrufe entwickeln, die die notwendigen Parameter an Mirador übergeben. -->
 
         <script type="text/javascript">
-        	var miradorConfig = {
+            var miradorConfig = {
             	root: "#{request.contextPath}",
             	restEndpoint: "#{configurationBean.restApiUrl}",
-            	userLoggedIn: #{userBean.loggedIn},
             	manifestEndpoint: "#{configurationBean.restApiUrlForIIIFPresention}/"
-            };
+			};
             viewerJS.mirador.init( miradorConfig );
 
         </script>
