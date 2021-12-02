@@ -64,11 +64,10 @@
     <header id="pageHeader" class="page-header">
         <div class="container">
 			<div class="page-header__logo">
-				<a href="#{request.contextPath}/"> <img
-					src="#{adminThemesBean.getLogo(request.contextPath.concat(&quot;/resources/themes/boilerplate/images/template/goobi_logo.svg&quot;), 80, 53)}"
-					alt="#{adminThemesBean.getThemeLabel(configurationBean.name)} Logo" />
-					<span class="page-header__span">#{adminThemesBean.getThemeLabel(configurationBean.name)}</span>
-				</a>
+              <a href="#{request.contextPath}/"> <img
+                src="#{adminThemesBean.getLogo(&quot;images/template/logo_bka.png&quot;, 80, 53)}"
+                alt="#{adminThemesBean.getThemeLabel(configurationBean.name)} Logo" /> <span class="page-header__span">#{adminThemesBean.getThemeLabel(configurationBean.name)}</span>
+              </a>
 			</div>
         </div>
     </header>
