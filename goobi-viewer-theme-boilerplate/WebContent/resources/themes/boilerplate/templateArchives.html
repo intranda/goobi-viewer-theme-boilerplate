@@ -14,7 +14,8 @@
       xmlns:widgetComponent="http://xmlns.jcp.org/jsf/composite/components/widgets"
       xmlns:templateComponent="http://xmlns.jcp.org/jsf/composite/themes/boilerplate/components"
       lang="#{navigationHelper.localeString}"
-      dir="#{navigationHelper.localeString eq 'ar' or navigationHelper.localeString eq 'iw' ? 'rtl' : 'ltr'}">
+      dir="#{navigationHelper.localeString eq 'ar' or navigationHelper.localeString eq 'iw' ? 'rtl' : 'ltr'}"
+      class="#{sessionBean.get('colorTheme')}">
 
 <h:head profile="http://dublincore.org/documents/dcq-html/">
 
@@ -32,16 +33,15 @@
 
 	<c:choose>
 		<c:when test="#{archiveBean.databaseLoaded}">
-		    <title>#{archiveBean.archiveId} - #{configurationBean.name}</title>
+		    <title>#{archiveBean.archiveId} - #{adminThemesBean.getThemeLabel(configurationBean.name)}</title>
 		</c:when>
 		<c:otherwise>
-		    <title>#{msg.archives__archiveViewHeading} - #{configurationBean.name}</title>
+		    <title>#{msg.archives__archiveViewHeading} - #{adminThemesBean.getThemeLabel(configurationBean.name)}</title>
 		</c:otherwise>
 	</c:choose>
     
     <!-- FAVICON -->
     <link rel="shortcut icon" href="#{adminThemesBean.getIcon(&quot;images/template/favicon.ico&quot;, 32, 32)}" />
-    
     <!-- RELATIVE URL TAGS -->
     <h:outputText escape="false" value="#{activeDocumentBean.relativeUrlTags}" />
 
@@ -59,6 +59,9 @@
 	<link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/dist/viewer.min.css?${navigationHelper.buildVersion}" />
 	<link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/themes/#{navigationHelper.theme}/css/dist/#{navigationHelper.theme}.min.css?${navigationHelper.buildVersion}" />
     
+    <!-- QUICK CSS IN VIEWER BACKEND - ADDS <style> NODE -->
+	<h:outputText escape="false" value="#{adminThemesBean.styleSheet}"/>
+
     <!-- JAVASCRIPT LIBS -->   
     <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/jquery/jquery.min.js?${navigationHelper.buildVersion}"></script>
     <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/jqueryUi/1.12.1/jquery-ui.min.js?${navigationHelper.buildVersion}"></script>
@@ -68,13 +71,13 @@
     <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/q-promises/q.min.js?${navigationHelper.buildVersion}"></script>
     <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/clipboard/clipboard.min.js?${navigationHelper.buildVersion}"></script>
     <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/riot/riot.min.js?${navigationHelper.buildVersion}"></script>
+	<script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/sweetalert/sweetalert2.min.js?${navigationHelper.buildVersion}"></script>
     <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/openseadragon/openseadragon.min.js?${navigationHelper.buildVersion}"></script>
     <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/openseadragon/openseadragon-viewerinputhook.js?${navigationHelper.buildVersion}"></script>
     <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/leaflet/leaflet.js?${navigationHelper.buildVersion}"></script>
 	<script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/leaflet/extra-markers/leaflet.extra-markers.min.js?${navigationHelper.buildVersion}"></script>
 	<script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/leaflet/markercluster/leaflet.markercluster.js?${navigationHelper.buildVersion}"></script>
 	<script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/hcsticky/hc-sticky.js?${navigationHelper.buildVersion}"></script>
-	<script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/sweetalert/sweetalert2.min.js?${navigationHelper.buildVersion}"></script>
 	
 	
     <!-- JAVASCRIPT DIST FILES -->
