@@ -70,6 +70,9 @@ $( document ).ready( function() {
     };
     
     viewerJS.init( viewerConfig );
+
+    // Initialize sticky elements for frontend sidebar
+    // viewerJS.stickyElements.init({initFrontend:true});
     
     // set content height to window height
     // setContentHeight(); --> METHODE AN LAYOUT ANPASSEN!
