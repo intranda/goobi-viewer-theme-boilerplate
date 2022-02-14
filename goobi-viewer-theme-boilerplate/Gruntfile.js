@@ -49,6 +49,7 @@ module.exports = function(grunt) {
                 	],
                     compress: true,
                     sourceMap: true,
+					sourceMapURL: "<%=theme.name%>.min.css.map",
                     banner: '<%=banner.text%>',
                 },
                 files: {
