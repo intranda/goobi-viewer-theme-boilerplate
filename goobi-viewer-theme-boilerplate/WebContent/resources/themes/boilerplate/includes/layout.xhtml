@@ -200,6 +200,9 @@
 	<viewerComponent:modalUserLogin id="userLoginModal" />
 	<viewerComponent:modalUserTerms id="userTermsModal" />
 	<viewerComponent:modalFeedbackForm id="feedbackModal" />
+	<ui:fragment rendered="#{configurationBean.contentUploadEnabled}">
+		<viewerComponent:modalContentUpload id="contentUploadModal" />
+	</ui:fragment>
 	
     <ui:include src="/resources/includes/overlay.xhtml" />
 	<ui:include src="/resources/includes/loadingOverlay.xhtml" />
