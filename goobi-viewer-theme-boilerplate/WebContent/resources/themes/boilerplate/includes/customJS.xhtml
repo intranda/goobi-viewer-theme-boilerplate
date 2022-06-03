@@ -47,6 +47,10 @@
         	adminJS.init();    		
     	}
     	
+    	// thumbnail script
+    	viewerJS.thumbnailLoader = new viewerJS.loadThumbnails("#{request.contextPath}#{navigationHelper.getResource('images/image_not_found.png')}",
+        "#{request.contextPath}#{navigationHelper.getResource('images/thumbnail_access_denied.jpg')}");
+    	
     	// init cms module functions
     	cmsJS.modules.init();
     </script>
