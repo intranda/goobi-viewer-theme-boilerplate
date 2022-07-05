@@ -31,6 +31,11 @@
     	</button>
         <viewerComponent:changeLocal toggleLanguage="false" showFlags="false" />
     </ui:fragment>
+    
+	<!-- CLIENT STATUS -->
+	<ui:fragment rendered="#{adminClientsBean.clientLoggedIn}">
+	        <viewerComponent:clientApplicationStatus/>
+	</ui:fragment>
 
     <!-- BOOKMARK -->
     <viewerComponent:bookmarkListNavigation />
