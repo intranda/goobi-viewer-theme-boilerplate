@@ -19,7 +19,7 @@ pipeline {
     }
     stage('build') {
       steps {
-              sh 'mvn -f goobi-viewer-theme-*/pom.xml clean install'
+              sh 'mvn -f goobi-viewer-theme-*/pom.xml clean verify -U'
               recordIssues enabledForFailure: true, aggregatingResults: true, tools: [java(), javaDoc()]
       }
     }
