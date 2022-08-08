@@ -36,7 +36,7 @@
 
 	<!-- META TAGS -->
 	<ui:include src="/resources/includes/templateHeads/metaTags.xhtml" />
-	<meta name="color-scheme" content="light dark" />
+	<meta name="color-scheme" content="light" />
 
 	<!-- FAVICON -->
 	<link rel="shortcut icon"
@@ -66,6 +66,7 @@
 	<ui:include src="/resources/includes/templateHeads/css.xhtml">
 		<ui:param name="templateName" value="#{templateName}" />
 		<ui:param name="excludeCSS" value="#{excludeCSS}" />
+      	<ui:param name="cacheBuster" value="-cachetimestamp=2022-8-8-10-51-31" />
 	</ui:include>
 
 	<!-- SUBTHEME CSS -->
@@ -82,6 +83,7 @@
 	<ui:include src="/resources/includes/templateHeads/js.xhtml">
 		<ui:param name="templateName" value="#{templateName}" />
 		<ui:param name="excludeJS" value="#{excludeJS}" />
+      	<ui:param name="cacheBuster" value="-cachetimestamp=2022-8-8-10-51-31" />
 	</ui:include>
 
 </h:head>
