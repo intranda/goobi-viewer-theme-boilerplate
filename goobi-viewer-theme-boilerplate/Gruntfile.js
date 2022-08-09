@@ -27,7 +27,8 @@ module.exports = function(grunt) {
             lessCsFolder: 'WebContent/resources/themes/<%=theme.name%>/css/less/crowdsourcing/',
             lessSubThemeOneFolder: 'WebContent/resources/themes/<%=theme.name%>/css/less/subthemes/<%=theme.subThemeOne%>/',
             cssFolder: 'WebContent/resources/themes/<%=theme.name%>/css/',
-            cssDistFolder: 'WebContent/resources/themes/<%=theme.name%>/css/dist/'
+            cssDistFolder: 'WebContent/resources/themes/<%=theme.name%>/css/dist/',
+			templatesFolder: 'WebContent/resources/themes/<%=theme.name%>/',
         },
         sync: {
         	main: {
@@ -123,6 +124,31 @@ module.exports = function(grunt) {
 			 	}
 			}
 		},
+		replace: {
+			dist: {
+		    	options:{
+		      		patterns: [ {
+						match: /cachetimestamp=[0-9-]+/g,
+						replacement: 'cachetimestamp=<%= new Date().getFullYear()+"-"+(new Date().getMonth()+1)+"-"+new Date().getDate()+"-"+(new Date().getHours())+"-"+(new Date().getMinutes())+"-"+(new Date().getSeconds()) %>' 
+					} ],
+					usePrefix: false,
+		    	},
+			  files: [
+			    {
+			     expand: true, 
+			     flatten: true, 
+			     src: ['<%=src.templatesFolder%>*.html'],
+			     dest: '<%=src.templatesFolder%>'
+			    },
+			    {
+			     expand: false, 
+			     flatten: true, 
+			     src: ['WebContent/resources/themes/<%=theme.name%>/includes/customJS.xhtml'],
+			     dest: 'WebContent/resources/themes/<%=theme.name%>/includes/customJS.xhtml'
+			    }
+			  ]
+		    }
+		},
     });
     
 	// ---------- LOAD TASKS ----------
@@ -131,8 +157,10 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-sync');
+	grunt.loadNpmTasks('grunt-replace');
 
     
 	// ---------- REGISTER DEVELOPMENT TASKS ----------
     grunt.registerTask('default', [ 'watch', 'sync' ]);
+	grunt.registerTask('cache', [ 'sync', 'replace' ]);
 };
