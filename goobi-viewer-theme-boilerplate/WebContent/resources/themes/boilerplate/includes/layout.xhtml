@@ -16,6 +16,13 @@
     <!-- ADMIN TOPBAR FRONTEND -->
 	<viewerComponent:frontEndAdminTopBar />
 
+	<!-- ONLY FOR KEYBOARD - SKIP TO MAIN CONTENT LINK -->
+	<div class="skip-menu">
+		<a href="#main" class="skip-menu__link">
+		Skip to main content
+		</a>
+	</div>
+
     <!-- SEARCH FIELD -->
     <ui:fragment 
         rendered="#{navigationHelper.currentPage != 'search' and 

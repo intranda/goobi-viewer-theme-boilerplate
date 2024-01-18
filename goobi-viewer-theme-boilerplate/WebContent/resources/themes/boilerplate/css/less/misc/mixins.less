@@ -75,3 +75,8 @@
 	z-index: 9999;
 }
 
+// DETACHED RULESET FOR OVERRIDING STYLING
+.detachedRuleSetTopLevel(@generalprops) {
+  & { @generalprops(); }
+}
+
