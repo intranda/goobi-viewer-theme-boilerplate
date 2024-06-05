@@ -42,59 +42,44 @@
     <ui:include src="/resources/includes/templateHeads/css.xhtml">
       <ui:param name="templateName" value="#{templateName}" />
       <ui:param name="excludeCSS" value="#{excludeCSS}" />
-      <ui:param name="cacheBuster" value="-cachetimestamp=2022-8-8-10-51-31" />
+      <ui:param name="cacheBuster" value="-cachetimestamp=2022-9-1-10-5-6" />
     </ui:include>
-
-    <!-- BASIC CSS -->
-    <!--
-    <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/libs/bs/bootstrap.custom.css?${navigationHelper.buildVersion}" />
-    <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/libs/jQueryUI-1.12.1/jquery-ui.min.css?${navigationHelper.buildVersion}" />
-    <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/libs/jQueryUI-1.12.1/jquery-ui.structure.min.css?${navigationHelper.buildVersion}" />
-	<link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/libs/sweetalert/sweetalert2.min.css?${navigationHelper.buildVersion}" />
-    <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/libs/font-awesome/css/font-awesome.min.css?${navigationHelper.buildVersion}" />
-	<link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/libs/leaflet/leaflet.css?${navigationHelper.buildVersion}" />
-	<link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/libs/leaflet/extra-markers/leaflet.extra-markers.min.css?${navigationHelper.buildVersion}" />
-	<link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/libs/leaflet/markercluster/MarkerCluster.css?${navigationHelper.buildVersion}" />
-	<link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/libs/mapbox/geocoder/mapbox-gl-geocoder.css?${navigationHelper.buildVersion}" />
-	<link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/libs/mapbox/mapbox-gl.css?${navigationHelper.buildVersion}" />
-    -->
 
 	<!-- CUSTOM CSS + DIST FILES -->
 	<link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/dist/viewer.min.css?${navigationHelper.buildVersion}" />
 
-    <!-- QUICK CSS IN VIEWER BACKEND - ADDS <style> NODE -->
-	<h:outputText escape="false" value="#{adminThemesBean.styleSheet}"/>
+	 <!-- QUICK CSS IN VIEWER BACKEND - ADDS <style> NODE - INSERTED WITH INCLUDE FOR CORRECT IDE VALIDATION -->
+	 <ui:fragment rendered="#{adminThemesBean.stylesheetExists(adminThemesBean.mainThemeName)}">
+	    <ui:include src="/resources/includes/templateHeads/quickcss.xhtml">
+	    	<ui:param name="style" value="#{adminThemesBean.getStylesheet(adminThemesBean.mainThemeName)}"></ui:param>
+	    </ui:include>				
+    </ui:fragment>
+    <!-- QUICK CSS FROM SUBTHEMES -->
+	<ui:fragment rendered="#{adminThemesBean.stylesheetExists(adminThemesBean.currentSubThemeName)}">
+	    <ui:include src="/resources/includes/templateHeads/quickcss.xhtml">
+	    	<ui:param name="style" value="#{adminThemesBean.getStylesheet(adminThemesBean.currentSubThemeName)}"></ui:param>
+	    </ui:include>	
+    </ui:fragment>
 
     <!-- JAVASCRIPT -->
     <ui:include src="/resources/includes/templateHeads/js.xhtml">
       <ui:param name="templateName" value="#{templateName}" />
       <ui:param name="excludeJS" value="#{excludeJS}" />
-      <ui:param name="cacheBuster" value="-cachetimestamp=2022-8-8-10-51-31" />
+      <ui:param name="cacheBuster" value="-cachetimestamp=2022-9-1-10-5-6" />
     </ui:include>
-
-    <!-- JAVASCRIPT LIBS -->
-    <!--
-    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/jquery/jquery.min.js?${navigationHelper.buildVersion}"></script>
-    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/jqueryUi/1.12.1/jquery-ui.min.js?${navigationHelper.buildVersion}"></script>
-    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/bs/bootstrap.bundle.min.js?${navigationHelper.buildVersion}"></script>
-    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/tinymce/tinymce.min.js?${navigationHelper.buildVersion}"></script>
-    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/reactiveX/rxjs.umd.min.js?${navigationHelper.buildVersion}"></script>
-    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/q-promises/q.min.js?${navigationHelper.buildVersion}"></script>
-    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/clipboard/clipboard.min.js?${navigationHelper.buildVersion}"></script>
-    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/riot/riot.min.js?${navigationHelper.buildVersion}"></script>
-    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/openseadragon/openseadragon.min.js?${navigationHelper.buildVersion}"></script>
-    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/openseadragon/openseadragon-viewerinputhook.js?${navigationHelper.buildVersion}"></script>
-    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/leaflet/leaflet.js?${navigationHelper.buildVersion}"></script>
-	<script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/leaflet/extra-markers/leaflet.extra-markers.min.js?${navigationHelper.buildVersion}"></script>
-	<script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/leaflet/markercluster/leaflet.markercluster.js?${navigationHelper.buildVersion}"></script>
-	<script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/sweetalert/sweetalert2.min.js?${navigationHelper.buildVersion}"></script>
-	<script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/mapbox/geocoder/mapbox-gl-geocoder.min.js?${navigationHelper.buildVersion}"></script>
-	<script type="text/javascript" src="#{request.contextPath}/resources/javascript/libs/mapbox/mapbox-gl.js?${navigationHelper.buildVersion}"></script>
-
-    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/dist/viewer.min.js?${navigationHelper.buildVersion}"></script>
-    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/dist/imageView.min.js?${navigationHelper.buildVersion}"></script>
-    <script type="text/javascript" src="#{request.contextPath}/resources/javascript/dist/riot-tags.js?${navigationHelper.buildVersion}"></script>
-    -->
+    
+	<!-- QUICK JS IN VIEWER BACKEND - ADDS <script> NODE - INSERTED WITH INCLUDE FOR CORRECT IDE VALIDATION -->
+    <ui:fragment rendered="#{adminThemesBean.javascriptExists(adminThemesBean.mainThemeName)}">
+	    <ui:include src="/resources/includes/templateHeads/quickjs.xhtml">
+	    	<ui:param name="script" value="#{adminThemesBean.getJavascript(adminThemesBean.mainThemeName)}"></ui:param>
+	    </ui:include>	
+    </ui:fragment>
+    <!-- QUICK JS FROM SUBTHEMES -->
+    <ui:fragment rendered="#{adminThemesBean.javascriptExists(adminThemesBean.currentSubThemeName)}">
+	    <ui:include src="/resources/includes/templateHeads/quickjs.xhtml">
+	    	<ui:param name="script" value="#{adminThemesBean.getJavascript(adminThemesBean.currentSubThemeName)}"></ui:param>
+	    </ui:include>	
+    </ui:fragment>
 
 </h:head>
 
