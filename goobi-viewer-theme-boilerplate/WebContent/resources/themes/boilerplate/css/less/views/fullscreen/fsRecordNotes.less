@@ -1,10 +1,17 @@
 /* ==============================================================
-   View Fullscreen Signal 
+   View Fullscreen Record Notes Styling
    ==============================================================*/
-/* FULLSCREEN SIGNAL */
-.fullscreen__view-sidebar-signal {}
-.fullscreen__view-sidebar-copy-sign {}
-.fullscreen__view-sidebar-copy-info {}
+/* FULLSCREEN RECORD NOTES */
+.fullscreen {
+	#widgetRecordNotes {}
+	.widget-record-notes {
+		.widget__title {}
+		.widget__body {
+			p {}
+		}
+		&:last-child {}
+	}
+}
 
 /* BREAKPOINT FOR LARGE DESKTOPS */
 @media screen and (max-width: @largeBreakpoint) {}
