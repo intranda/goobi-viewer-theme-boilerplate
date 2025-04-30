@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.goobi.viewer.theme</groupId>
 	<artifactId>theme-boilerplate</artifactId>
-	<version>24.11-SNAPSHOT</version>
+	<version>25.03-SNAPSHOT</version>
 	<packaging>war</packaging>
 
 
@@ -16,8 +16,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.release>11</maven.compiler.release>
-		
+		<maven.compiler.release>21</maven.compiler.release>
+
 		<!-- Manifest information -->
 		<themeName>boilerplate</themeName>
 		<maven.build.timestamp.format>yyyy-MM-dd_HH-mm</maven.build.timestamp.format>
@@ -37,25 +37,27 @@
 		<url>scm:git:https://github.com/intranda/goobi-viewer-theme-boilerplate/</url>
 		<connection>scm:git:https://github.com/intranda/goobi-viewer-theme-boilerplate/</connection>
 	</scm>
-	
+
+
 	<dependencies>
 		<dependency>
 			<groupId>io.goobi.viewer</groupId>
 			<artifactId>viewer-core</artifactId>
-			<version>24.11-SNAPSHOT</version>
+			<version>25.03-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>io.goobi.viewer</groupId>
 			<artifactId>viewer-core-config</artifactId>
-			<version>24.11-SNAPSHOT</version>
+			<version>25.03-SNAPSHOT</version>
 			<scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.goobi.viewer</groupId>
-            <artifactId>viewer-connector</artifactId>
-            <version>24.11-SNAPSHOT</version>
-        </dependency>
+		</dependency>
+		<dependency>
+			<groupId>io.goobi.viewer</groupId>
+			<artifactId>viewer-connector</artifactId>
+			<version>25.03-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
+
 
 	<profiles>
 		<profile>
@@ -70,16 +72,15 @@
 				<dependency>
 					<groupId>io.goobi.viewer.module</groupId>
 					<artifactId>module-crowdsourcing</artifactId>
-					<version>24.11-SNAPSHOT</version>
+					<version>25.03-SNAPSHOT</version>
 				</dependency>
 			</dependencies>
 		</profile>
 	</profiles>
 
 
-	<build>
-		<sourceDirectory>src</sourceDirectory>
-		<testSourceDirectory>test</testSourceDirectory>
+    <build>
+        <finalName>viewer</finalName>
 		<resources>
 			<resource>
 				<directory>WebContent</directory>
@@ -93,7 +94,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
-				<version>3.0.0-M3</version>
+				<version>3.5.0</version>
 				<executions>
 					<execution>
 						<id>enforce-maven</id>
@@ -103,7 +104,7 @@
 						<configuration>
 							<rules>
 								<requireMavenVersion>
-									<version>3.3.9</version>
+									<version>3.6.3</version>
 								</requireMavenVersion>
 							</rules>
 						</configuration>
@@ -115,7 +116,7 @@
 			<plugin>
 		        <groupId>org.apache.maven.plugins</groupId>
 		        <artifactId>maven-resources-plugin</artifactId>
-		        <version>3.1.0</version>
+               <version>3.3.1</version>
 		        <configuration>
 				<nonFilteredFileExtensions>
 					<nonFilteredFileExtension>ico</nonFilteredFileExtension>
@@ -127,17 +128,17 @@
 				</nonFilteredFileExtensions>
 		        </configuration>
 		     </plugin>
-			
+
 			<!-- Maven Compiler Plugin -->
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
+				<version>3.13.0</version>
 			</plugin>
 			<!-- Maven Dependency Plugin -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.1.2</version>
+				<version>3.8.1</version>
 				<executions>
 					<!-- Config files -->
 					<execution>
@@ -150,7 +151,7 @@
 							<outputDirectory>${project.build.directory}/config/WEB-INF/classes/</outputDirectory>
 							<excludeGroupIds>io.goobi.viewer.module</excludeGroupIds>
 							<excludeArtifactIds>viewer-core,viewer-connector</excludeArtifactIds>
-							<includeArtifacIds>viewer-core-config</includeArtifacIds>
+							<includeArtifactIds>viewer-core-config</includeArtifactIds>
 							<excludes>MANIFEST.MF,**/pom.*,install/,docker/,**/*.class,web-fragment.xml</excludes>
 							<excludeTransitive>true</excludeTransitive>
 						</configuration>
@@ -166,7 +167,7 @@
 							<outputDirectory>${project.build.directory}/templates</outputDirectory>
 							<excludeGroupIds>io.goobi.viewer.module</excludeGroupIds>
 							<excludeArtifactIds>viewer-core-config,viewer-connector</excludeArtifactIds>
-							<includeArtifacIds>viewer-core</includeArtifacIds>
+							<includeArtifactIds>viewer-core</includeArtifactIds>
 							<includes>META-INF/resources/resources/cms/templates/**/*</includes>
 							<excludeTransitive>true</excludeTransitive>
 						</configuration>
@@ -176,12 +177,9 @@
 			<!-- Maven WAR Plugin -->
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>3.3.1</version>
+				<version>3.4.0</version>
 				<configuration>
 					<warSourceDirectory>WebContent</warSourceDirectory>
-					<warName>viewer</warName>
-					<wtpversion>2.0</wtpversion>
-					<wtpContextName>viewer</wtpContextName>
 					<packagingExcludes>**/rebel.xml</packagingExcludes>
 					<webResources>
 						<webResource>
@@ -206,7 +204,7 @@
 			<plugin>
 				<groupId>pl.project13.maven</groupId>
 				<artifactId>git-commit-id-plugin</artifactId>
-				<version>4.0.1</version>
+				<version>4.9.10</version>
 				<executions>
 					<execution>
 						<goals>
@@ -224,7 +222,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>buildnumber-maven-plugin</artifactId>
-				<version>1.4</version>
+				<version>3.2.1</version>
 				<executions>
 					<execution>
 						<phase>validate</phase>
