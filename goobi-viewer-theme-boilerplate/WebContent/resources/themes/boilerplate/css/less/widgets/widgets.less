@@ -4,48 +4,51 @@
    ==============================================================*/
 /* WIDGETS */
 .widget {
-    h2 {}
-    ul {}
-    li {
-    	&.active {
-    		a {}
-    	}
-    	&.unpublished {
-    		a {}
-    	}
-    }
-    a {
-    	&:hover,
-    	&:active,
-    	&:focus {}
-    }
-    dl {}
-    dt,
-    dd {}
-    dt {}
-    dd {}
-    &__title {
-    	.fa {}
-    	&.collapseable {
-    		.fa {}
-	    	&.in {
-	    		.fa-angle-down {}
-	    	}    		
-    	}
-    }
-    &__body {
-    	&.collapseable {}
-    }    
+	&__topbar {
+		.fa {}
+	}
+	&__description-text {}
+	&__title {}
+	
+	&__body {
+		a {
+			&:hover {}
+		}
+		
+		li {
+		  &.active {
+		    a {}
+		  }
+		}
+	}
+
+  &__badge-container {
+	.badge {
+		&:hover,  
+		&:active,
+		&:focus {}
+	}
+	
+	.badge-dark {
+		&:hover,
+		&:active,
+		&:focus {}
+	}
+  }
 }
 
 /* BREAKPOINT FOR LARGE DESKTOPS */
-@media screen and (max-width: @largeBreakpoint) {} 
+@media screen and (max-width: @largeBreakpoint) {
+}
 
 /* BREAKPOINT FOR DESKTOPS */
-@media screen and (max-width: @mediumBreakpoint) {}
+@media screen and (max-width: @mediumBreakpoint) {
+}
 
 /* BREAKPOINT FOR TABLETS */
-@media screen and (max-width: @smallBreakpoint) {}
+@media screen and (max-width: @smallBreakpoint) {
+}
 
 /* BREAKPOINT FOR SMARTPHONES */
-@media screen and (max-width: @xSmallBreakpoint) {}
+@media screen and (max-width: @xSmallBreakpoint) {
+}
