@@ -2,42 +2,35 @@
    Widget Search Result Navigation
    style declarations for widget_searchresultNavigation.xhtml
    ==============================================================*/
-#widgetSearchResultNavigation {
-    h2 {}
-    .search-result-navigation-wrapp {
-        .search-result-navigation-left,
-        .search-result-navigation-center,
-        .search-result-navigation-right {
-        }
-        .search-result-navigation-left,
-        .search-result-navigation-right {
-            &:hover {
-            	svg {}
-            }
-        }
-        .search-result-navigation-left {
-            a {}
-            span {}
-            svg {}
-        }
-        .search-result-navigation-center {
-            span {}
-        }
-        .search-result-navigation-right {
-            a {}
-            span {}
-            svg {
-            }
-        }
-    }
-    .search-result-navigation-back-to-collection {
-        a {
-            svg {}
-        }
-        &:hover {
-        	svg {}
-        }
-    }
+.widget-search-result-navigation {
+   	&__topbar {}
+   	&__title {}
+   	&__body {}
+   	&__wrapper {}
+   	&__left,
+   	&__center,
+   	&__right {
+   		&:hover {
+   			svg {}
+   		}
+   	}
+   	&__left,
+   	&__right {}
+   	&__left {
+   		svg {}
+   	}
+   	&__center {}
+   	&__right {
+   		svg {}
+   	}
+   	&__back-to-collection {
+   		a {
+   			svg {}
+   		}
+   		&:hover {
+   			svg {}
+   		}
+   	}
 }
 
 /* BREAKPOINT FOR LARGE DESKTOPS */
