@@ -5,126 +5,170 @@
 /* BOOKMARK NAVIGATION */
 /* BLOCK */
 .bookmark-navigation {
-	/* ELEMENT */
-	&__dropdown-wrapper {}
-	/* TOOGLE DROPDOWN */
-	&__counter {}
-	&__string {}
-	&__icon {}
-	/* DROPDOWN */
-	&__dropdown {}
-	/* DROPDOWN LIST */
-	&__dropdown-list {
-		li {
-			&:last-child {}
-			.empty {}
-		}
-		h3 {}
-		a {
-			&:hover,
-			&:active,
-			&:focus {}
-		}
-	}
-	&__dropdown-list-counter {}
-	&__dropdown-list-image {}
-	&__dropdown-list-remove {
-			&:hover,
-			&:active,
-			&:focus {}
-	}
-	/* DROPDOWN ACTIONS */
-	&__dropdown-list-actions {}
-	&__dropdown-list-single-entry {}
-	&__dropdown-list-title {}
-	&__dropdown-list-reset,
-	&__dropdown-list-send,
-	&__dropdown-list-search,
-	&__dropdown-list-mirador {
-		&:hover,
-		&:active,
-		&:focus {}
-	}
-	/* COLOR OF ALL LINKS/BUTTONS OF LOGGED OUT BOOKMARK LIST */
-	&__dropdown-list-single-entry,
-	&__dropdown-list-title,
-	&__dropdown-list-remove,
-	&__dropdown-list-reset,
-	&__dropdown-list-send,	
-	&__dropdown-list-search,
-	&__dropdown-list-mirador {
-		button, a, span, h3
-		{
-			&:hover,
-			&:focus,
-			&:active {}
-		}
-	}
-	&__dropdown-list-reset {}
-	&__dropdown-list-send,
-	&__dropdown-list-mirador {
-		a {
-			span {}
-			.fa {}
-		}
-	}
-	&__dropdown-list-send {}
-	&__dropdown-list-mirador {}
+    /* ELEMENT */
+    &__dropdown-wrapper {
+    }
+    /* TOOGLE DROPDOWN */
+    &__counter {
+    }
+    &__string {
+    }
+    &__icon {
+    }
+    /* DROPDOWN */
+    &__dropdown {
+    }
+    /* DROPDOWN LIST */
+    &__dropdown-list {
+        li {
+            &:last-child {
+            }
+            .empty {
+            }
+        }
+        h3 {
+        }
+        a {
+            &:hover,
+            &:active,
+            &:focus {
+            }
+        }
+    }
+    &__dropdown-list-counter {
+    }
+    &__dropdown-list-image {
+    }
+    &__dropdown-list-remove {
+        &:hover,
+        &:active,
+        &:focus {
+        }
+    }
+    /* DROPDOWN ACTIONS */
+    &__dropdown-list-actions {
+    }
+    &__dropdown-list-single-entry {
+    }
+    &__dropdown-list-title {
+    }
+    &__dropdown-list-reset,
+    &__dropdown-list-send,
+    &__dropdown-list-search,
+    &__dropdown-list-mirador {
+        &:hover,
+        &:active,
+        &:focus {
+        }
+    }
+    /* COLOR OF ALL LINKS/BUTTONS OF LOGGED OUT BOOKMARK LIST */
+    &__dropdown-list-single-entry,
+    &__dropdown-list-title,
+    &__dropdown-list-remove,
+    &__dropdown-list-reset,
+    &__dropdown-list-send,
+    &__dropdown-list-search,
+    &__dropdown-list-mirador {
+        button,
+        a,
+        span,
+        h3 {
+            &:hover,
+            &:focus,
+            &:active {
+            }
+        }
+    }
+    &__dropdown-list-reset {
+    }
+    &__dropdown-list-send,
+    &__dropdown-list-mirador {
+        a {
+            span {
+            }
+            .fa {
+            }
+        }
+    }
+    &__dropdown-list-send {
+    }
+    &__dropdown-list-mirador {
+    }
 }
 
 /* POPUPS */
 /* BLOCK */
-.bookmark-popup { 
-	&.top {}
-	&.right {}
-	&.bottom {
-		&:before {}
-	}
-	&.left {}
-	/* ELEMENT */
-	&__header,
-	&__body,
-	&__footer {}
-	&__header {}
-	&__body {}
-	&__body-loader {}
-	&__body-list {
-		li {
-			&:hover,
-			&:active,
-			&:focus {} 
-			button {
-				&.btn {
-					&:hover,
-					&:active,
-					&:focus {
-					}
-				}
-				span {
-					background-color: @ci-color1;
-				}
-			}
-			.empty {}
-		}
-			&:hover {} 
-			.fa {} 
-			span {}  
-	}
-	&__footer {
-		input {}
-			&.added {}
-	}
-	&__list {}
+.bookmark-popup {
+    &.top {
+    }
+    &.right {
+    }
+    &.bottom {
+        &:before {
+        }
+    }
+    &.left {
+    }
+    /* ELEMENT */
+    &__header,
+    &__body,
+    &__footer {
+    }
+    &__header {
+    }
+    &__body {
+    }
+    &__body-loader {
+    }
+    &__body-list {
+        li {
+            &:hover,
+            &:active,
+            &:focus {
+            }
+            button {
+                &.btn {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                    }
+                }
+                span {
+                    background-color: @ci-color1;
+                }
+            }
+            .empty {
+            }
+        }
+        &:hover {
+        }
+        .fa {
+        }
+        span {
+        }
+    }
+    &__footer {
+        input {
+        }
+        &.added {
+        }
+    }
+    &__list {
+    }
 }
 
 /* BREAKPOINT FOR LARGE DESKTOPS */
-@media screen and (max-width: @largeBreakpoint) {} 
+@media screen and (max-width: @largeBreakpoint) {
+}
 
 /* BREAKPOINT FOR DESKTOPS */
-@media screen and (max-width: @mediumBreakpoint) {}
+@media screen and (max-width: @mediumBreakpoint) {
+}
 
 /* BREAKPOINT FOR TABLETS */
-@media screen and (max-width: @smallBreakpoint) {}
+@media screen and (max-width: @smallBreakpoint) {
+}
 
 /* BREAKPOINT FOR SMARTPHONES */
-@media screen and (max-width: @xSmallBreakpoint) {}
+@media screen and (max-width: @xSmallBreakpoint) {
+}

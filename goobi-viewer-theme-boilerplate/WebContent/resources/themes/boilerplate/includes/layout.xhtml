@@ -1,55 +1,59 @@
-<ui:composition xmlns="http://www.w3.org/1999/xhtml" 
-    xmlns:ui="http://xmlns.jcp.org/jsf/facelets" 
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
     xmlns:c="http://java.sun.com/jsp/jstl/core"
-    xmlns:h="http://xmlns.jcp.org/jsf/html" 
-    xmlns:f="http://xmlns.jcp.org/jsf/core" 
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
     xmlns:fn="http://java.sun.com/jsp/jstl/functions"
     xmlns:jsf="http://xmlns.jcp.org/jsf"
-    xmlns:pt="http://xmlns.jcp.org/jsf/passthrough" 
+    xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
     xmlns:viewer="http://xmlns.jcp.org/jsf/composite/components/partner"
-    xmlns:viewerComponent="http://xmlns.jcp.org/jsf/composite/components" 
+    xmlns:viewerComponent="http://xmlns.jcp.org/jsf/composite/components"
     xmlns:widgetComponent="http://xmlns.jcp.org/jsf/composite/components/widgets"
     xmlns:templateComponent="http://xmlns.jcp.org/jsf/composite/themes/boilerplate/components">
-
     <!-- ### COMPONENTS ### -->
-    
-    <!-- ADMIN TOPBAR FRONTEND -->
-	<viewerComponent:frontEndAdminTopBar />
 
-	<!-- ONLY FOR KEYBOARD - SKIP TO MAIN CONTENT LINK -->
-	<nav id="skipmenu" aria-label="#{msg.a11y__skip_menu}" class="skip-menu">
-		<a href="#main" class="skip-menu__link">
-		#{msg.a11y__skip_menu__jump_to_main}
-		</a>
-	</nav>
+    <!-- ADMIN TOPBAR FRONTEND -->
+    <viewerComponent:frontEndAdminTopBar />
+
+    <!-- ONLY FOR KEYBOARD - SKIP TO MAIN CONTENT LINK -->
+    <nav
+        id="skipmenu"
+        aria-label="#{msg.a11y__skip_menu}"
+        class="skip-menu">
+        <a
+            href="#main"
+            class="skip-menu__link">
+            #{msg.a11y__skip_menu__jump_to_main}
+        </a>
+    </nav>
 
     <!-- SEARCH FIELD -->
-    <ui:fragment 
+    <ui:fragment
         rendered="#{navigationHelper.currentPage != 'search' and 
                     navigationHelper.currentPage != 'searchadvanced' and 
                     navigationHelper.currentPage != 'searchlist'}">
         <widgetComponent:widget_searchField />
     </ui:fragment>
 
-
-
-
-
-	
-
-
     <!-- CHANGE LOCAL -->
     <ui:fragment rendered="#{fn:length(navigationHelper.supportedLanguages) > 1}">
-    	<button type="button" class="btn btn--clean" data-toggle="local" aria-label="#{msg.aria_label__switch_language}">
-    		#{msg['changeLocal_' += navigationHelper.localeString]}
-    	</button>
-        <viewerComponent:changeLocal toggleLanguage="false" showFlags="false" />
+        <button
+            type="button"
+            class="btn btn--clean"
+            data-toggle="local"
+            aria-label="#{msg.aria_label__switch_language}">
+            #{msg['changeLocal_' += navigationHelper.localeString]}
+        </button>
+        <viewerComponent:changeLocal
+            toggleLanguage="false"
+            showFlags="false" />
     </ui:fragment>
-    
-	<!-- CLIENT STATUS -->
-	<ui:fragment rendered="#{adminClientsBean.clientLoggedIn}">
-	        <viewerComponent:clientApplicationStatus/>
-	</ui:fragment>
+
+    <!-- CLIENT STATUS -->
+    <ui:fragment rendered="#{adminClientsBean.clientLoggedIn}">
+        <viewerComponent:clientApplicationStatus />
+    </ui:fragment>
 
     <!-- BOOKMARK -->
     <viewerComponent:bookmarkListNavigation />
@@ -62,11 +66,13 @@
     <!-- DESKTOP NAVIGATION -->
     <viewerComponent:navigation megaMenu="false" />
 
-	<!-- BREADCRUMBS -->
-	<viewerComponent:breadcrumbs showIcon="false" showStartText="true" />
-    
-	<!-- ALTERNATIVE SIDEBAR MENU COMPONENT -->
-	<!-- <viewerComponent:sidebarMenu /> -->
+    <!-- BREADCRUMBS -->
+    <viewerComponent:breadcrumbs
+        showIcon="false"
+        showStartText="true" />
+
+    <!-- ALTERNATIVE SIDEBAR MENU COMPONENT -->
+    <!-- <viewerComponent:sidebarMenu /> -->
 
     <!-- SIDEBAR WIDGETS -->
     <ui:insert name="sidebar" />
@@ -75,155 +81,198 @@
     <ui:insert name="rssFeed" />
 
     <!-- ### LAYOUT ### -->
-    
+
     <!-- HEADER -->
-    <header id="pageHeader" class="page-header">
-			<div class="page-header__logo">
-				<a href="#{request.contextPath}/"> <img
-					src="#{adminThemesBean.getLogo(&quot;/images/template/customer-header-logo.png&quot;, 80, 53)}"
-					alt="#{adminThemesBean.getThemeLabel(configurationBean.name)} Logo" />
-					<span class="page-header__span">#{adminThemesBean.getThemeLabel(configurationBean.name)}</span>
-				</a>
-			</div>
+    <header
+        id="pageHeader"
+        class="page-header">
+        <div class="page-header__logo">
+            <a href="#{request.contextPath}/">
+                <img
+                    src='#{adminThemesBean.getLogo("/images/template/customer-header-logo.png", 80, 53)}'
+                    alt="#{adminThemesBean.getThemeLabel(configurationBean.name)} Logo" />
+                <span class="page-header__span">#{adminThemesBean.getThemeLabel(configurationBean.name)}</span>
+            </a>
+        </div>
     </header>
 
     <!-- CONTENT -->
     <ui:insert name="content" />
 
     <!-- MAIN -->
-    <div id="pageContent" class="page-content">
+    <div
+        id="pageContent"
+        class="page-content">
         <div class="container">
-            <aside id="sidebar" class="page-content__sidebar"></aside>
+            <aside
+                id="sidebar"
+                class="page-content__sidebar"></aside>
 
-            <main id="main" class="page-content__main"></main>
+            <main
+                id="main"
+                class="page-content__main"></main>
         </div>
     </div>
 
-	<!-- FOOTER -->
-	<footer id="pageFooter" class="page-footer">
-		<div class="container">
-			<div class="page-footer__wrapper">
-				<!-- FOOTER LINKS -->
-				<div class="page-footer__links">
+    <!-- FOOTER -->
+    <footer
+        id="pageFooter"
+        class="page-footer">
+        <div class="container">
+            <div class="page-footer__wrapper">
+                <!-- FOOTER LINKS -->
+                <div class="page-footer__links">
+                    <ui:fragment rendered="#{configurationBean.sitelinksEnabled}">
+                        <a href="#{request.contextPath}/sitelinks/">#{msg.sitelinks}</a>
+                    </ui:fragment>
 
-					<ui:fragment rendered="#{configurationBean.sitelinksEnabled}">
-					   <a href="#{request.contextPath}/sitelinks/">#{msg.sitelinks}</a>
-					</ui:fragment>
+                    <c:if test="#{not empty adminThemesBean.currentTheme.getFooterLink('contact').linkUrl}">
+                        <a href="#{adminThemesBean.getFooterUrl('contact', 'default_contact_link')}">#{msg.contact}</a>
+                    </c:if>
 
-					<c:if test="#{not empty adminThemesBean.currentTheme.getFooterLink('contact').linkUrl}">
-						<a href="#{adminThemesBean.getFooterUrl('contact', 'default_contact_link')}">#{msg.contact}</a>
-					</c:if>
+                    <c:if test="#{empty adminThemesBean.currentTheme.getFooterLink('contact').linkUrl}">
+                        <button
+                            class="btn btn--icon"
+                            data-toggle="modal"
+                            data-target="#feedbackModal">
+                            #{msg.contact}
+                        </button>
+                    </c:if>
 
-					<c:if test="#{empty adminThemesBean.currentTheme.getFooterLink('contact').linkUrl}">
-						<button class="btn btn--icon" data-toggle="modal" data-target="#feedbackModal">#{msg.contact}</button>
-					</c:if>
+                    <a
+                        href="#{adminThemesBean.getFooterUrl('privacy', request.contextPath.concat(&quot;/privacy&quot;))}">
+                        #{msg.privacy}
+                    </a>
 
-					<a href="#{adminThemesBean.getFooterUrl('privacy', request.contextPath.concat(&quot;/privacy&quot;))}">#{msg.privacy}</a>
+                    <a
+                        href="#{adminThemesBean.getFooterUrl('legal', request.contextPath.concat(&quot;/imprint&quot;))}">
+                        #{msg.imprint}
+                    </a>
+                    <span>powered by</span>
 
-					<a href="#{adminThemesBean.getFooterUrl('legal', request.contextPath.concat(&quot;/imprint&quot;))}">#{msg.imprint}</a> <span>powered by</span> 
+                    <a
+                        href="#{msg.intrandaViewer}"
+                        target="_blank"
+                        rel="noopener">
+                        Goobi viewer
+                    </a>
+                </div>
 
-					<a href="#{msg.intrandaViewer}" target="_blank" rel="noopener">Goobi viewer</a>
+                <!-- FOOTER SOCIAL MEDIA -->
+                <div class="page-footer__social">
+                    <c:if test="#{adminThemesBean.hasSocialMediaUrl('facebook')}">
+                        <a
+                            href="https://facebook.com/#{adminThemesBean.currentTheme.getSocialMediaLink('facebook').linkUrl}"
+                            title="#{msg.social__follow_on_facebook}"
+                            data-toggle="tooltip"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="#{msg.social__follow_on_facebook}">
+                            <span class="sr-only">#{msg.social__follow_on_slideshare}</span>
+                            <i
+                                class="fa fa-facebook"
+                                aria-hidden="true"></i>
+                        </a>
+                    </c:if>
 
-				</div>
+                    <c:if test="#{adminThemesBean.hasSocialMediaUrl('github')}">
+                        <a
+                            href="https://github.com/#{adminThemesBean.currentTheme.getSocialMediaLink('github').linkUrl}"
+                            title="#{msg.social__follow_on_github}"
+                            data-toggle="tooltip"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="#{msg.social__follow_on_github}">
+                            <span class="sr-only">#{msg.social__follow_on_github}</span>
+                            <i
+                                class="fa fa-github"
+                                aria-hidden="true"></i>
+                        </a>
+                    </c:if>
 
-				<!-- FOOTER SOCIAL MEDIA -->
-				<div class="page-footer__social">
+                    <c:if test="#{adminThemesBean.hasSocialMediaUrl('twitter')}">
+                        <a
+                            href="https://twitter.com/#{adminThemesBean.currentTheme.getSocialMediaLink('twitter').linkUrl}"
+                            title="#{msg.social__follow_on_twitter}"
+                            data-toggle="tooltip"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="#{msg.social__follow_on_twitter}">
+                            <span class="sr-only">#{msg.social__follow_on_twitter}</span>
+                            <i
+                                class="fa fa-twitter"
+                                aria-hidden="true"></i>
+                        </a>
+                    </c:if>
 
-				<c:if test="#{adminThemesBean.hasSocialMediaUrl('facebook')}">
-					
-					<a href="https://facebook.com/#{adminThemesBean.currentTheme.getSocialMediaLink('facebook').linkUrl}"
-						title="#{msg.social__follow_on_facebook}" data-toggle="tooltip"
-						target="_blank" rel="noopener"
-						aria-label="#{msg.social__follow_on_facebook}"> <span
-						class="sr-only">#{msg.social__follow_on_slideshare}</span> <i
-						class="fa fa-facebook" aria-hidden="true"></i>
-					</a>
-					
-				</c:if>
+                    <c:if test="#{adminThemesBean.hasSocialMediaUrl('youtube')}">
+                        <a
+                            href="https://youtube.com/#{adminThemesBean.currentTheme.getSocialMediaLink('youtube').linkUrl}"
+                            title="#{msg.social__follow_on_youtube}"
+                            data-toggle="tooltip"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="#{msg.social__follow_on_youtube}">
+                            <span class="sr-only">#{msg.social__follow_on_youtube}</span>
+                            <i
+                                class="fa fa-youtube"
+                                aria-hidden="true"></i>
+                        </a>
+                    </c:if>
 
-				<c:if test="#{adminThemesBean.hasSocialMediaUrl('github')}">
-					
-					<a href="https://github.com/#{adminThemesBean.currentTheme.getSocialMediaLink('github').linkUrl}"
-						title="#{msg.social__follow_on_github}" data-toggle="tooltip"
-						target="_blank" rel="noopener"
-						aria-label="#{msg.social__follow_on_github}"> <span
-						class="sr-only">#{msg.social__follow_on_github}</span> <i
-						class="fa fa-github" aria-hidden="true"></i>
-					</a> 
-					
-				</c:if>
-					
-				<c:if test="#{adminThemesBean.hasSocialMediaUrl('twitter')}">
+                    <c:if test="#{adminThemesBean.hasSocialMediaUrl('slideshare')}">
+                        <a
+                            href="https://slideshare.net/#{adminThemesBean.currentTheme.getSocialMediaLink('slideshare').linkUrl}"
+                            title="#{msg.social__follow_on_slideshare}"
+                            data-toggle="tooltip"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="#{msg.social__follow_on_slideshare}">
+                            <span class="sr-only">#{msg.social__follow_on_slideshare}</span>
+                            <i
+                                class="fa fa-slideshare"
+                                aria-hidden="true"></i>
+                        </a>
+                    </c:if>
 
-					<a href="https://twitter.com/#{adminThemesBean.currentTheme.getSocialMediaLink('twitter').linkUrl}"
-
-						title="#{msg.social__follow_on_twitter}" data-toggle="tooltip"
-						target="_blank" rel="noopener"
-						aria-label="#{msg.social__follow_on_twitter}"> <span
-						class="sr-only">#{msg.social__follow_on_twitter}</span> <i
-						class="fa fa-twitter" aria-hidden="true"></i>
-					</a>
-					
-				</c:if>	
-				
-				<c:if test="#{adminThemesBean.hasSocialMediaUrl('youtube')}">
-					
-					<a href="https://youtube.com/#{adminThemesBean.currentTheme.getSocialMediaLink('youtube').linkUrl}"
-
-						title="#{msg.social__follow_on_youtube}" data-toggle="tooltip"
-						target="_blank" rel="noopener"
-						aria-label="#{msg.social__follow_on_youtube}"> <span
-						class="sr-only">#{msg.social__follow_on_youtube}</span> <i
-						class="fa fa-youtube" aria-hidden="true"></i>
-					</a> 
-					
-				</c:if>
-				
-				<c:if test="#{adminThemesBean.hasSocialMediaUrl('slideshare')}">
-					
-					<a href="https://slideshare.net/#{adminThemesBean.currentTheme.getSocialMediaLink('slideshare').linkUrl}"
-
-						title="#{msg.social__follow_on_slideshare}" data-toggle="tooltip"
-						target="_blank" rel="noopener"
-						aria-label="#{msg.social__follow_on_slideshare}"> <span
-						class="sr-only">#{msg.social__follow_on_slideshare}</span> <i
-						class="fa fa-slideshare" aria-hidden="true"></i>
-					</a>
-					
-				</c:if>
-				
-				<c:if test="#{adminThemesBean.hasSocialMediaUrl('instagram')}">
-					
-					<a href="https://instagram.com/#{adminThemesBean.currentTheme.getSocialMediaLink('instagram').linkUrl}"
-						title="#{msg.social__follow_on_instagram}" data-toggle="tooltip"
-						target="_blank" rel="noopener"
-						aria-label="#{msg.social__follow_on_slideshare}"> <span
-						class="sr-only">#{msg.social__follow_on_slideshare}</span> <i
-						class="fa fa-instagram" aria-hidden="true"></i>
-					</a>
-					
-				</c:if>
-				
-				</div>
-			</div>
-		</div>
-	</footer>
+                    <c:if test="#{adminThemesBean.hasSocialMediaUrl('instagram')}">
+                        <a
+                            href="https://instagram.com/#{adminThemesBean.currentTheme.getSocialMediaLink('instagram').linkUrl}"
+                            title="#{msg.social__follow_on_instagram}"
+                            data-toggle="tooltip"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="#{msg.social__follow_on_slideshare}">
+                            <span class="sr-only">#{msg.social__follow_on_slideshare}</span>
+                            <i
+                                class="fa fa-instagram"
+                                aria-hidden="true"></i>
+                        </a>
+                    </c:if>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- LINK FOR SCROLLING TO TOP -->
-    <span class="icon-totop" title="#{msg.topOfPage}">
-        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+    <span
+        class="icon-totop"
+        title="#{msg.topOfPage}">
+        <i
+            class="fa fa-chevron-up"
+            aria-hidden="true"></i>
     </span>
- 
-	<!-- USER LOGIN + TERMS + FEEDBACK -->
-	<viewerComponent:modalUserLogin id="userLoginModal" />
-	<viewerComponent:modalUserTerms id="userTermsModal" />
-	<viewerComponent:modalFeedbackForm id="feedbackModal" />
-	<ui:fragment rendered="#{configurationBean.contentUploadEnabled}">
-		<viewerComponent:modalContentUpload id="contentUploadModal" />
-	</ui:fragment>
-	
+
+    <!-- USER LOGIN + TERMS + FEEDBACK -->
+    <viewerComponent:modalUserLogin id="userLoginModal" />
+    <viewerComponent:modalUserTerms id="userTermsModal" />
+    <viewerComponent:modalFeedbackForm id="feedbackModal" />
+    <ui:fragment rendered="#{configurationBean.contentUploadEnabled}">
+        <viewerComponent:modalContentUpload id="contentUploadModal" />
+    </ui:fragment>
+
     <ui:include src="/resources/includes/overlay.xhtml" />
-	<ui:include src="/resources/includes/loadingOverlay.xhtml" />
+    <ui:include src="/resources/includes/loadingOverlay.xhtml" />
 
     <!-- IE 11 NOT SUPPORTED -->
     <div class="support-overlay">
@@ -232,10 +281,17 @@
                 <h3>#{msg.ie11_heading}</h3>
             </header>
             <section class="support-overlay__box-body">
-                <h:outputText value="#{msg.ie11_text}" escape="false" />
+                <h:outputText
+                    value="#{msg.ie11_text}"
+                    escape="false" />
             </section>
             <footer class="support-overlay__box-footer">
-                powered by <a href="http://www.intranda.com/digiverso/goobi-viewer/goobi-viewer-overview/" target="_blank">Goobi viewer</a>
+                powered by
+                <a
+                    href="http://www.intranda.com/digiverso/goobi-viewer/goobi-viewer-overview/"
+                    target="_blank">
+                    Goobi viewer
+                </a>
             </footer>
         </div>
     </div>

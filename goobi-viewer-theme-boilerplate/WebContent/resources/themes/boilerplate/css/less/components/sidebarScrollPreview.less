@@ -6,52 +6,58 @@
 /* THUMBNAIL PAGINATOR */
 
 .sidebar-scroll-preview {
-	&__inner {} 
-	&__grid {
-		.simplebar-track {
-		}
-		.simplebar-scrollbar {
-			&:before { 
-			}
-		}
-	}
-	&__item {}
-	&__button,
-	&__link {
-		&:hover,
-		&:active,
-		&:focus {
-		}
-		&.-highlighted {
-
-		}
-	} 
-	&__button-text {}
-	&__image { 
-		&.-loaded {}
-	}
+    &__inner {
+    }
+    &__grid {
+        .simplebar-track {
+        }
+        .simplebar-scrollbar {
+            &:before {
+            }
+        }
+    }
+    &__item {
+    }
+    &__button,
+    &__link {
+        &:hover,
+        &:active,
+        &:focus {
+        }
+        &.-highlighted {
+        }
+    }
+    &__button-text {
+    }
+    &__image {
+        &.-loaded {
+        }
+    }
 }
 
 /* BREAKPOINT FOR LARGE DESKTOPS */
-@media screen and (max-width: @largeBreakpoint) {} 
+@media screen and (max-width: @largeBreakpoint) {
+}
 
 /* BREAKPOINT FOR DESKTOPS */
-@media screen and (max-width: @mediumBreakpoint) {}
+@media screen and (max-width: @mediumBreakpoint) {
+}
 
 /* BREAKPOINT FOR TABLETS */
 @media screen and (max-width: @smallBreakpoint) {
-	.thumbnail-paginator {
-		&__item {
-			&.-activePage {
-				.thumbnail-paginator__image {
-				}
-			}
-		}
-		&__image {
-			height: 160px;
-		}
-	}
+    .thumbnail-paginator {
+        &__item {
+            &.-activePage {
+                .thumbnail-paginator__image {
+                }
+            }
+        }
+        &__image {
+            height: 160px;
+        }
+    }
 }
 
 /* BREAKPOINT FOR SMARTPHONES */
-@media screen and (max-width: @xSmallBreakpoint) {}
+@media screen and (max-width: @xSmallBreakpoint) {
+}
