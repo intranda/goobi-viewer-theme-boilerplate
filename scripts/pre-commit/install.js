@@ -16,7 +16,7 @@ node "$GIT_ROOT/scripts/pre-commit/formatter.js"
 
 /**
  * Gets the paths for hook installation
- * @param {string} baseDir - Base directory (usually __dirname)
+ * @param {string} baseDir - Base directory
  * @returns {Object} Object with gitRoot, hooksDir and preCommitHook paths
  */
 function getHookPaths(baseDir) {
@@ -111,6 +111,6 @@ module.exports = {
 if (require.main === module) {
   const result = installHooks();
   if (!result.success) {
-    process.exit(0); // Don't fail npm install
+    process.exit(0);
   }
 }

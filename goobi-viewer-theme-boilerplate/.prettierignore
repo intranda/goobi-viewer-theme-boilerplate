@@ -9,7 +9,7 @@
 
 # Generated/minified files
 *.min.*
-/src/META-INF/resources/resources/css/styleguide/
+/WebContent/resources/themes/*/css/dist/
 
 # IDE & OS files
 .DS_Store
@@ -20,5 +20,4 @@
 /.tern-project
 
 # Config files
-/config_viewer.xml
 /package-lock.json

@@ -1,5 +1,6 @@
 const {
   SUPPORTED_EXTENSIONS,
+  findProjectDir,
   getPrettierBinPath,
   prettierExists,
   getStagedFiles,
@@ -49,6 +50,40 @@ describe("Pre-Commit Formatter", () => {
   });
 
   // ============================================================
+  // PROJECT DIRECTORY DETECTION
+  // Finds the directory containing node_modules
+  // ============================================================
+
+  describe("Project Directory Detection", () => {
+    test("finds directory with node_modules", () => {
+      const mockFs = {
+        readdirSync: jest.fn().mockReturnValue([
+          { name: "my-theme", isDirectory: () => true },
+          { name: "scripts", isDirectory: () => true },
+        ]),
+        existsSync: jest
+          .fn()
+          .mockImplementation((p) => p.includes("my-theme/node_modules")),
+      };
+
+      const result = findProjectDir("/repo/scripts/pre-commit", mockFs);
+      expect(result).toContain("my-theme");
+    });
+
+    test("returns null if no node_modules found", () => {
+      const mockFs = {
+        readdirSync: jest
+          .fn()
+          .mockReturnValue([{ name: "scripts", isDirectory: () => true }]),
+        existsSync: jest.fn().mockReturnValue(false),
+      };
+
+      const result = findProjectDir("/repo/scripts/pre-commit", mockFs);
+      expect(result).toBeNull();
+    });
+  });
+
+  // ============================================================
   // CROSS-PLATFORM SUPPORT
   // Prettier path differs between Windows and Unix
   // ============================================================
@@ -62,7 +97,14 @@ describe("Pre-Commit Formatter", () => {
 
     test("Unix: uses 'prettier'", () => {
       Object.defineProperty(process, "platform", { value: "darwin" });
-      const result = getPrettierBinPath("/base");
+      const mockFs = {
+        readdirSync: jest
+          .fn()
+          .mockReturnValue([{ name: "project", isDirectory: () => true }]),
+        existsSync: jest.fn().mockReturnValue(true),
+      };
+
+      const result = getPrettierBinPath("/base", mockFs);
 
       expect(result).toContain("prettier");
       expect(result).not.toContain(".cmd");
@@ -70,9 +112,26 @@ describe("Pre-Commit Formatter", () => {
 
     test("Windows: uses 'prettier.cmd'", () => {
       Object.defineProperty(process, "platform", { value: "win32" });
-      const result = getPrettierBinPath("/base");
+      const mockFs = {
+        readdirSync: jest
+          .fn()
+          .mockReturnValue([{ name: "project", isDirectory: () => true }]),
+        existsSync: jest.fn().mockReturnValue(true),
+      };
+
+      const result = getPrettierBinPath("/base", mockFs);
 
       expect(result).toContain("prettier.cmd");
+    });
+
+    test("returns null if project not found", () => {
+      const mockFs = {
+        readdirSync: jest.fn().mockReturnValue([]),
+        existsSync: jest.fn().mockReturnValue(false),
+      };
+
+      const result = getPrettierBinPath("/base", mockFs);
+      expect(result).toBeNull();
     });
   });
 
@@ -116,6 +175,23 @@ describe("Pre-Commit Formatter", () => {
   });
 
   // ============================================================
+  // PRETTIER INSTALLATION CHECK
+  // Verify Prettier is installed before running
+  // ============================================================
+
+  describe("Prettier Installation Check", () => {
+    test("returns true if Prettier exists", () => {
+      const mockFs = { existsSync: jest.fn().mockReturnValue(true) };
+      expect(prettierExists("/path/to/prettier", mockFs)).toBe(true);
+    });
+
+    test("returns false if Prettier is missing", () => {
+      const mockFs = { existsSync: jest.fn().mockReturnValue(false) };
+      expect(prettierExists("/path/to/prettier", mockFs)).toBe(false);
+    });
+  });
+
+  // ============================================================
   // COMMAND EXECUTION
   // Verify correct shell commands are built
   // ============================================================
@@ -148,23 +224,6 @@ describe("Pre-Commit Formatter", () => {
   });
 
   // ============================================================
-  // PRETTIER INSTALLATION CHECK
-  // Verify Prettier is installed before running
-  // ============================================================
-
-  describe("Prettier Installation Check", () => {
-    test("returns true if Prettier exists", () => {
-      const mockFs = { existsSync: jest.fn().mockReturnValue(true) };
-      expect(prettierExists("/path/to/prettier", mockFs)).toBe(true);
-    });
-
-    test("returns false if Prettier is missing", () => {
-      const mockFs = { existsSync: jest.fn().mockReturnValue(false) };
-      expect(prettierExists("/path/to/prettier", mockFs)).toBe(false);
-    });
-  });
-
-  // ============================================================
   // MAIN WORKFLOW
   // The complete pre-commit hook flow
   // ============================================================
@@ -186,7 +245,12 @@ describe("Pre-Commit Formatter", () => {
 
     test("formats and re-stages JS/CSS files", () => {
       const mockExec = jest.fn().mockReturnValue("app.js\nstyles.css\n");
-      const mockFs = { existsSync: jest.fn().mockReturnValue(true) };
+      const mockFs = {
+        readdirSync: jest
+          .fn()
+          .mockReturnValue([{ name: "project", isDirectory: () => true }]),
+        existsSync: jest.fn().mockReturnValue(true),
+      };
 
       const result = runPreCommit({
         execFn: mockExec,

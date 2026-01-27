@@ -8,15 +8,45 @@ const path = require("path");
 const SUPPORTED_EXTENSIONS = /\.(js|ts|jsx|tsx|html|xhtml|css|less|json|md)$/;
 
 /**
+ * Finds the project directory containing node_modules
+ * @param {string} baseDir - Base directory (usually __dirname)
+ * @param {Object} fsModule - Filesystem module (mockable for tests)
+ * @returns {string|null} Path to project directory or null if not found
+ */
+function findProjectDir(baseDir, fsModule = fs) {
+  const repoRoot = path.join(baseDir, "../..");
+
+  try {
+    const entries = fsModule.readdirSync(repoRoot, { withFileTypes: true });
+    for (const entry of entries) {
+      if (entry.isDirectory() && !entry.name.startsWith(".")) {
+        const nodeModulesPath = path.join(repoRoot, entry.name, "node_modules");
+        if (fsModule.existsSync(nodeModulesPath)) {
+          return path.join(repoRoot, entry.name);
+        }
+      }
+    }
+  } catch (e) {
+    // Ignore errors
+  }
+
+  return null;
+}
+
+/**
  * Gets the path to the Prettier binary (OS-independent)
  * @param {string} baseDir - Base directory (usually __dirname)
- * @returns {string} Path to Prettier binary
+ * @param {Object} fsModule - Filesystem module (mockable for tests)
+ * @returns {string|null} Path to Prettier binary or null if not found
  */
-function getPrettierBinPath(baseDir) {
+function getPrettierBinPath(baseDir, fsModule = fs) {
+  const projectDir = findProjectDir(baseDir, fsModule);
+  if (!projectDir) return null;
+
   const isWindows = process.platform === "win32";
   return path.join(
-    baseDir,
-    "../../goobi-viewer-core/node_modules/.bin",
+    projectDir,
+    "node_modules/.bin",
     isWindows ? "prettier.cmd" : "prettier",
   );
 }
@@ -101,7 +131,7 @@ function runPreCommit(options = {}) {
     fsModule = fs,
   } = options;
 
-  const prettierBin = getPrettierBinPath(baseDir);
+  const prettierBin = getPrettierBinPath(baseDir, fsModule);
   const stagedFiles = getStagedFiles(execFn);
 
   if (stagedFiles.length === 0) {
@@ -114,10 +144,9 @@ function runPreCommit(options = {}) {
 
   if (prettierFiles.length > 0) {
     // Check if Prettier is installed
-    if (!prettierExists(prettierBin, fsModule)) {
+    if (!prettierBin || !prettierExists(prettierBin, fsModule)) {
       log("⚠️  Prettier not found. Skipping formatting.");
-      log("   Run 'npm install' in goobi-viewer-core to enable formatting.");
-      log("   Expected at:", prettierBin);
+      log("   Run 'npm install' to enable formatting.");
       return { success: true, filesProcessed: 0, reason: "prettier-not-found" };
     }
 
@@ -135,6 +164,7 @@ function runPreCommit(options = {}) {
 // Export for tests
 module.exports = {
   SUPPORTED_EXTENSIONS,
+  findProjectDir,
   getPrettierBinPath,
   prettierExists,
   getStagedFiles,
