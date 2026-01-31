@@ -168,7 +168,7 @@
                             target="_blank"
                             rel="noopener"
                             aria-label="#{msg.social__follow_on_facebook}">
-                            <span class="sr-only">#{msg.social__follow_on_slideshare}</span>
+                            <span class="sr-only">#{msg.social__follow_on_facebook}</span>
                             <i
                                 class="fa fa-facebook"
                                 aria-hidden="true"></i>
@@ -220,21 +220,6 @@
                         </a>
                     </c:if>
 
-                    <c:if test="#{adminThemesBean.hasSocialMediaUrl('slideshare')}">
-                        <a
-                            href="https://slideshare.net/#{adminThemesBean.currentTheme.getSocialMediaLink('slideshare').linkUrl}"
-                            title="#{msg.social__follow_on_slideshare}"
-                            data-toggle="tooltip"
-                            target="_blank"
-                            rel="noopener"
-                            aria-label="#{msg.social__follow_on_slideshare}">
-                            <span class="sr-only">#{msg.social__follow_on_slideshare}</span>
-                            <i
-                                class="fa fa-slideshare"
-                                aria-hidden="true"></i>
-                        </a>
-                    </c:if>
-
                     <c:if test="#{adminThemesBean.hasSocialMediaUrl('instagram')}">
                         <a
                             href="https://instagram.com/#{adminThemesBean.currentTheme.getSocialMediaLink('instagram').linkUrl}"
@@ -242,8 +227,8 @@
                             data-toggle="tooltip"
                             target="_blank"
                             rel="noopener"
-                            aria-label="#{msg.social__follow_on_slideshare}">
-                            <span class="sr-only">#{msg.social__follow_on_slideshare}</span>
+                            aria-label="#{msg.social__follow_on_instagram}">
+                            <span class="sr-only">#{msg.social__follow_on_instagram}</span>
                             <i
                                 class="fa fa-instagram"
                                 aria-hidden="true"></i>
