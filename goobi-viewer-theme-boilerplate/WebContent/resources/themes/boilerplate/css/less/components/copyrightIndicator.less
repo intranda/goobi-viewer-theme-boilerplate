@@ -4,75 +4,91 @@
    ==============================================================*/
 
 .copyright-indicator {
-	.svg-fill {
-		fill: #000;
-	}
-	.svg-stroke {
-		stroke: #000;
-	}
-	&__label-style {
+    .svg-fill {
+        fill: #000;
+    }
+    .svg-stroke {
+        stroke: #000;
+    }
+    &__label-style {
         &.-green {
-			.copyright-indicator__status-icon {
-				&:before {}
-			}
-			.copyright-indicator__dot-wrapper {
-			}
+            .copyright-indicator__status-icon {
+                &:before {
+                }
+            }
+            .copyright-indicator__dot-wrapper {
+            }
         }
         &.-yellow {
-			.copyright-indicator__status-icon {
-				&:before {}
-			}
-			.copyright-indicator__dot-wrapper {}
+            .copyright-indicator__status-icon {
+                &:before {
+                }
+            }
+            .copyright-indicator__dot-wrapper {
+            }
         }
         &.-red {
-			.copyright-indicator__status-icon {
-				&:before {
-				}
-			}
-			.copyright-indicator__dot-wrapper {}
+            .copyright-indicator__status-icon {
+                &:before {
+                }
+            }
+            .copyright-indicator__dot-wrapper {
+            }
         }
-	}
-    &__dot-wrapper {}
+    }
+    &__dot-wrapper {
+    }
     &__dot {
-	} 
+    }
     &__icon-wrapper {
         img,
-        svg {}
+        svg {
+        }
     }
-	// TRAFFIC LIGHT STYLE
-	&__traffic-light-style {
-		&-circle-wrapper {}
-	    &-circle {
-			.fa {}
-	        &.-green {
-	            .fa {}
-	        }
-	        &.-yellow {
-	            .fa {}
-	        }
-	        &.-red {
-	            .fa {}
-	        }
-	    }
-		&-icon-wrapper {
-	        img,
-	        svg {}
-		}
-	}
-	&__hidden-information {}
+    // TRAFFIC LIGHT STYLE
+    &__traffic-light-style {
+        &-circle-wrapper {
+        }
+        &-circle {
+            .fa {
+            }
+            &.-green {
+                .fa {
+                }
+            }
+            &.-yellow {
+                .fa {
+                }
+            }
+            &.-red {
+                .fa {
+                }
+            }
+        }
+        &-icon-wrapper {
+            img,
+            svg {
+            }
+        }
+    }
+    &__hidden-information {
+    }
 }
 
 #copyrightInformation {
 }
 
-
 /* BREAKPOINT FOR LARGE DESKTOPS */
-@media screen and (max-width: @largeBreakpoint) {} 
+@media screen and (max-width: @largeBreakpoint) {
+}
 
 /* BREAKPOINT FOR DESKTOPS */
-@media screen and (max-width: @mediumBreakpoint) {}
+@media screen and (max-width: @mediumBreakpoint) {
+}
 
 /* BREAKPOINT FOR TABLETS */
-@media screen and (max-width: @smallBreakpoint) {}
+@media screen and (max-width: @smallBreakpoint) {
+}
 /* BREAKPOINT FOR SMARTPHONES */
-@media screen and (max-width: @xSmallBreakpoint) {}
+@media screen and (max-width: @xSmallBreakpoint) {
+}

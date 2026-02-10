@@ -2,74 +2,111 @@
    Basic Elements Styling
    ==============================================================*/
 html,
-body {}
+body {
+}
 
 html {
-	font-size: 62.5%; // sets basic font-size to 10px for easier rem use
+    font-size: 62.5%; // sets basic font-size to 10px for easier rem use
 }
 
 body {
-	font-size: 1.6rem;
-	font-feature-settings: "kern" 1;
-	font-kerning: normal;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    font-size: 1.6rem;
+    font-feature-settings: 'kern' 1;
+    font-kerning: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
-	// Style focused elements when navigating with the keyboard
-	// Define rules in the mixin `.mx-focus-visible`
-	&.using-keyboard :focus-visible {
-		.mx-focus-visible !important;
-	}
+    // Style focused elements when navigating with the keyboard
+    // Define rules in the mixin `.mx-focus-visible`
+    &.using-keyboard :focus-visible {
+        .mx-focus-visible !important;
+    }
 
-	// No outline offset when an input is in focus
-	// Does not apply if inputs are styled as buttons
-	&.using-keyboard input:not(.btn):focus-visible {
-		outline-offset: 0 !important;
-	}
-
+    // No outline offset when an input is in focus
+    // Does not apply if inputs are styled as buttons
+    &.using-keyboard input:not(.btn):focus-visible {
+        outline-offset: 0 !important;
+    }
 }
 
-h1, h1, h2, h3, h4, h5,
-.h1, .h1, .h2, .h3, .h4, .h5 {}
+h1,
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+}
 
-h1, .h1 {}
+h1,
+.h1 {
+}
 
-h1, .h1 {}
+h1,
+.h1 {
+}
 
-h2, .h2 {}
+h2,
+.h2 {
+}
 
-h3, h4, h5,
-.h3, .h4, .h5 {}
+h3,
+h4,
+h5,
+.h3,
+.h4,
+.h5 {
+}
 
-p {}
+p {
+}
 
-pre {}
+pre {
+}
 
-nav ul {}
+nav ul {
+}
 
-ul {}
+ul {
+}
 
-ol {}
+ol {
+}
 
-ul, ol {}
+ul,
+ol {
+}
 
 a {
-    &:hover {}
-    &:active {}
-    &:focus {}
+    &:hover {
+    }
+    &:active {
+    }
+    &:focus {
+    }
 }
 
 table,
-.table {}
+.table {
+}
 
 /* BREAKPOINT FOR LARGE DESKTOPS */
-@media screen and (max-width: @largeBreakpoint) {}
+@media screen and (max-width: @largeBreakpoint) {
+}
 
 /* BREAKPOINT FOR DESKTOPS */
-@media screen and (max-width: @mediumBreakpoint) {}
+@media screen and (max-width: @mediumBreakpoint) {
+}
 
 /* BREAKPOINT FOR TABLETS */
-@media screen and (max-width: @smallBreakpoint) {}
+@media screen and (max-width: @smallBreakpoint) {
+}
 
 /* BREAKPOINT FOR SMARTPHONES */
-@media screen and (max-width: @xSmallBreakpoint) {}
+@media screen and (max-width: @xSmallBreakpoint) {
+}

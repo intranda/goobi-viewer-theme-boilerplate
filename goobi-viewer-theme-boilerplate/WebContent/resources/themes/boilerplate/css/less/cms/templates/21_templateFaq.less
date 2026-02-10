@@ -5,40 +5,53 @@
 /* FAQ */
 /* BLOCK */
 .tpl-faq {
-	/* ELEMENT */
-	h1 {}
-	&__description {}
-	&__list {
-		.card {}
-		.card-header {
-			&:hover {}
-		}
-		.card-title {
-			a {
-				&:hover,
-				&:active,
-				&:focus {}
-				.fa {}
-				.fa-chevron-down {}
-				.fa-chevron-up {}
-				&.collapsed {
-					.fa-chevron-down {}
-					.fa-chevron-up {}
-				}
-			}
-		}
-	}
+    /* ELEMENT */
+    h1 {
+    }
+    &__description {
+    }
+    &__list {
+        .card {
+        }
+        .card-header {
+            &:hover {
+            }
+        }
+        .card-title {
+            a {
+                &:hover,
+                &:active,
+                &:focus {
+                }
+                .fa {
+                }
+                .fa-chevron-down {
+                }
+                .fa-chevron-up {
+                }
+                &.collapsed {
+                    .fa-chevron-down {
+                    }
+                    .fa-chevron-up {
+                    }
+                }
+            }
+        }
+    }
 }
 
-
 /* BREAKPOINT FOR LARGE DESKTOPS */
-@media screen and (max-width: @largeBreakpoint) {}
+@media screen and (max-width: @largeBreakpoint) {
+}
 
 /* BREAKPOINT FOR DESKTOPS */
-@media screen and (max-width: @mediumBreakpoint) {}
+@media screen and (max-width: @mediumBreakpoint) {
+}
 
 /* BREAKPOINT FOR TABLETS */
-@media screen and (max-width: @smallBreakpoint) {}
+@media screen and (max-width: @smallBreakpoint) {
+}
 
 /* BREAKPOINT FOR SMARTPHONES */
-@media screen and (max-width: @xSmallBreakpoint) {}
+@media screen and (max-width: @xSmallBreakpoint) {
+}
