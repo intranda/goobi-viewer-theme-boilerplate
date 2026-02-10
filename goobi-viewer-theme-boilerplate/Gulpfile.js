@@ -589,7 +589,10 @@ function syncAll() {
     let copied = 0;
 
     return gulp
-        .src(joinPosix(paths.staticRoot, '**/*'), {
+		    .src([ 
+		        joinPosix(paths.staticRoot, '**/*'),
+				'!' + joinPosix(paths.staticRoot, 'resources/themes/*.xml'),
+		    ], {
             dot: true,
             allowEmpty: true,
             base: paths.staticRoot,
@@ -605,7 +608,7 @@ function syncAll() {
             logTask({
                 name: 'sync-all',
                 started,
-                src: `${path.resolve(paths.staticRoot)}/**/*`,
+                src: toPosix(path.resolve(paths.staticRoot)) + '/**/*',
                 projOut: [],
                 deployOut: [],
                 genCount: 0,
