@@ -1,29 +1,30 @@
 /* ==============================================================
    Error
-   style declarations for error.xhtml
+   style declarations for error.xhtml and errorHttp4xx/500.xhtml
    ==============================================================*/
 /* ERROR */
-/* BLOCK */
 .view-error {
-    /* ELEMENT */
-    h1 {
-    }
-    p {
-    }
+    /* ELEMENTS */
+    h1 {}
+    p {}
+
+    /* ELEMENTS (errorHttp4xx/500.xhtml) */
+    &__image {}
+    &__headline {}
+    &__code {}
+    &__title {}
+    &__message {}
+    &__actions {}
 }
 
 /* BREAKPOINT FOR LARGE DESKTOPS */
-@media screen and (max-width: @largeBreakpoint) {
-}
+@media screen and (max-width: @largeBreakpoint) {}
 
 /* BREAKPOINT FOR DESKTOPS */
-@media screen and (max-width: @mediumBreakpoint) {
-}
+@media screen and (max-width: @mediumBreakpoint) {}
 
 /* BREAKPOINT FOR TABLETS */
-@media screen and (max-width: @smallBreakpoint) {
-}
+@media screen and (max-width: @smallBreakpoint) {}
 
 /* BREAKPOINT FOR SMARTPHONES */
-@media screen and (max-width: @xSmallBreakpoint) {
-}
+@media screen and (max-width: @xSmallBreakpoint) {}
