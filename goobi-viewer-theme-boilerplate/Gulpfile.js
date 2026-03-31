@@ -196,7 +196,7 @@ function taskFooter(generated, copied, errors, started) {
 }
 
 /**
- * Compact task logger to avoid boilerplate across tasks.
+ * Compact task logger to avoid reference across tasks.
  * @param {Object} o
  * @param {string} o.name
  * @param {bigint} o.started
